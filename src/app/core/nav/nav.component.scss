@@ -1,0 +1,35 @@
+.elhoo_dashboardMenu_IconSvgStyle {
+    text-align: center;
+    width: 60px;
+    box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elhoo_dashboardMenu_menuPosition {
+    position: absolute;
+    z-index: 1;
+}
+
+.elhoo_dashboardMenu_helpIconSvgStyle {
+    text-align: center;
+    width: 60px;
+    box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 12px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 25px;
+}
