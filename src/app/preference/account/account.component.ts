@@ -6,8 +6,16 @@ import { Moment } from 'moment';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+
 
  
+ 
+
+ 
+
+
 
 interface Food {
   value: string;
@@ -36,18 +44,21 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class AccountAddUserFrom {
 
   submitStatus: boolean;
+ 
   selectedValue1: string;
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    {value: '0', viewValue: 'Francais'},
+    {value: '1', viewValue: 'Anglais'},
+    {value: '2', viewValue: 'Allemand'}
   ];
- 
+
   // tslint:disable-next-line:max-line-length
-  constructor(private formBuilder: FormBuilder , public dialogRef: MatDialogRef<AccountAddUserFrom> ) {  dialogRef.disableClose = true;}
+  constructor(private formBuilder: FormBuilder , public dialogRef: MatDialogRef<AccountAddUserFrom> ) {  dialogRef.disableClose = false;}
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+
    // tslint:disable-next-line:member-ordering
    registerForm: FormGroup = this.formBuilder.group({
     // tslint:disable-next-line:quotemark
@@ -62,10 +73,10 @@ export class AccountAddUserFrom {
     passwordCorantFormControlDialog: [, { validators: [Validators.required], updateOn: "change" }],
     passwordFormControlDialog: [, { validators: [Validators.required], updateOn: "change" }],
     telephoneFormControlDialog: [, { validators: [Validators.required], updateOn: "change" }],
-    
+
   });
- 
-  
+
+
   submitForm() {
     console.log(this.registerForm.valid);
     this.submitStatus = true;
@@ -93,32 +104,36 @@ export class AccountFacturationFrom {
   submitStatus: boolean;
   selectedValue1: string;
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    {value: '0', viewValue: 'Belgique'},
+    {value: '1', viewValue: 'France'},
+    {value: '2', viewValue: 'Allemand'}
   ];
  
+
   // tslint:disable-next-line:max-line-length
-  constructor(private formBuilder: FormBuilder , public dialogRef: MatDialogRef<AccountFacturationFrom> ) {  dialogRef.disableClose = true;}
+  constructor(private formBuilder: FormBuilder , public dialogRef: MatDialogRef<AccountFacturationFrom> ) {  dialogRef.disableClose = false;}
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  
+
    // tslint:disable-next-line:member-ordering
    registerFormFacturation: FormGroup = this.formBuilder.group({
     // tslint:disable-next-line:quotemark
     nomFormControlDialogFacturation: [, { validators: [Validators.required], updateOn: "change" }],
     // tslint:disable-next-line:quotemark
-  
+
     // tslint:disable-next-line:quotemark
- 
+
     emailFormControlDialogFacturation: [, { validators: [Validators.required,Validators.pattern('^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$')], updateOn: "change" }],
     paysFormControlDialogFacturation: [, { validators: [Validators.required], updateOn: "change" }],
 
- 
-    
+
+
   });
- 
-  
+
+
   submitForm() {
     console.log(this.registerFormFacturation.valid);
     this.submitStatus = true;
@@ -137,30 +152,62 @@ export class AccountFacturationFrom {
 
 
 
+class ImageSnippet {
+  pending: boolean = false;
+  status: string = 'init';
+
+  constructor(public src: string, public file: File) {}
+}
 
 
 
 
 
- 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
+
+
+ 
 export class AccountComponent implements OnInit {
 
- 
+
   submitStatus: boolean;
   checked: boolean;
+  selectedFile: ImageSnippet;
+  url: string | ArrayBuffer ='../../assets/addLogoElhoo.png';
  
+  constructor(private router: Router , public dialog: MatDialog ) {
 
-  constructor(private router: Router , public dialog: MatDialog) { 
-  
 
   }
+
+
+  onSelectFile(event) { // called each time file input changes
+    console.log(event);
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+
+      }
+    }
+}
+onSelectFileEmpty(event) { // called each time file input changes
+ 
+   
+      this.url =  '../../assets/addLogoElhoo.png';
+    
+  }
+
  
  
+
   openDialog() {
     this.dialog.open(AccountAddUserFrom,{
       disableClose: true,
@@ -174,7 +221,7 @@ export class AccountComponent implements OnInit {
 
   }
 
-  
+
   openDialogFacturation() {
     this.dialog.open(AccountFacturationFrom,{
       disableClose: true,
@@ -188,7 +235,7 @@ export class AccountComponent implements OnInit {
 
   }
 
- 
+
 
 
 
@@ -227,7 +274,7 @@ export class AccountComponent implements OnInit {
     , Validators.email
 
   ]);
- 
+
 
   societeFormControl = new FormControl('', [
     Validators.required,
@@ -257,15 +304,16 @@ export class AccountComponent implements OnInit {
   selectedCar: string;
 
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    {value: '0', viewValue: 'Francais'},
+    {value: '1', viewValue: 'Anglais'},
+    {value: '2', viewValue: 'Allemand'}
   ];
 
+
   cars: Car[] = [
-    {value: 'volvo', viewValue: 'Volvo'},
-    {value: 'saab', viewValue: 'Saab'},
-    {value: 'mercedes', viewValue: 'Mercedes'}
+    {value: 'Liége', viewValue: 'Liége'},
+    {value: 'Bruxelles', viewValue: 'Bruxelles'},
+    {value: 'Anvers', viewValue: 'Anvers'}
   ];
   route_active: string;
 
@@ -273,10 +321,11 @@ export class AccountComponent implements OnInit {
   ngOnInit(): void {
     this.route_active =this.router.url
     this.checked =false;
+   
   }
 
-
   
+
   setrouter(e){
     this.route_active = e;
     console.log(this.route_active)

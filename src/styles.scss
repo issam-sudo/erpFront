@@ -3,22 +3,42 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-:root {
+ :root {
     --primary_color: #ebeff2;
     --secondary_color: #D22254;
     --badge_color_success: #28a745;
     --badge_color_warn: #D22254;
+    --dark_color: #323d41;
 }
 
 html,
 body {
-    height: 100%;
-}
-
-body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: var(--primary_color);
+    background-size: contain;
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ebeff2;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #323d41;
 }
 
 .mat-form-field-flex {
@@ -29,4 +49,24 @@ body {
     width: 18px;
     height: 18px;
     line-height: 18px;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar-track {
+    background: #ebeff2;
+}
+
+.mat-icon-button ::ng-deep .mat-button-focus-overlay {
+    display: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.mat-button-focus-overlay {
+    background-color: transparent!important;
+}
+
+.mat-calendar {
+    background-color: #ebeff2;
 }

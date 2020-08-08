@@ -1,0 +1,43 @@
+.elhoo_body_img_TableauBord_padding {
+    padding-left: 140px;
+}
+
+.elhoo_body_title_textStyle {
+    width: 256px;
+    font-weight: normal;
+    letter-spacing: 1.16667px;
+    color: #D22254;
+    font-size: 23px;
+}
+
+.elhoo_body_subtitle_textStyleHeader {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0px;
+}
+
+.list-group-item {
+    padding: 0;
+    background-color: #fff0;
+    border: 0;
+}
+
+ul list-group {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: .25rem
+}
+
+.elhoo_compte_IconSvgStyle:hover svg path {
+    fill: #d22254;
+}
+
+.elhoo_body_btn:hover svg path {
+    fill: #d22254;
+}
+
+.elhoo_body_btn1:hover svg path {
+    fill: #d22254;
+}

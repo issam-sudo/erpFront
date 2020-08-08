@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from  '../app/shared/shared.module';
 import { AccountAddUserFrom } from './preference/account/account.component';
 import { AccountFacturationFrom } from './preference/account/account.component';
+import {HttpClientModule} from '@angular/common/http';
+import { PreferenceContainerComponent } from './preference/preference-container/preference-container.component';
+import { HeaderPreferenceComponent } from './preference/header-preference/header-preference.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +24,17 @@ import { AccountFacturationFrom } from './preference/account/account.component';
     DashboardComponent,
     AccountComponent,
     AccountAddUserFrom,
-    AccountFacturationFrom
-   
+    AccountFacturationFrom,
+    PreferenceContainerComponent,
+    HeaderPreferenceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

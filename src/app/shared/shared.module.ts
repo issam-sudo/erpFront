@@ -11,13 +11,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatBadgeModule,} from '@angular/material/badge';
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
   ],
-  exports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatIconModule , MatTableModule , MatSelectModule , MatCheckboxModule , MatBadgeModule]
+  exports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatIconModule , MatTableModule , MatSelectModule , MatCheckboxModule , MatBadgeModule ,MatMenuModule]
 
 })
 export class SharedModule { }

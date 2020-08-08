@@ -13,17 +13,6 @@
     justify-content: center;
 }
 
-.elhoo_compte_IconSvgSecondSectoin {
-    text-align: center;
-    width: 35px;
-    border-radius: 10px;
-    cursor: pointer;
-    height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .elhoo_body_title_textStyle {
     width: 256px;
     font-weight: normal;
@@ -34,20 +23,26 @@
 
 .elhoo_body_subtitle_textStyleHeader {
     font-size: 14px;
-    letter-spacing: 0.166667px;
+    letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
     line-height: 0px;
 }
 
 .elhoo_body_subtitle_textStyle {
-    font-size: 14px;
-    letter-spacing: 0.166667px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.elhoo_body_subtitle_textStyle1 {
+    font-size: 12px;
+    letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
 }
 
 .elhoo_body_subtitle_textStyle2 {
-    font-size: 14px;
-    letter-spacing: 0.166667px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
     color: #D22254;
 }
@@ -121,6 +116,12 @@ h1 {
 .elhoo_compte_messageErrorPosition {
     margin-top: 18px;
     color: #d22254;
+}
+
+.elhoo_compte_messageErrorPositionModal {
+    margin-top: 16px;
+    color: #d22254;
+    font-size: 9px;
 }
 
 ::ng-deep .mat-calendar-body-selected {
@@ -222,44 +223,27 @@ h1 {
     padding-right: 30px;
 }
 
-.elhoo_account_listeIcon {
-    background-color: #323d41;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 9px;
+ul.elhoo_account_listeIcon li a {
+    background-color: rgba(50, 61, 65, 0.5);
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    border-radius: 7px;
 }
 
-.elhoo_account_listeIcon:hover {
-    border-color: #d22254;
-    background-color: #ebeff2;
+ul.elhoo_account_listeIcon li a:hover {
+    background-color: rgba(50, 61, 65, 1);
 }
 
-.icon-bike {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 22px;
-    width: 17px;
-    background-image: url("src/assets/Combined shape 5198.svg");
+ul.elhoo_account_listeIcon li a svg path {
+    fill: #ebeff2;
 }
 
-.elhoo_compte_IconSvgSecondSectoin:hover .icon-bike,
-.elhoo_compte_IconSvgSecondSectoin:focus .icon-bike,
-.elhoo_compte_IconSvgSecondSectoin:active .icon-bike {
-    background-image: url("src/assets/iconred3.svg");
-}
-
-.icon-bike2 {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20px;
-    width: 20px;
-    background-image: url("src/assets/Combined shape 5197.svg");
-}
-
-.elhoo_compte_IconSvgSecondSectoin:hover .icon-bike2,
-.elhoo_compte_IconSvgSecondSectoin:focus .icon-bike2,
-.elhoo_compte_IconSvgSecondSectoin:active .icon-bike2 {
-    background-image: url("src/assets/iconred4.svg");
+ul.elhoo_account_listeIcon li a:hover svg path {
+    fill: #d22254;
 }
 
 .buttonText {
@@ -272,11 +256,7 @@ h1 {
 }
 
 .elhoo_compte_IconSvgStyle:hover svg path {
-    fill: #ebeff2;
-}
-
-.listHover:hover {
-    background-color: #323d41;
+    fill: #d22254;
 }
 
 .elhoo_body_btn:hover svg path {
@@ -285,4 +265,9 @@ h1 {
 
 .elhoo_body_btn1:hover svg path {
     fill: #d22254;
+}
+
+.InputFirstSection {
+    font-size: 12px;
+    padding-left: 12px;
 }

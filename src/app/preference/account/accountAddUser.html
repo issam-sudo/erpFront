@@ -1,222 +1,196 @@
-<h2 class="modal-title" id="exampleModalLongTitle" style="text-align: center;
-    color: #ebeff2;
-    background-color: #323d41;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    font-family: 'Poppins', sans-serif;letter-spacing: 2px;">AJOUTER UN UTILISATEUR</h2>
+<div class="custom-scrollbar-css">
+    <h2 class="modal-title" id="exampleModalLongTitle" style="text-align:
+        center;
+        color: #ebeff2;
+        background-color: #323d41;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Poppins', sans-serif;letter-spacing: 2px;">
+
+        AJOUTER UN UTILISATEUR</h2>
+
+    <form class="mt-4" [formGroup]="registerForm" (submit)="submitForm()">
+        <div class="row mr-1 ml-1 mb-4">
+            <div class="col-md-6">
+
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Nom *" formControlName="nomFormControlDialog" style="font-size:
+                        12px;
+                        padding-left: 12px;" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="registerForm.controls['nomFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Nom is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
 
-<form class="mt-4" [formGroup]="registerForm" (submit)="submitForm()">
-    <div class="row mr-1 ml-1 mb-4">
-        <div class="col-md-6">
+            </div>
 
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Nom *</mat-label>
-                <input autocomplete="off" matInput placeholder="Nom *" formControlName="nomFormControlDialog" style="font-size:
-                    12px;
-                    padding-left: 12px;" [errorStateMatcher]="matcher">
-                <mat-error *ngIf="registerForm.controls['nomFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Nom is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+            <div class="col-md-6">
 
 
-        </div>
-
-        <div class="col-md-6">
-
-
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Prénom *</mat-label>
-                <input autocomplete="off" matInput placeholder="Prénom *" formControlName="prenomFormControlDialog" style="font-size:
-                    12px;
-                    padding-left: 12px;">
-                <mat-error *ngIf="registerForm.controls['prenomFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Prénom is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
-
-
-
-        </div>
-
-    </div>
-
-
-
-    <div class="row mr-1 ml-1 mb-4">
-        <div class="col-md-6">
-
-
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Téléphone</mat-label>
-                <input autocomplete="off" type="number" matInput placeholder="Téléphone" formControlName="telephoneFormControlDialog" style="font-size: 12px; padding-left: 12px;">
-
-                <mat-error *ngIf="registerForm.controls['telephoneFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Téléphone is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
-
-
-
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Prénom *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Prénom *" formControlName="prenomFormControlDialog" style="font-size:
+                        12px;
+                        padding-left: 12px;">
+                    <mat-error *ngIf="registerForm.controls['prenomFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Prénom is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
 
         </div>
-
-        <div class="col-md-6">
-
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Langue *</mat-label>
-                <mat-select style="font-size: 12px; padding-left: 12px;
-                    max-width:97%;" [(ngModel)]="selectedValue1" name="food" formControlName="langueFormControlDialog">
-
-                    <mat-option *ngFor="let food of foods" [value]="food.value">
-                        {{food.viewValue}}
-                    </mat-option>
-
-                </mat-select>
-                <mat-error *ngIf="registerForm.controls['langueFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Langue is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+        <div class="row mr-1 ml-1 mb-4">
+            <div class="col-md-6">
 
 
-        </div>
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Téléphone</mat-label>
+                    <input autocomplete="off" type="number" matInput placeholder="Téléphone" formControlName="telephoneFormControlDialog" style="font-size: 12px; padding-left: 12px;">
 
-    </div>
-
-
-    <div class="row mr-1 ml-1 mb-4">
-        <div class="col-md-6">
-
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Nom d'utilisateur *</mat-label>
-                <input autocomplete="off" matInput placeholder="Nom
-                    d'utilisateur *" formControlName="usernameFormControlDialog" style="font-size: 12px; padding-left: 12px;">
-                <mat-error *ngIf="registerForm.controls['usernameFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Nom d'utilisateur is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+                    <mat-error *ngIf="registerForm.controls['telephoneFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Téléphone is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
 
 
 
+            </div>
+
+            <div class="col-md-6">
+
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Langue *</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px;
+                        max-width:97%;" [(ngModel)]="selectedValue1" name="food" formControlName="langueFormControlDialog">
+
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+                    <mat-error *ngIf="registerForm.controls['langueFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Langue is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+            </div>
 
         </div>
+        <div class="row mr-1 ml-1 mb-4">
+            <div class="col-md-6">
 
-        <div class="col-md-6">
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom d'utilisateur *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Nom
+                        d'utilisateur *" formControlName="usernameFormControlDialog" style="font-size: 12px; padding-left: 12px;">
+                    <mat-error *ngIf="registerForm.controls['usernameFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Nom d'utilisateur is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
 
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Mot de passe actuel
-                </mat-label>
-                <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput formControlName="passwordCorantFormControlDialog" placeholder="Mot de passe actuel">
-                <mat-error *ngIf="registerForm.controls['passwordCorantFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Mot de passe courant is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
 
 
+
+            </div>
+
+            <div class="col-md-6">
+
+
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Mot de passe actuel
+                    </mat-label>
+                    <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput formControlName="passwordCorantFormControlDialog" placeholder="Mot de passe actuel">
+                    <mat-error *ngIf="registerForm.controls['passwordCorantFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Mot de passe courant is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+
+            </div>
 
         </div>
+        <div class="row mr-1 ml-1 mb-4">
+            <div class="col-md-6">
 
-    </div>
-
-
-    <div class="row mr-1 ml-1 mb-4">
-        <div class="col-md-6">
-
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Mot-de-passe</mat-label>
-                <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput formControlName="passwordFormControlDialog" placeholder="Mot-de-passe">
-                <mat-error *ngIf="registerForm.controls['passwordFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Mot de passe is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Mot-de-passe</mat-label>
+                    <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput formControlName="passwordFormControlDialog" placeholder="Mot-de-passe">
+                    <mat-error *ngIf="registerForm.controls['passwordFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Mot de passe is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
 
 
 
 
-        </div>
+            </div>
 
-        <div class="col-md-6">
+            <div class="col-md-6">
 
 
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Répéter mot-de-passe
-                </mat-label>
-                <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" formControlName="passwordConfirmFormControlDialog" matInput placeholder="Répéter
-                    mot-de-passe">
-                <mat-error *ngIf="registerForm.controls['passwordConfirmFormControlDialog'].invalid" class="elhoo_compte_messageErrorPosition">
-                    Mot de passe confirm is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Répéter mot-de-passe
+                    </mat-label>
+                    <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" formControlName="passwordConfirmFormControlDialog" matInput placeholder="Répéter
+                        mot-de-passe">
+                    <mat-error *ngIf="registerForm.controls['passwordConfirmFormControlDialog'].invalid" class="elhoo_compte_messageErrorPositionModal">
+                        Mot de passe confirm is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
+
+
+
+            </div>
 
 
 
         </div>
-
-
-
-    </div>
-
-
-
-    <div class="row mr-1 ml-1 mb-4">
+        <div class="row mr-1 ml-1 mb-4">
 
 
 
 
-        <div class="col-md-12 mb-4">
+            <div class="col-md-12 mb-4">
 
 
-            <mat-form-field appearance="none" class="w-100">
-                <mat-label class="elhoo_compte_labelInputPosition">Email *</mat-label>
-                <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput placeholder="Email *" formControlName="emailFormControlDialog" [errorStateMatcher]="matcher">
-                <mat-error class="elhoo_compte_messageErrorPosition" *ngIf="registerForm.controls['emailFormControlDialog'].dirty ">
-                    Please enter a valid email address
-                </mat-error>
-                <mat-error *ngIf="registerForm.controls['emailFormControlDialog'].hasError('required') && (registerForm.controls['emailFormControlDialog'].touched)" class="elhoo_compte_messageErrorPosition">
-                    Email is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+                <mat-form-field appearance="none" class="w-100">
+                    <mat-label class="elhoo_compte_labelInputPosition">Email *</mat-label>
+                    <input style="font-size: 12px; padding-left: 12px;" autocomplete="off" matInput placeholder="Email *" formControlName="emailFormControlDialog" [errorStateMatcher]="matcher">
+                    <mat-error class="elhoo_compte_messageErrorPositionModal" *ngIf="registerForm.controls['emailFormControlDialog'].dirty">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.controls['emailFormControlDialog'].hasError('required')
+                        &&
+                        (registerForm.controls['emailFormControlDialog'].touched)" class="elhoo_compte_messageErrorPositionModal">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
 
 
-        </div>
+            </div>
 
-        <div class="col-md-12" style="    display: flex;
-        justify-content: center;">
+            <div class="col-md-12" style="display: flex;
+                justify-content: center;">
 
-            <button class="btn active text-uppercase btnEnregistrer mr-2" (click)="onNoClick()">Cancel</button>
+                <!--<button class="btn active text-uppercase btnEnregistrer mr-2" (click)="onNoClick()">Cancel</button>-->
 
-            <button class="btn active text-uppercase btnEnregistrer " [disabled]="!registerForm.valid" type="submit">Submit</button>
+                <button class="btn active text-uppercase btnEnregistrer" [disabled]="!registerForm.valid" type="submit">Submit</button>
+            </div>
 
 
 
         </div>
+    </form>
 
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <form>
+</div>
