@@ -1,3 +1,15 @@
+.mat-badge-content {
+    background: var(--badge_color_success);
+}
+
+.mat-badge-warn .mat-badge-content {
+    background: var(--badge_color_warn);
+}
+
+.mat-badge-medium.mat-badge-after .mat-badge-content {
+    right: -12px;
+}
+
 nav {
     position: fixed;
     z-index: 99;
@@ -19,21 +31,12 @@ nav {
     width: 58%;
 }
 
-.mat-badge-content {
-    color: #fff;
-    background: var(--badge_color_success);
-}
-
-.mat-badge-warn .mat-badge-content {
-    color: #fff;
-    background: var(--badge_color_warn);
-}
-
-.mat-badge-medium.mat-badge-after .mat-badge-content {
-    right: -12px;
-}
-
-.fixedPosiion {
+.elhoo_nav_fixedPosiion {
     position: fixed;
     top: 0%;
+}
+
+.elhoo_nav-collapse {
+    align-items: center;
+    justify-content: flex-end;
 }

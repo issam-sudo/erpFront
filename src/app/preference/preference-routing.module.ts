@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:"" , component:PreferenceContainerComponent, children:[
     {path:"account" , component:AccountComponent},
     {path:"invoice" , component:InvoiceComponent}
+
   ]}
 ];
 

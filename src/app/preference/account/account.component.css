@@ -1,3 +1,62 @@
+::ng-deep .mat-form-field-infix {
+    padding: 13px 0;
+    border-top: 0;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: var(--secondary_color)!important;
+}
+
+::ng-deep .mat-form-field {
+    border-color: #323d41;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 7px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+::ng-deep .mat-form-field-label {
+    color: #323d41!important;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0em 0;
+    padding-top: 104px;
+}
+
+::ng-deep .mat-datepicker-content {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+::ng-deep .mat-calendar-body-selected {
+    background-color: var(--secondary_color);
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .custom-frame .mat-checkbox-background,
+ ::ng-deep .custom-frame .mat-checkbox-frame {
+    border-radius: 70% !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: var(--secondary_color);
+}
+
+::ng-deep .my-custom-dialog-class mat-dialog-container {
+    padding: 0;
+    background-color: var(--primary_color);
+}
+
 .elhoo_body_img_TableauBord_padding {
     padding-left: 140px;
 }
@@ -11,21 +70,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.elhoo_body_title_textStyle {
-    width: 256px;
-    font-weight: normal;
-    letter-spacing: 1.16667px;
-    color: #D22254;
-    font-size: 23px;
-}
-
-.elhoo_body_subtitle_textStyleHeader {
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    font-family: 'Poppins', sans-serif;
-    line-height: 0px;
 }
 
 .elhoo_body_subtitle_textStyle {
@@ -44,7 +88,7 @@
     font-size: 18px;
     letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
-    color: #D22254;
+    color: var(--secondary_color);
 }
 
 .list-group-item {
@@ -72,28 +116,6 @@ mat-form-field {
     font-size: 12px;
 }
 
-::ng-deep .mat-form-field-label {
-    color: #323d41!important;
-    margin-left: 10px;
-    margin-bottom: 15px;
-}
-
-::ng-deep .mat-form-field-infix {
-    padding: 13px 0;
-    border-top: 0;
-}
-
-::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: #D22254!important;
-}
-
-::ng-deep .mat-form-field {
-    border-color: #323d41;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 7px;
-}
-
 h1 {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -109,27 +131,15 @@ h1 {
     color: white;
 }
 
-::ng-deep .mat-form-field-wrapper {
-    padding-bottom: 0;
-}
-
 .elhoo_compte_messageErrorPosition {
     margin-top: 18px;
-    color: #d22254;
+    color: var(--secondary_color);
 }
 
 .elhoo_compte_messageErrorPositionModal {
     margin-top: 16px;
-    color: #d22254;
+    color: var(--secondary_color);
     font-size: 9px;
-}
-
-::ng-deep .mat-calendar-body-selected {
-    background-color: #d22254;
-}
-
-::ng-deep .mat-form-field-underline {
-    display: none;
 }
 
 .elhoo_compte-logo {
@@ -146,16 +156,6 @@ h1 {
     height: 105px;
 }
 
-::ng-deep .mat-datepicker-content {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-    padding: 0em 0;
-    padding-top: 104px;
-}
-
 .elhoo_body_btn {
     color: #323d41;
     border-color: #323d41;
@@ -163,30 +163,26 @@ h1 {
 }
 
 .elhoo_body_btn:hover {
-    color: #D22254;
-    border-color: #D22254;
-    background-color: #ebeff2;
+    color: var(--secondary_color);
+    border-color: var(--secondary_color);
+    background-color: var(--primary_color);
     cursor: pointer;
     transition: all 0.23s ease-in-out 0s;
 }
 
 .elhoo_body_btn1 {
     background-color: #323d41;
-    color: #ebeff2;
+    color: var(--primary_color);
     border-color: #323d41;
     letter-spacing: 1.2px;
 }
 
 .elhoo_body_btn1:hover {
-    color: #D22254;
-    border-color: #D22254;
-    background-color: #ebeff2;
+    color: var(--secondary_color);
+    border-color: var(--secondary_color);
+    background-color: var(--primary_color);
     cursor: pointer;
     transition: all 0.23s ease-in-out 0s;
-}
-
-.input-group1 {
-    margin-bottom: 30px;
 }
 
 .elhoo_compte_title2 {
@@ -198,25 +194,10 @@ h1 {
     letter-spacing: 1.2px;
 }
 
-::ng-deep .custom-frame .mat-checkbox-background,
- ::ng-deep .custom-frame .mat-checkbox-frame {
-    border-radius: 70% !important;
-}
-
-::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
-.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: #D22254;
-}
-
-::ng-deep .my-custom-dialog-class mat-dialog-container {
-    padding: 0;
-    background-color: #ebeff2;
-}
-
 .btnEnregistrer {
-    background-color: #d22254;
+    background-color: var(--secondary_color);
     box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
-    color: #ebeff2;
+    color: var(--primary_color);
     font-size: 14px;
     letter-spacing: 2px;
     padding-left: 30px;
@@ -239,11 +220,11 @@ ul.elhoo_account_listeIcon li a:hover {
 }
 
 ul.elhoo_account_listeIcon li a svg path {
-    fill: #ebeff2;
+    fill: var(--primary_color);
 }
 
 ul.elhoo_account_listeIcon li a:hover svg path {
-    fill: #d22254;
+    fill: var(--secondary_color);
 }
 
 .buttonText {
@@ -256,15 +237,15 @@ ul.elhoo_account_listeIcon li a:hover svg path {
 }
 
 .elhoo_compte_IconSvgStyle:hover svg path {
-    fill: #d22254;
+    fill: var(--secondary_color);
 }
 
 .elhoo_body_btn:hover svg path {
-    fill: #d22254;
+    fill: var(--secondary_color);
 }
 
 .elhoo_body_btn1:hover svg path {
-    fill: #d22254;
+    fill: var(--secondary_color);
 }
 
 .InputFirstSection {

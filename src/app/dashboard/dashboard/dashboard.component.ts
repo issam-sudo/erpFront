@@ -40,42 +40,33 @@ export class DashboardComponent implements OnInit {
 
   typeDgr: any  ;
   e: any  ;
+  // tslint:disable-next-line:variable-name
   date_chart = new FormControl(moment());
+  // tslint:disable-next-line:variable-name
   date_statistique = new FormControl(moment());
   Ventes: any = 0;
   Achats: any = 0;
   Marge1: any = 0;
   Marge2: any = 0;
-
-  year: any = '2020';
-
+  date: any = new Date();
+  year: any ;
   VentesElement: any = (0).toFixed(2);
   AchatsElement: any = (0).toFixed(2);
   Marge1Element: any = (0).toFixed(2);
   Marge2Element: any = (0).toFixed(2);
+  yearMax: any;
 
-
-
-  constructor() {
-
-  }
-
-
-
-
-
+  constructor() { }
 
   ngOnInit(): void {
-    var num = 4552;  // typeof num is "Number"
-
-
-console.log(num.toFixed(2))
-
+    // var num = 4552;  // typeof num is "Number"
+    // console.log(num.toFixed(2))
     this.getChart();
     this.TableauBordFilter();
+    this.year =  this.date.toString().split(' ')[3];
+    this.yearMax =  this.date.toString().split(' ')[3];
+ 
   }
-
-
   async getChart(){
 
     // tslint:disable-next-line:prefer-const
@@ -105,8 +96,8 @@ console.log(num.toFixed(2))
               pointBackgroundColor: 'rgb(245, 89, 82 ,1)',
               pointBorderColor: 'rgb(245, 89, 82 ,1)'
           },
-          
-          
+
+
           {
             label: 'Vente',
             fill: true,
@@ -130,25 +121,25 @@ console.log(num.toFixed(2))
       },
       options: {
         tooltips: {
-          custom: function(tooltip) {
-            if (!tooltip) return;
+          custom(tooltip) {
+            if (!tooltip) { return; }
             // disable displaying the color box;
             tooltip.displayColors = false;
           },
           callbacks: {
-            title: function(tooltipItem, data) {
-              return data['labels'][tooltipItem[0]['index']];
-            },label: function(tooltipItem, data) {
-              return data['datasets'][tooltipItem.datasetIndex]['label']+":" +data['datasets'][tooltipItem.datasetIndex]['data'][tooltipItem['index']]+'€';
-            
+            title(tooltipItem, data) {
+              return data.labels[tooltipItem[0].index];
+            }, label(tooltipItem, data) {
+              return data.datasets[tooltipItem.datasetIndex].label + ':' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '€';
+
             },
-            
-           
+
+
           },
-          
+
           yAlign: 'bottom',
           backgroundColor: 'rgb(50, 61, 65)',
-           
+
       },
         layout: {
           padding: {
@@ -157,7 +148,7 @@ console.log(num.toFixed(2))
               top: 0,
               bottom: 0
           },
-    
+
       },
         legend: {
           display: true,
@@ -165,7 +156,7 @@ console.log(num.toFixed(2))
           align: 'start',
 
           labels: {
-          
+
             usePointStyle: true,
 
 
@@ -201,8 +192,6 @@ console.log(num.toFixed(2))
       }
   });
 
-
-
    }
 
 
@@ -216,9 +205,6 @@ console.log(num.toFixed(2))
 
 
   async chosenYearHandler_statistique(normalizedYear_statistique: Moment , datepicker_statistique: MatDatepicker<Moment>) {
-
-
-
     this.VentesElement = (0).toFixed(2);
     this.AchatsElement = (0).toFixed(2);
     this.Marge1Element = (0).toFixed(2);
@@ -299,10 +285,6 @@ console.log(num.toFixed(2))
 
       }.bind(this));
 
-
-
-
-
       // tslint:disable-next-line:prefer-for-of
       for (let index = 0; index < this.TableauBordFilter.length; index++) {
        const element = this.TableauBordFilter[index];
@@ -316,18 +298,11 @@ console.log(num.toFixed(2))
        this.AchatsElement = this.Achats.toFixed(2);
        this.Marge1Element = this.Marge1.toFixed(2);
        this.Marge2Element = this.Marge2.toFixed(2);
-
-
      }
-
       console.log(this.Ventes);
       } else {
         // tslint:disable-next-line:quotemark
         alert("HTTP-Error: " + response.status);
-
-
     }
-
   }
-
 }

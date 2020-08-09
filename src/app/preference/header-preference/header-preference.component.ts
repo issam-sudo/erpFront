@@ -26,6 +26,7 @@ export class HeaderPreferenceComponent implements OnInit {
   setrouter(e){
     this.route_active = e;
     console.log(this.route_active)
+    this.router.navigate([this.route_active]) ;
 
   }
 }

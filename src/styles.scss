@@ -30,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #ebeff2;
+    background-color: var(--primary_color);
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -38,7 +38,7 @@ body {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #323d41;
+    background: var(--dark_color);
 }
 
 .mat-form-field-flex {
@@ -52,7 +52,7 @@ body {
 }
 
 .custom-scrollbar-css::-webkit-scrollbar-track {
-    background: #ebeff2;
+    background: var(--primary_color);
 }
 
 .mat-icon-button ::ng-deep .mat-button-focus-overlay {
@@ -68,5 +68,10 @@ button:focus {
 }
 
 .mat-calendar {
-    background-color: #ebeff2;
+    background-color: var(--primary_color);
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background: var(--secondary_color);
+    color: var(--primary_color);
 }
