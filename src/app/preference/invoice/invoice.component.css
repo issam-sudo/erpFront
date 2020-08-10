@@ -1,0 +1,11 @@
+.elhoo_body_img_TableauBord_padding {
+    padding-left: 140px;
+}
+
+.elhoo_compte_title {
+    border-radius: 8px;
+    background-color: #323d41;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
