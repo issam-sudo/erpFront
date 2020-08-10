@@ -1,12 +1,11 @@
 <div class="container-fluid  custom-scrollbar-css">
-    <div class="row pb-5 pt-3 px-3">
-        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
 
-            <h3>PRÉFÉRENCES GÉNÉRALES </h3>
+            <h3 class="elhoo_compte_title">VOS COORDONNÉES </h3>
 
         </div>
     </div>
-
     <div class="row">
         <div class="col-12 col-md-4">
 
@@ -19,9 +18,7 @@
                         <mat-form-field appearance="none">
 
                             <input type="number" autocomplete="off" min="1" matInput placeholder="1" [formControl]="prenomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
-                            <mat-error *ngIf="prenomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
-                                Délai is <strong>required</strong>
-                            </mat-error>
+
                         </mat-form-field>
                     </div>
                 </div>
@@ -38,9 +35,7 @@
                                 </mat-option>
 
                             </mat-select>
-                            <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
-                                Délai is <strong>required</strong>
-                            </mat-error>
+
                         </mat-form-field>
                     </div>
                 </div>
@@ -48,35 +43,63 @@
 
             </div>
 
-            <div class="row">
+            <div class="row pb-2">
 
-                <div class="col-12 col-md-6">
-                    <p> Notes libres</p>
+                <div class="col-12 col-md-4">
+                    Notes libres
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-8 d-flex justify-content-end">
+                    <!--        <a  onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('fr')" value="{{langueValue}}" id="selectlanguage"> fr&nbsp; |&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('nl')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> nl&nbsp; |&nbsp; </button></a>
 
 
-                    <a onclick="translateFunc()"> <button (click)="clickButton('fr')" value="{{langueValue}}" id="selectlanguage"> fr | </button></a>
-                    <a onclick="translateFunc()"> <button (click)="clickButton('nl')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> nl | </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('en')" value="{{langueValue}}" id="selectlanguage"> en &nbsp;|&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('de')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> de&nbsp; |&nbsp; </button></a>
 
 
-                    <a onclick="translateFunc()"> <button (click)="clickButton('en')" value="{{langueValue}}" id="selectlanguage"> en | </button></a>
-                    <a onclick="translateFunc()"> <button (click)="clickButton('de')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> de | </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('es')" value="{{langueValue}}" id="selectlanguage"> es &nbsp;|&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('ca')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> ca  </button></a>
+
+                                                                -->
 
 
-                    <a onclick="translateFunc()"> <button (click)="clickButton('es')" value="{{langueValue}}" id="selectlanguage"> es | </button></a>
-                    <a onclick="translateFunc()"> <button (click)="clickButton('ca')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> ca  </button></a>
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+
 
 
                 </div>
             </div>
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group  ">
 
-                <mat-form-field class="example-full-width ">
+                <mat-form-field>
                     <mat-label> </mat-label>
-                    <textarea id="username" class="transOutput"> bonjour  </textarea>
+
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+                    <!--  <p class="transOutput">
+
+                    </p> -->
 
                 </mat-form-field>
 
@@ -84,11 +107,11 @@
 
         </div>
 
-        <div class="col-12 col-md-4">
-            <p class="pb-4"> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
-            <div class="row">
+        <div class="col-12 col-md-4 ">
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
 
-                <div class="col-6 col-md-4  ">
+                <div class="col-6 col-md-4 ">
                     <p> %invoicedate% </p>
                     <p> %duedate% </p>
                     <p> %totalamount% </p>
@@ -99,7 +122,7 @@
 
 
                 </div>
-                <div class="col-6 col-md-8">
+                <div class="col-6 col-md-8 ">
                     <p> la date de facture </p>
                     <p> la date d'échéance </p>
                     <p> le montant total </p>
@@ -111,74 +134,65 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 ">
 
 
-            <p> Colonne "Quantité"</p>
+            <p> Colonne "Quantité "</p>
 
-            <div class="input-group mb-4">
-                <mat-form-field appearance="none" class="example-full-width">
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
 
-                    <mat-select style="font-size: 12px; padding-left:
-                        12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
 
-                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
                         </mat-option>
 
                     </mat-select>
-                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
-                        Délai is <strong>required</strong>
-                    </mat-error>
+
+
                 </mat-form-field>
             </div>
 
 
-            <p> Colonne "Référence"</p>
-            <div class="input-group mb-4">
-                <mat-form-field appearance="none" class="example-full-width">
+            <p> Colonne "Référence "</p>
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
 
-                    <mat-select style="font-size: 12px; padding-left:
-                        12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
 
-                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
                         </mat-option>
 
                     </mat-select>
-                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
-                        Délai is <strong>required</strong>
-                    </mat-error>
+
+
                 </mat-form-field>
             </div>
             <p> Nom de l'adresse d'envoi</p>
-            <div class="input-group mb-4">
-                <mat-form-field appearance="none" class="example-full-width">
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
 
-                    <mat-select style="font-size: 12px; padding-left:
-                        12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
 
-                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
                         </mat-option>
 
                     </mat-select>
-                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
-                        Délai is <strong>required</strong>
-                    </mat-error>
+
+
                 </mat-form-field>
             </div>
 
 
-            <section class="example-section">
-                <mat-checkbox class="example-margin" [(ngModel)]="checkedMail">Toujours m'envoyer une copie de la facture par email</mat-checkbox>
+            <section class="example-section ">
+                <mat-checkbox class="example-margin " [(ngModel)]="checkedMail ">Toujours m'envoyer une copie de la facture par email</mat-checkbox>
 
             </section>
-            <section class="example-section">
-                <mat-checkbox class="example-margin" [(ngModel)]="checkedReception">Toujours demander un accusé de réception</mat-checkbox>
+            <section class="example-section ">
+                <mat-checkbox class="example-margin " [(ngModel)]="checkedReception ">Toujours demander un accusé de réception</mat-checkbox>
 
             </section>
         </div>
@@ -189,25 +203,297 @@
     </div>
 
 
-    <div class="row pb-5 pt-3 px-3">
-        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
 
-            <h1>INSTRUCTIONS DE PAIEMENT </h1>
-
-
-            <a onclick="translateFunc()"> <button (click)="clickButton('fr')" value="{{langueValue}}" type="button" id="selectlanguage"> fr </button></a>
-            <a onclick="translateFunc()"> <button (click)="clickButton('en')" value="{{langueValue}}" type="button" id="selectlanguage" onclick="translateFunc()"> en </button></a>
-
-
-            <div>
-
-
-                <textarea id="username" class="transOutput"> bonjour  </textarea>
-            </div>
-            <div *ngIf="showTradiction">
-                <textarea class="transOutput">   </textarea>
-            </div>
+            <h3 class="elhoo_compte_title">VOS COORDONNÉES </h3>
 
         </div>
     </div>
+
+    <div class="row">
+
+
+        <div class="col-12 col-md-4">
+            <p> Code IBAN</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Code IBAN" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <p> Code BIC</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Code BIC" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <p> Type de communication</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
+
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
+
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+
+                </mat-form-field>
+            </div>
+
+
+        </div>
+
+        <div class="col-12 col-md-4">
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+                    Instructions de paiement
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group  ">
+
+                <mat-form-field>
+                    <mat-label> </mat-label>
+
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+
+
+                </mat-form-field>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-12 col-md-4">
+
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row pb-3 pt-4">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">CHAMPS PERSONNALISÉS </h3>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+                    Champ personnalisé 1
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Code IBAN" class="InputFirstSection">
+
+                </mat-form-field>
+
+            </div>
+            <p> Valeur par défaut</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+                    Champ personnalisé 2
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 2" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <p> Valeur par défaut</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+
+
+
+        </div>
+        <div class="col-12 col-md-4">
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <a onclick="translateFunc() "> <button (click)="clickButton( 'fr') " value="{{langueValue}} " type="button " id="selectlanguage "> fr </button></a>
+<a onclick="translateFunc() "> <button (click)="clickButton( 'en') " value="{{langueValue}} " type="button " id="selectlanguage " onclick="translateFunc() "> en </button></a>
+<div>
+
+
+    <textarea id="username " class="transOutput "> bonjour  </textarea>
 </div>
+<div *ngIf="showTradiction ">
+    <textarea class="transOutput ">   </textarea>
+</div>
+
+
+
+
+
+
+
+
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'fr') " value="{{langueValue}} " id="selectlanguage "> fr | </button></a>
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'nl') " value="{{langueValue}} " id="selectlanguage " onclick="translateFunc() "> nl | </button></a>
+
+
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'en') " value="{{langueValue}} " id="selectlanguage "> en | </button></a>
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'de') " value="{{langueValue}} " id="selectlanguage " onclick="translateFunc() "> de | </button></a>
+
+
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'es') " value="{{langueValue}} " id="selectlanguage "> es | </button></a>
+                    <a onclick="translateFunc() "> <button (click)="clickButton( 'ca') " value="{{langueValue}} " id="selectlanguage " onclick="translateFunc() "> ca  </button></a>
+
+
+
+
+
+-->

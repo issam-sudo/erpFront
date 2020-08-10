@@ -28,22 +28,31 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
-  value = 'Clear me';
+  
   checkedMail = false;
   checkedReception = false;
-  langue: HTMLElement;
+  langue: any;
   langueValue: string;
+  textLangue: any;
+  value: string;
+  lng: any;
+  langue2: string;
   constructor(private router: Router) { }
   
   showTradiction: any =false;
   ngOnInit(): void {
  
-   
-    
+ 
+ 
   }
-  clickButton(e: string) {
 
-    this.langue  =  document.getElementById('selectlanguage1');
+ 
+  clickButton(e: string) {
+  
+    this.langue2  =  (<HTMLInputElement>document.getElementById('textLangue')).value;
+    
+ console.log(this.langue2)
+ 
     this.langueValue = e
     console.log(this.langueValue);
     this.showTradiction =true

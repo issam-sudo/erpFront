@@ -30,34 +30,6 @@
     padding-top: 104px;
 } */
 
-::ng-deep .mat-datepicker-content {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-::ng-deep .mat-calendar-body-selected {
-    background-color: var(--secondary_color);
-}
-
-::ng-deep .mat-form-field-underline {
-    display: none;
-}
-
-::ng-deep .custom-frame .mat-checkbox-background,
- ::ng-deep .custom-frame .mat-checkbox-frame {
-    border-radius: 70% !important;
-}
-
-::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
-.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: var(--secondary_color);
-}
-
-::ng-deep .my-custom-dialog-class mat-dialog-container {
-    padding: 0;
-    background-color: var(--primary_color);
-}
-
 .elhoo_compte_IconSvgStyle {
     text-align: center;
     width: 50px;
@@ -126,6 +98,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     color: white;
+    padding: .5rem .8rem;
 }
 
 .elhoo_compte_messageErrorPosition {
@@ -248,4 +221,24 @@ ul.elhoo_account_listeIcon li a:hover svg path {
 .InputFirstSection {
     font-size: 12px;
     padding-left: 12px;
+}
+
+.astext {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.BtnLanguageActive {
+    color: var(--secondary_color);
+}
+
+.BtnLanguageInactive {
+    color: var(--dark_color);
+}
+
+.divider {
+    color: var(--secondary_color);
 }
