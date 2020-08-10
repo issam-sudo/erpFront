@@ -1,9 +1,9 @@
-<div class="container-fluid elhoo_body_img_TableauBord_padding
+<div class="container-fluid
     custom-scrollbar-css">
-    <div class="row pb-5 pt-3 px-3">
-        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
 
-            <h1>VOS COORDONNÉES </h1>
+            <h3 class="elhoo_compte_title">VOS COORDONNÉES </h3>
 
         </div>
     </div>
@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -37,7 +37,7 @@
             </div>
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -51,7 +51,7 @@
         <div class="col-12 col-md-4">
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -72,7 +72,7 @@
             </div>
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom d'utilisateur *</mat-label>
@@ -87,7 +87,7 @@
             </div>
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Mot de passe actuel</mat-label>
@@ -101,7 +101,7 @@
         <div class="col-12 col-md-4">
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -115,7 +115,7 @@
 
 
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Répéter mot-de-passe
@@ -126,7 +126,7 @@
 
             </div>
 
-            <div class="input-group  mb-4">
+            <div class="input-group mb-4">
 
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -146,10 +146,10 @@
         </div>
     </div>
 
-    <div class="row pb-5 pt-3 px-3">
-        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
 
-            <h1>VOTRE SOCIÉTÉ </h1>
+            <h3 class="elhoo_compte_title">VOTRE SOCIÉTÉ </h3>
 
 
         </div>
@@ -208,7 +208,7 @@
                     <div class="mb-4">
 
 
-                        <mat-form-field appearance="none" style="width: 100%;">
+                        <mat-form-field appearance="none" class="w-100">
                             <mat-label class="elhoo_compte_labelInputPosition">Code postal * </mat-label>
                             <input type="number" autocomplete="off" matInput placeholder="Code postal *" [formControl]="codePostalFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
                             <mat-error *ngIf="codePostalFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
@@ -223,7 +223,7 @@
                 <div class="col-12 col-md-6">
                     <div class="mb-4">
 
-                        <mat-form-field appearance="none" style="width: 100%;">
+                        <mat-form-field appearance="none" class="w-100">
                             <mat-label class="elhoo_compte_labelInputPosition">Ville *
                             </mat-label>
                             <mat-select style="font-size: 12px; padding-left:
@@ -260,7 +260,7 @@
 
 
 
-                <mat-form-field appearance="none" style="width: 252%;">
+                <mat-form-field appearance="none">
                     <mat-label class="elhoo_compte_labelInputPosition">Début de votre excercice</mat-label>
                     <input disabled autocomplete="off" min="1990" max="2020" class="InputFirstSection" matInput [matDatepicker]="picker1">
 
@@ -279,8 +279,8 @@
 
 
 
-        <div class="col-12 col-md-2" style="display: flex; justify-content:
-            center; align-content: center;">
+        <div class="col-12 col-md-2 d-flex justify-content-center
+            align-content-center">
 
             <div class="h-100 elhoo_compte-logo" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' ,'width.px':
                 elhoolink.offsetHeight}" style="width: 80%; background-image:
@@ -291,22 +291,97 @@
 
             <div class="mt-5 pt-4">
                 <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
-                <ul class="list-group pt-2 elhoo_account_listeIcon" style="flex-direction: unset;
-                    display: flex; justify-content: center;">
+                <ul class="list-group pt-2 elhoo_account_listeIcon
+                    justify-content-center d-flex" style="flex-direction:
+                    unset;">
                     <li (click)="onSelectFileEmpty($event)" class="list-group-item
-                        mr-2 ">
+                        mr-2">
                         <a>
                             <svg width="20" height="24" viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.85464 1.92945H14.7281V2.70975H16.4879V1.82022C16.4882 0.957089 15.7505 0.254639 14.8437 0.254639H9.73902C8.83222 0.254639 8.09454 0.957089 8.09454 1.82022V2.70975H9.85464V1.92945ZM20.5524 9.34485H4.0303C3.57764 9.34485 3.22121 9.7125 3.25766 10.1419L4.63891 26.3936C4.71595 27.301 5.51113 27.9996 6.46674 27.9996H18.1157C19.0712 27.9996 19.8666 27.301 19.9435 26.3934L21.3247 10.1419C21.3615 9.7125 21.0051 9.34485 20.5524 9.34485ZM8.03077 26.2663C8.01241 26.2673 7.99405 26.268 7.9757 26.268C7.51425 26.268 7.12693 25.926 7.09851 25.482L6.23276 12.1401C6.20304 11.6785 6.57193 11.2812 7.05699 11.2529C7.54046 11.2248 7.95973 11.5752 7.98945 12.0372L8.85492 25.3789C8.88489 25.8406 8.51582 26.2377 8.03077 26.2663ZM13.1812 25.4305C13.1812 25.8928 12.7873 26.2678 12.3011 26.2678C11.8151 26.2678 11.4211 25.8928 11.4211 25.4305V12.0886C11.4211 11.626 11.8151 11.2512 12.3011 11.2512C12.7871 11.2512 13.1812 11.626 13.1812 12.0886V25.4305ZM18.35 12.1377L17.5236 25.4797C17.4962 25.9246 17.1081 26.2678 16.6459 26.2678C16.6286 26.2678 16.6109 26.2673 16.5934 26.2665C16.1082 26.239 15.7381 25.843 15.7667 25.3812L16.5931 12.0393C16.6214 11.5775 17.0366 11.2253 17.523 11.2526C18.0084 11.2797 18.3785 11.6763 18.35 12.1377ZM23.5957 6.7608L23.0178 5.11233C22.8654 4.67769 22.4378 4.38456 21.9561 4.38456H2.62646C2.14481 4.38456 1.71716 4.67769 1.56501 5.11233L0.987029 6.7608C0.875489 7.07886 1.02072 7.40313 1.29144 7.5648C1.4016 7.63065 1.53217 7.67016 1.67582 7.67016H22.9071C23.0503 7.67016 23.1813 7.63065 23.2914 7.56459C23.5621 7.4028 23.7072 7.07865 23.5957 6.7608Z" fill="#F2F5FA"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.85464
+                                    1.92945H14.7281V2.70975H16.4879V1.82022C16.4882
+                                    0.957089 15.7505 0.254639 14.8437
+                                    0.254639H9.73902C8.83222 0.254639 8.09454
+                                    0.957089 8.09454
+                                    1.82022V2.70975H9.85464V1.92945ZM20.5524
+                                    9.34485H4.0303C3.57764 9.34485 3.22121
+                                    9.7125 3.25766 10.1419L4.63891
+                                    26.3936C4.71595 27.301 5.51113 27.9996
+                                    6.46674 27.9996H18.1157C19.0712 27.9996
+                                    19.8666 27.301 19.9435 26.3934L21.3247
+                                    10.1419C21.3615 9.7125 21.0051 9.34485
+                                    20.5524 9.34485ZM8.03077 26.2663C8.01241
+                                    26.2673 7.99405 26.268 7.9757 26.268C7.51425
+                                    26.268 7.12693 25.926 7.09851 25.482L6.23276
+                                    12.1401C6.20304 11.6785 6.57193 11.2812
+                                    7.05699 11.2529C7.54046 11.2248 7.95973
+                                    11.5752 7.98945 12.0372L8.85492
+                                    25.3789C8.88489 25.8406 8.51582 26.2377
+                                    8.03077 26.2663ZM13.1812 25.4305C13.1812
+                                    25.8928 12.7873 26.2678 12.3011
+                                    26.2678C11.8151 26.2678 11.4211 25.8928
+                                    11.4211 25.4305V12.0886C11.4211 11.626
+                                    11.8151 11.2512 12.3011 11.2512C12.7871
+                                    11.2512 13.1812 11.626 13.1812
+                                    12.0886V25.4305ZM18.35 12.1377L17.5236
+                                    25.4797C17.4962 25.9246 17.1081 26.2678
+                                    16.6459 26.2678C16.6286 26.2678 16.6109
+                                    26.2673 16.5934 26.2665C16.1082 26.239
+                                    15.7381 25.843 15.7667 25.3812L16.5931
+                                    12.0393C16.6214 11.5775 17.0366 11.2253
+                                    17.523 11.2526C18.0084 11.2797 18.3785
+                                    11.6763 18.35 12.1377ZM23.5957
+                                    6.7608L23.0178 5.11233C22.8654 4.67769
+                                    22.4378 4.38456 21.9561
+                                    4.38456H2.62646C2.14481 4.38456 1.71716
+                                    4.67769 1.56501 5.11233L0.987029
+                                    6.7608C0.875489 7.07886 1.02072 7.40313
+                                    1.29144 7.5648C1.4016 7.63065 1.53217
+                                    7.67016 1.67582 7.67016H22.9071C23.0503
+                                    7.67016 23.1813 7.63065 23.2914
+                                    7.56459C23.5621 7.4028 23.7072 7.07865
+                                    23.5957 6.7608Z" fill="#F2F5FA" />
                                 </svg>
 
                         </a>
                     </li>
-                    <li class="list-group-item ">
+                    <li class="list-group-item">
                         <a (click)="loadImage.click()">
                             <svg width="20" height="20" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3876 13.1878C20.767 13.1878 20.2651 13.6798 20.2651 14.2859V23.0724C20.2651 23.6779 19.7625 24.1708 19.1429 24.1708H3.42963C2.80996 24.1708 2.30722 23.6779 2.30722 23.0724V7.69588C2.30722 7.09099 2.80996 6.59782 3.42963 6.59782H12.4087C13.0293 6.59782 13.531 6.10561 13.531 5.49943C13.531 4.89316 13.0293 4.40104 12.4087 4.40104H3.42963C1.57311 4.40104 0.0625 5.87947 0.0625 7.69588V23.0724C0.0625 24.8893 1.57311 26.3676 3.42963 26.3676H19.1429C20.9995 26.3676 22.5101 24.8893 22.5101 23.0724V14.2859C22.5101 13.6787 22.0083 13.1878 21.3876 13.1878ZM10.5858 12.1873C10.5071 12.2641 10.4545 12.3617 10.4321 12.467L9.63844 16.3509C9.60156 16.5309 9.65993 16.7165 9.79235 16.8472C9.89901 16.9515 10.0426 17.0076 10.1899 17.0076C10.2255 17.0076 10.2627 17.0043 10.2996 16.9967L14.2673 16.2204C14.3772 16.1981 14.4773 16.1467 14.5547 16.0695L23.435 7.37965L19.4674 3.49726L10.5858 12.1873ZM26.178 0.811904C25.0837 -0.258916 23.3037 -0.258916 22.2102 0.811904L20.6571 2.33176L24.6246 6.21436L26.178 4.69426C26.7078 4.17694 26.9996 3.48721 26.9996 2.75347C26.9996 2.02 26.7078 1.33 26.178 0.811904Z" fill="#F2F5FA"/>
-                                </svg>
+                                    <path fill-rule="evenodd"
+                                        clip-rule="evenodd" d="M21.3876
+                                        13.1878C20.767 13.1878 20.2651 13.6798
+                                        20.2651 14.2859V23.0724C20.2651 23.6779
+                                        19.7625 24.1708 19.1429
+                                        24.1708H3.42963C2.80996 24.1708 2.30722
+                                        23.6779 2.30722 23.0724V7.69588C2.30722
+                                        7.09099 2.80996 6.59782 3.42963
+                                        6.59782H12.4087C13.0293 6.59782 13.531
+                                        6.10561 13.531 5.49943C13.531 4.89316
+                                        13.0293 4.40104 12.4087
+                                        4.40104H3.42963C1.57311 4.40104 0.0625
+                                        5.87947 0.0625 7.69588V23.0724C0.0625
+                                        24.8893 1.57311 26.3676 3.42963
+                                        26.3676H19.1429C20.9995 26.3676 22.5101
+                                        24.8893 22.5101 23.0724V14.2859C22.5101
+                                        13.6787 22.0083 13.1878 21.3876
+                                        13.1878ZM10.5858 12.1873C10.5071 12.2641
+                                        10.4545 12.3617 10.4321 12.467L9.63844
+                                        16.3509C9.60156 16.5309 9.65993 16.7165
+                                        9.79235 16.8472C9.89901 16.9515 10.0426
+                                        17.0076 10.1899 17.0076C10.2255 17.0076
+                                        10.2627 17.0043 10.2996 16.9967L14.2673
+                                        16.2204C14.3772 16.1981 14.4773 16.1467
+                                        14.5547 16.0695L23.435 7.37965L19.4674
+                                        3.49726L10.5858 12.1873ZM26.178
+                                        0.811904C25.0837 -0.258916 23.3037
+                                        -0.258916 22.2102 0.811904L20.6571
+                                        2.33176L24.6246 6.21436L26.178
+                                        4.69426C26.7078 4.17694 26.9996 3.48721
+                                        26.9996 2.75347C26.9996 2.02 26.7078
+                                        1.33 26.178 0.811904Z" fill="#F2F5FA" />
+                                    </svg>
 
                         </a>
                     </li>
@@ -326,10 +401,10 @@
 
 
 
-    <div class="row pb-5 mt-5 px-3">
-        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+    <div class="row pb-3 mt-5">
+        <div class="col-12 col-md-12">
 
-            <h1>VOTRE FORFAIT</h1>
+            <h3 class="elhoo_compte_title">VOTRE FORFAIT</h3>
 
         </div>
     </div>
@@ -339,8 +414,10 @@
             <p class="elhoo_body_subtitle_textStyle">Forfait </p>
             <p class="elhoo_body_subtitle_textStyle">Clients </p>
             <p class="elhoo_body_subtitle_textStyle">Kill the Bills (tous) </p>
-            <p class="elhoo_body_subtitle_textStyle">Kill the Bills (payant)</p>
-            <p class="elhoo_body_subtitle_textStyle">Montant payé / mois </p>
+            <p class="elhoo_body_subtitle_textStyle">Kill the Bills (payant)
+            </p>
+            <p class="elhoo_body_subtitle_textStyle">Montant payé / mois
+            </p>
         </div>
         <div class="col-12 col-md-4 col-sm">
             <p class="elhoo_body_subtitle_textStyle2">Gratuit </p>
@@ -350,140 +427,188 @@
             <p class="elhoo_body_subtitle_textStyle">0 € HTVA </p>
         </div>
 
-        <div class="col-12 col-md-3 pt-4 col-sm" style="margin-left: 134px;">
-            <a   class="btn elhoo_body_btn text-uppercase
-                w-100 buttonText">
-                <svg width="20" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;
-                    width: 16px;">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26
-                        3.2233V3.85786H0V3.2233C0 1.4458 1.47639 -0.00012207
-                        3.29075 -0.00012207H22.7093C24.5236 -0.00012207 26
-                        1.4458 26 3.2233ZM26 5.46638H0V7.45514H26V5.46638ZM0
-                        9.06364V13.7766C0 15.554 1.47639 16.9999 3.29075
-                        16.9999H22.7093C24.5236 16.9999 26 15.554 26
-                        13.7766V9.06364H0ZM19.0673 13.3758C18.5889 13.3758
-                        18.2011 12.9956 18.2011 12.527C18.2011 12.0583 18.5889
-                        11.6786 19.0673 11.6786C19.5458 11.6786 19.9335 12.0583
-                        19.9335 12.527C19.9335 12.9956 19.5458 13.3758 19.0673
-                        13.3758ZM21.496 13.3758C21.0176 13.3758 20.6299 12.9956
-                        20.6299 12.527C20.6299 12.0583 21.0176 11.6786 21.496
-                        11.6786C21.9745 11.6786 22.3625 12.0583 22.3625
-                        12.527C22.3625 12.9956 21.9745 13.3758 21.496 13.3758Z"
-                        fill="#323D41" />
-                    </svg> Méthode de paiement </a>
+        <div class="col-12 col-md-3 pt-4 col-sm" style="margin-left:
+                    134px;">
+            <a class="btn elhoo_btn_transparent text-uppercase w-100
+                        buttonText">
+                <svg class="mr-1" width="16" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26
+                                3.2233V3.85786H0V3.2233C0 1.4458 1.47639
+                                -0.00012207
+                                3.29075 -0.00012207H22.7093C24.5236 -0.00012207
+                                26
+                                1.4458 26 3.2233ZM26
+                                5.46638H0V7.45514H26V5.46638ZM0
+                                9.06364V13.7766C0 15.554 1.47639 16.9999 3.29075
+                                16.9999H22.7093C24.5236 16.9999 26 15.554 26
+                                13.7766V9.06364H0ZM19.0673 13.3758C18.5889
+                                13.3758
+                                18.2011 12.9956 18.2011 12.527C18.2011 12.0583
+                                18.5889
+                                11.6786 19.0673 11.6786C19.5458 11.6786 19.9335
+                                12.0583
+                                19.9335 12.527C19.9335 12.9956 19.5458 13.3758
+                                19.0673
+                                13.3758ZM21.496 13.3758C21.0176 13.3758 20.6299
+                                12.9956
+                                20.6299 12.527C20.6299 12.0583 21.0176 11.6786
+                                21.496
+                                11.6786C21.9745 11.6786 22.3625 12.0583 22.3625
+                                12.527C22.3625 12.9956 21.9745 13.3758 21.496
+                                13.3758Z"
+                                fill="#323D41" />
+                            </svg> Méthode de paiement </a>
 
 
-            <p class="elhoo_body_subtitle_textStyle1 pb-3 w-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+            <p class="elhoo_body_subtitle_textStyle1 pb-3 w-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
 
-            <a (click)="openDialogFacturation()" class="btn elhoo_body_btn1
-                    text-uppercase mb-1 pb-2 w-100 buttonText">
+            <a (click)="openDialogFacturation()" class="btn
+                            elhoo_btn text-uppercase mb-1 pb-2 w-100
+                            buttonText">
 
-                <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:
-                        8px;
-                        width: 11px;">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M13.0019 3.42461C11.7687 1.32995 9.57823
-                            0.0501604 7.14245 0.00137736C7.03846 -0.000784641
-                            6.93392 -0.000784641 6.82993 0.00137736C4.39415
-                            0.0501604 2.20372 1.32995 0.970464 3.42461C-0.290022
-                            5.56577 -0.324528 8.13767 0.878088 10.3047L5.91694
-                            19.3823C5.91915 19.3863 5.92147 19.3902 5.92396
-                            19.3942C6.1455 19.7736 6.54262 19.9999 6.98615
-                            19.9999C7.42976 19.9999 7.82708 19.7736 8.0486
-                            19.3942C8.05093 19.3902 8.05323 19.3863 8.05544
-                            19.3823L13.0943 10.3047C14.2969 8.13767 14.2624
-                            5.56577 13.0019 3.42461ZM6.98615 9.06227C5.41049
-                            9.06227 4.12869 7.80082 4.12869 6.24979C4.12869
-                            4.69901 5.41049 3.43732 6.98615 3.43732C8.56189
-                            3.43732 9.84369 4.69901 9.84369 6.24979C9.84369
-                            7.80082 8.56189 9.06227 6.98615 9.06227Z"
-                            fill="white" />
-                        </svg> Adresse de facturation</a>
+                <svg class="mr-1" width="11" height="20" viewBox="0
+                                0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.0019 3.42461C11.7687 1.32995 9.57823
+                                    0.0501604 7.14245 0.00137736C7.03846
+                                    -0.000784641
+                                    6.93392 -0.000784641 6.82993
+                                    0.00137736C4.39415
+                                    0.0501604 2.20372 1.32995 0.970464
+                                    3.42461C-0.290022
+                                    5.56577 -0.324528 8.13767 0.878088
+                                    10.3047L5.91694
+                                    19.3823C5.91915 19.3863 5.92147 19.3902
+                                    5.92396
+                                    19.3942C6.1455 19.7736 6.54262 19.9999
+                                    6.98615
+                                    19.9999C7.42976 19.9999 7.82708 19.7736
+                                    8.0486
+                                    19.3942C8.05093 19.3902 8.05323 19.3863
+                                    8.05544
+                                    19.3823L13.0943 10.3047C14.2969 8.13767
+                                    14.2624
+                                    5.56577 13.0019 3.42461ZM6.98615
+                                    9.06227C5.41049
+                                    9.06227 4.12869 7.80082 4.12869
+                                    6.24979C4.12869
+                                    4.69901 5.41049 3.43732 6.98615
+                                    3.43732C8.56189
+                                    3.43732 9.84369 4.69901 9.84369
+                                    6.24979C9.84369
+                                    7.80082 8.56189 9.06227 6.98615 9.06227Z"
+                                    fill="white" />
+                                </svg> Adresse de facturation</a>
             <p class="elhoo_body_subtitle_textStyle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
         </div>
     </div>
 
 
-    <div class="row pb-4 mb-4 mt-4 ml-1 mr-2 pl-3 elhoo_compte_title2">
-        <div class="col-6 col-md-9 pt-4">
-            <h1>VOS UTILISATEURS</h1>
-        </div>
-        <div class="col-6 col-md-3 pt-4" style="justify-content:
-                    flex-end;">
-            <a (click)="openDialog()" class="btn elhoo_body_btn1 w-100
-                        text-uppercase buttonText">
-
-                <svg width="14" height="20" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;
-                            width: 11px;">
-                            <path d="M15.4792
-                                10.2708H10.6667V14.9375H5.41667V10.2708H0.604167V5.3125H5.41667V0.645831H10.6667V5.3125H15.4792V10.2708Z"
-                                fill="white" />
-                            </svg> AJOUTER UN UTILISATEUR</a>
-        </div>
-
-
-    </div>
-
-    <div class="row pb-4 mb-4 mt-4 ml-1 mr-2 pl-3
-                    elhoo_compte_title2">
-        <div class="col-6 col-md-9 pt-4">
-
-            <h1>VOS ABONNEMENTS MAIL</h1>
-
-
-        </div>
-        <div class="col-6 col-md-3 pt-4" style="justify-content:
-                        flex-end;">
-            <section class="example-section w-100">
-                <mat-checkbox class="example-margin" [(ngModel)]="checked">
-
-                    <p class="text-uppercase" style="margin: 0 0
-                                    -24px;"> Inscription au rapport hebdomadaire</p>
-                    <br>
-                    <p *ngIf="checked ==false" style="font-size:
-                                    smaller;" style="margin: 0 0 -11px;
-                                    font-size: 11px; font-family: 'Poppins',
-                                    sans-serif;"> Vous n'êtes désormais inscrit au rapport hebdomadaire</p>
-
-                    <p *ngIf="checked ==true" style="font-size:
-                                    smaller;" style="margin: 0 0
-                                    -11px;font-size: 11px; color: #D22254;
-                                    font-family: 'Poppins', sans-serif;"> Vous êtes désormais inscrit au rapport hebdomadaire
-                    </p>
+    <div class="row pb-3 px-3">
+        <div class="col-12 col-md-12 col-sm-12
+                            elhoo_compte_title2">
+            <div class="row">
 
 
 
-                </mat-checkbox>
+
+                <div class="col-6 col-md-9 d-flex
+                                    align-items-center">
+                    <h4>VOS UTILISATEURS</h4>
+                </div>
+                <div class="col-6 col-md-3 d-flex
+                                    align-items-center">
+                    <a (click)="openDialog()" class="btn
+                                        elhoo_btn w-100
+                                        text-uppercase buttonText">
+
+                        <svg width="11" height="20" viewBox="0 0
+                                            16 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
+                                            <path d="M15.4792
+                                                10.2708H10.6667V14.9375H5.41667V10.2708H0.604167V5.3125H5.41667V0.645831H10.6667V5.3125H15.4792V10.2708Z"
+                                                fill="white" />
+                                            </svg> AJOUTER UN UTILISATEUR</a>
+                </div>
 
 
-            </section>
-
-
+            </div>
         </div>
     </div>
+    <div class="row pb-3 px-3">
 
-    <div class="row pb-4 mb-4 mt-4 ml-1 mr-2 pl-3
-                    elhoo_compte_title2">
-        <div class="col-6 col-md-9 pt-4">
+        <div class="col-12 col-md-12 col-sm-12
+                                elhoo_compte_title2">
+            <div class="row">
+                <div class="col-6 col-md-9 d-flex
+                                        align-items-center">
+                    <h4>VOS ABONNEMENTS MAIL</h4>
+                </div>
+                <div class="col-6 col-md-3 d-flex
+                                        align-items-center">
+                    <section class="example-section w-100">
+                        <mat-checkbox class="example-margin" [(ngModel)]="checked">
 
-            <h1>CONFIDENTIALITÉ</h1>
+                            <p class="text-uppercase" style="margin: 0 0-24px;">
+                                Inscription au rapport hebdomadaire
+                            </p>
+                            <br>
+                            <p *ngIf="checked ==false" style="font-size:
+                                                    smaller;" style="margin: 0 0
+                                                    -11px;
+                                                    font-size: 11px;"> Vous n'êtes désormais inscrit au rapport hebdomadaire</p>
+
+                            <p *ngIf="checked ==true" style="font-size:
+                                                    smaller;" style="margin: 0 0
+                                                    -11px;font-size: 11px;
+                                                    color: #D22254;"> Vous êtes désormais inscrit au rapport hebdomadaire
+                            </p>
 
 
-        </div>
-        <div class="col-6 col-md-3 pt-4" >
 
-            <a href="#" class="btn elhoo_body_btn1 w-100
-                            text-uppercase buttonText">
+                        </mat-checkbox>
 
-                            Vos données personnelles chez elhoo</a>
 
+                    </section>
+                </div>
+
+
+            </div>
         </div>
 
     </div>
 
-    <div class="pr-2 pb-3 justify-content-end d-flex"  >
+    <div class="row pb-3 px-3">
+        <div class="col-12 col-md-12 col-sm-12
+                                elhoo_compte_title2">
+            <div class="row">
 
-        <button class="btn active text-uppercase btnEnregistrer " role="button" aria-pressed="true">enregristrer</button>
+
+
+
+                <div class="col-6 col-md-9 d-flex
+                                        align-items-center">
+                    <h4>CONFIDENTIALITÉ</h4>
+
+                </div>
+                <div class="col-6 col-md-3 d-flex
+                                        align-items-center">
+                    <a href="#" class="btn elhoo_btn w-100
+                                            text-uppercase buttonText">
+
+                                            Vos données personnelles chez elhoo</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="pr-2 pb-3 justify-content-end d-flex">
+        <button class="btn active text-uppercase btn_Save" role="button" aria-pressed="true">enregristrer</button>
     </div>
 
 

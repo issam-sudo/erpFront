@@ -1,16 +1,13 @@
-<div class="container-fluid elhoo_body_img_TableauBord_padding pt-5 custom-scrollbar-css">
+<div class="container-fluid  pt-5 custom-scrollbar-css">
 
     <div class="row pt-5">
         <div class="col col-md-6">
 
-            <p *ngIf="route_active == '/preference/account'" class="elhoo_body_title_textStyle text-uppercase">Mon compte </p>
-            <p *ngIf="route_active == '/preference/invoice'" class="elhoo_body_title_textStyle text-uppercase">Ma facture </p>
-            <p *ngIf="route_active == '/preference/compte'" class="elhoo_body_title_textStyle text-uppercase">Mon devis </p>
-            <p *ngIf="route_active == '/preference/compte3'" class="elhoo_body_title_textStyle text-uppercase text-uppercase">Rappels </p>
-
-            <p class="elhoo_body_subtitle_textStyleHeader">PRÉFÉRENCES </p>
-
-
+            <h1 *ngIf="route_active == '/preference/account'" class="text-uppercase">Mon compte </h1>
+            <h1 *ngIf="route_active == '/preference/invoice'" class="text-uppercase">Ma facture </h1>
+            <h1 *ngIf="route_active == '/preference/compte'" class="text-uppercase">Mon devis </h1>
+            <h1 *ngIf="route_active == '/preference/compte3'" class="text-uppercase">Rappels </h1>
+            <h2>PRÉFÉRENCES </h2>
 
         </div>
 

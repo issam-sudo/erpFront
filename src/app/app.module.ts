@@ -14,6 +14,8 @@ import { AccountFacturationFrom } from './preference/account/account.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PreferenceContainerComponent } from './preference/preference-container/preference-container.component';
 import { HeaderPreferenceComponent } from './preference/header-preference/header-preference.component';
+import { InvoiceComponent } from './preference/invoice/invoice.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { HeaderPreferenceComponent } from './preference/header-preference/header
     AccountAddUserFrom,
     AccountFacturationFrom,
     PreferenceContainerComponent,
-    HeaderPreferenceComponent
+    HeaderPreferenceComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,

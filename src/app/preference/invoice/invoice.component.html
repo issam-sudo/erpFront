@@ -1,21 +1,213 @@
-<body>
-    <div class="form-element">
+<div class="container-fluid  custom-scrollbar-css">
+    <div class="row pb-5 pt-3 px-3">
+        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+
+            <h3>PRÉFÉRENCES GÉNÉRALES </h3>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+
+            <p> Délai de paiement par défaut *</p>
+
+            <div class="row">
+
+                <div class="col-12 col-md-4  ">
+                    <div class="input-group   mb-4">
+                        <mat-form-field appearance="none">
+
+                            <input type="number" autocomplete="off" min="1" matInput placeholder="1" [formControl]="prenomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <mat-error *ngIf="prenomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Délai is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8  ">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none">
+
+                            <mat-select style="font-size: 12px; padding-left:
+                                12px;
+                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+
+                                <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                                    {{delai.viewValue}}
+                                </mat-option>
+
+                            </mat-select>
+                            <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Délai is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
 
 
-        <div>
-            <button (click)="clickButton('es')" value="{{vl}}" type="button" name="buttonGroup" onclick="translateFunc()" id="selectlanguage"> 1 </button>
-            <button (click)="clickButton('en')" value="{{vl}}" type="button" name="buttonGroup" onclick="translateFunc()" id="selectlanguage"> 2 </button>
+            </div>
 
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+                    <p> Notes libres</p>
+                </div>
+                <div class="col-12 col-md-6">
+
+
+                    <a onclick="translateFunc()"> <button (click)="clickButton('fr')" value="{{langueValue}}" id="selectlanguage"> fr | </button></a>
+                    <a onclick="translateFunc()"> <button (click)="clickButton('nl')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> nl | </button></a>
+
+
+                    <a onclick="translateFunc()"> <button (click)="clickButton('en')" value="{{langueValue}}" id="selectlanguage"> en | </button></a>
+                    <a onclick="translateFunc()"> <button (click)="clickButton('de')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> de | </button></a>
+
+
+                    <a onclick="translateFunc()"> <button (click)="clickButton('es')" value="{{langueValue}}" id="selectlanguage"> es | </button></a>
+                    <a onclick="translateFunc()"> <button (click)="clickButton('ca')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> ca  </button></a>
+
+
+                </div>
+            </div>
+
+
+            <div class="input-group  mb-4">
+
+                <mat-form-field class="example-full-width ">
+                    <mat-label> </mat-label>
+                    <textarea id="username" class="transOutput"> bonjour  </textarea>
+
+                </mat-form-field>
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-4">
+            <p class="pb-4"> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row">
+
+                <div class="col-6 col-md-4  ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+
+
+            <p> Colonne "Quantité"</p>
+
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <mat-select style="font-size: 12px; padding-left:
+                        12px;
+                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+
+                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Délai is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <p> Colonne "Référence"</p>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <mat-select style="font-size: 12px; padding-left:
+                        12px;
+                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+
+                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Délai is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <p> Nom de l'adresse d'envoi</p>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <mat-select style="font-size: 12px; padding-left:
+                        12px;
+                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+
+                        <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+                    <mat-error *ngIf="delaiFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Délai is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="checkedMail">Toujours m'envoyer une copie de la facture par email</mat-checkbox>
+
+            </section>
+            <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="checkedReception">Toujours demander un accusé de réception</mat-checkbox>
+
+            </section>
         </div>
 
 
 
 
-
-        <textarea type="text" id="username" rows="4" cols="50" name="comment" form="usrform">
-Enter text here...   </textarea>
-
-        <p class="transOutput"></p>
-
     </div>
-</body>
+
+
+    <div class="row pb-5 pt-3 px-3">
+        <div class="col-12 col-md-12 pt-2 pb-2 elhoo_compte_title">
+
+            <h1>INSTRUCTIONS DE PAIEMENT </h1>
+
+
+            <a onclick="translateFunc()"> <button (click)="clickButton('fr')" value="{{langueValue}}" type="button" id="selectlanguage"> fr </button></a>
+            <a onclick="translateFunc()"> <button (click)="clickButton('en')" value="{{langueValue}}" type="button" id="selectlanguage" onclick="translateFunc()"> en </button></a>
+
+
+            <div>
+
+
+                <textarea id="username" class="transOutput"> bonjour  </textarea>
+            </div>
+            <div *ngIf="showTradiction">
+                <textarea class="transOutput">   </textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
