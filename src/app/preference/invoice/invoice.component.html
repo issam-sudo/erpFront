@@ -49,20 +49,6 @@
                     Notes libres
                 </div>
                 <div class="col-12 col-md-8 d-flex justify-content-end">
-                    <!--        <a  onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('fr')" value="{{langueValue}}" id="selectlanguage"> fr&nbsp; |&nbsp; </button></a>
-                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('nl')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> nl&nbsp; |&nbsp; </button></a>
-
-
-                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('en')" value="{{langueValue}}" id="selectlanguage"> en &nbsp;|&nbsp; </button></a>
-                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('de')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> de&nbsp; |&nbsp; </button></a>
-
-
-                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('es')" value="{{langueValue}}" id="selectlanguage"> es &nbsp;|&nbsp; </button></a>
-                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('ca')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> ca  </button></a>
-
-                                                                -->
-
-
 
                     <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
                     BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
@@ -97,9 +83,6 @@
                     <mat-label> </mat-label>
 
                     <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
-                    <!--  <p class="transOutput">
-
-                    </p> -->
 
                 </mat-form-field>
 
@@ -370,7 +353,7 @@
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
 
-                    <input autocomplete="off" matInput placeholder="Code IBAN" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 1" class="InputFirstSection">
 
                 </mat-form-field>
 
@@ -426,27 +409,297 @@
         </div>
         <div class="col-12 col-md-4">
 
+            <div class="row pb-2">
 
+                <div class="col-12 col-md-6">
+                    Champ personnalisé 3
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+
+                </mat-form-field>
+
+            </div>
+            <p> Valeur par défaut</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+                    Champ personnalisé 3
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <p> Valeur par défaut</p>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
 
         </div>
+
         <div class="col-12 col-md-4">
 
 
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+
+            </div>
+
+
 
         </div>
 
+    </div>
+
+
+    <div class="row pb-3 pt-4">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">ENVOI DES FACTURES PAR EMAIL </h3>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+                    Champ personnalisé 3
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-4">
+                    Notes libres
+                </div>
+                <div class="col-12 col-md-8 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
 
 
 
 
+                </div>
+            </div>
 
 
+            <div class="input-group  ">
 
+                <mat-form-field>
+                    <mat-label> </mat-label>
+
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+
+                </mat-form-field>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row pb-3 pt-4">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">Pièces jointes </h3>
+
+        </div>
     </div>
 
 
 
 
+    <div class="row">
+        <div class="col-12 col-md-8">
+
+            <p> Nouvelle pièce jointe</p>
+
+            <div class="row pb-2">
+                <div class="col-12 col-md-6">
+                    <div class="input-group mb-4 ">
+                        <mat-form-field appearance="none" class="example-full-width">
+
+                            <input disabled="true" autocomplete="off" matInput placeholder="Aucun fichier choisis" value="{{url}}" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+
+
+                    <button type='file' (click)="loadImage.click()" class="btn   text-uppercase btn_upload" role="button" aria-pressed="true"> 
+                        Choisir un fichier
+ </button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-4">
+            <p> Nouvelle pièce jointe</p>
+            <p *ngIf="url==null"><small> Pas encore de pièce jointe</small></p>
+            <!-- <p><small> {{url}}</small></p> -->
+            <iframe src="{{url}}"></iframe>
+
+
+            <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
+        </div>
+
+    </div>
+
+    <div class="pr-2 pb-3 justify-content-end d-flex">
+        <button class="btn active text-uppercase btn_Save" role="button" aria-pressed="true">enregristrer</button>
+    </div>
+
+
+
+</div>
 
 
 
@@ -463,7 +716,46 @@
 
 
 
-    <!-- <a onclick="translateFunc() "> <button (click)="clickButton( 'fr') " value="{{langueValue}} " type="button " id="selectlanguage "> fr </button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  <p class="transOutput">
+
+                    </p> -->
+
+
+
+
+<!--        <a  onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('fr')" value="{{langueValue}}" id="selectlanguage"> fr&nbsp; |&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('nl')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> nl&nbsp; |&nbsp; </button></a>
+
+
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('en')" value="{{langueValue}}" id="selectlanguage"> en &nbsp;|&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('de')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> de&nbsp; |&nbsp; </button></a>
+
+
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('es')" value="{{langueValue}}" id="selectlanguage"> es &nbsp;|&nbsp; </button></a>
+                                                                                    <a onclick="translateFunc()"> <button class="astext text-uppercase" (click)="clickButton('ca')" value="{{langueValue}}" id="selectlanguage" onclick="translateFunc()"> ca  </button></a>
+
+                                                                -->
+
+
+
+
+
+
+
+<!-- <a onclick="translateFunc() "> <button (click)="clickButton( 'fr') " value="{{langueValue}} " type="button " id="selectlanguage "> fr </button></a>
 <a onclick="translateFunc() "> <button (click)="clickButton( 'en') " value="{{langueValue}} " type="button " id="selectlanguage " onclick="translateFunc() "> en </button></a>
 <div>
 

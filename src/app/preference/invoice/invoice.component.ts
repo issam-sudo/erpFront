@@ -32,11 +32,12 @@ export class InvoiceComponent implements OnInit {
   checkedMail = false;
   checkedReception = false;
   langue: any;
-  langueValue: string;
+  langueValue: string ='fr';
   textLangue: any;
   value: string;
   lng: any;
   langue2: string;
+  url: string | ArrayBuffer;
   constructor(private router: Router) { }
   
   showTradiction: any =false;
@@ -45,7 +46,19 @@ export class InvoiceComponent implements OnInit {
  
  
   }
+  onSelectFile(event) { // called each time file input changes
+   
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
 
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+      console.log(this.url)
+      }
+    }
+}
  
   clickButton(e: string) {
   
