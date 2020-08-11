@@ -15,8 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { PreferenceContainerComponent } from './preference/preference-container/preference-container.component';
 import { HeaderPreferenceComponent } from './preference/header-preference/header-preference.component';
 import { InvoiceComponent } from './preference/invoice/invoice.component';
-
-
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FileUpload } from './preference/invoice/invoice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import { InvoiceComponent } from './preference/invoice/invoice.component';
     AccountFacturationFrom,
     PreferenceContainerComponent,
     HeaderPreferenceComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    FileUpload
   ],
   imports: [
     BrowserModule,
@@ -37,6 +38,7 @@ import { InvoiceComponent } from './preference/invoice/invoice.component';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+    PdfViewerModule
    
   ],
   providers: [],

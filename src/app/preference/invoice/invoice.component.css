@@ -1,3 +1,7 @@
+ * {
+     font-family: 'Poppins', sans-serif !important;
+ }
+ 
  .elhoo_compte_IconSvgStyle {
      text-align: center;
      width: 50px;
@@ -55,18 +59,9 @@
  
  h1 {
      margin: 0;
-     font-family: 'Poppins', sans-serif;
      letter-spacing: 1px;
      font-size: 17px;
- }
- 
- .elhoo_compte_title {
-     border-radius: 8px;
-     background-color: #323d41;
-     display: flex;
-     justify-content: flex-start;
-     color: white;
-     padding: .5rem .8rem;
+     font-family: 'Poppins', sans-serif !important;
  }
  
  .elhoo_compte_messageErrorPosition {
@@ -121,25 +116,6 @@
      background-color: var(--primary_color);
      cursor: pointer;
      transition: all 0.23s ease-in-out 0s;
- }
- 
- .elhoo_compte_title2 {
-     border-radius: 8px;
-     border: 1px solid #323d41;
-     display: flex;
-     justify-content: flex-start;
-     font-family: 'Poppins', sans-serif;
-     letter-spacing: 1.2px;
- }
- 
- .btnEnregistrer {
-     background-color: var(--secondary_color);
-     box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
-     color: var(--primary_color);
-     font-size: 14px;
-     letter-spacing: 2px;
-     padding-left: 30px;
-     padding-right: 30px;
  }
  
  ul.elhoo_account_listeIcon li a {
@@ -218,4 +194,43 @@
      letter-spacing: 2px;
      padding: 11px;
      border-radius: 10px;
+ }
+ 
+ pdf-viewer {
+     display: block;
+     height: 500px;
+ }
+ 
+ .ImageSize {
+     display: block;
+     width: 300px;
+ }
+ 
+ p span {
+     font-size: 14px;
+ }
+ 
+ h3 {
+     font-family: 'Poppins', sans-serif !important;
+     letter-spacing: 2px;
+     font-size: 19px;
+ }
+ 
+ h1 {
+     font-weight: normal;
+     letter-spacing: 1px;
+     color: var(--secondary_color);
+     font-size: 23px;
+     font-family: 'Poppins', sans-serif !important;
+ }
+ 
+ h2 {
+     font-size: 14px;
+     letter-spacing: 0.5px;
+     line-height: 0px;
+     font-family: 'Poppins', sans-serif !important;
+ }
+ 
+ .marginCol {
+     margin-top: 27px;
  }

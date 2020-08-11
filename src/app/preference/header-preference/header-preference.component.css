@@ -1,3 +1,7 @@
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 .list-group-item {
     padding: 0;
     background-color: #fff0;
@@ -41,16 +45,22 @@ button {
     color: var(--dark_color);
 }
 
+h3 {
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif !important;
+}
+
 h1 {
     font-weight: normal;
     letter-spacing: 1px;
     color: var(--secondary_color);
     font-size: 23px;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 h2 {
     font-size: 14px;
     letter-spacing: 0.5px;
-    font-family: 'Poppins', sans-serif;
     line-height: 0px;
+    font-family: 'Poppins', sans-serif !important;
 }

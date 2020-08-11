@@ -2,7 +2,7 @@
     <div class="row pb-3 pt-3">
         <div class="col-12 col-md-12">
 
-            <h3 class="elhoo_compte_title">VOS COORDONNÉES </h3>
+            <h3 class="elhoo_compte_title">PRÉFÉRENCES GÉNÉRALES </h3>
 
         </div>
     </div>
@@ -17,7 +17,7 @@
                     <div class="input-group   mb-4">
                         <mat-form-field appearance="none">
 
-                            <input type="number" autocomplete="off" min="1" matInput placeholder="1" [formControl]="prenomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <input type="number" autocomplete="off" min="1" matInput placeholder="1" class="InputFirstSection">
 
                         </mat-form-field>
                     </div>
@@ -28,7 +28,7 @@
 
                             <mat-select style="font-size: 12px; padding-left:
                                 12px;
-                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl" [errorStateMatcher]="matcher">
+                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
 
                                 <mat-option *ngFor="let delai of delai" [value]="delai.value">
                                     {{delai.viewValue}}
@@ -46,7 +46,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-4">
-                    Notes libres
+
                 </div>
                 <div class="col-12 col-md-8 d-flex justify-content-end">
 
@@ -80,9 +80,9 @@
             <div class="input-group  ">
 
                 <mat-form-field>
-                    <mat-label> </mat-label>
+                    <mat-label class="elhoo_compte_labelInputPosition"> Notes libres</mat-label>
 
-                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+                    <textarea id="textLangue" (keydown)="textAreaSaisie()" #Input placeholder="Describe yourself here..." rows="8" cols="40" placeholder="Notes libres" matInput></textarea>
 
                 </mat-form-field>
 
@@ -104,6 +104,7 @@
                     <p> %communication% </p>
 
 
+
                 </div>
                 <div class="col-6 col-md-8 ">
                     <p> la date de facture </p>
@@ -120,12 +121,11 @@
         <div class="col-12 col-md-4 ">
 
 
-            <p> Colonne "Quantité "</p>
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
-
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Colonne "Quantité"</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -138,11 +138,11 @@
             </div>
 
 
-            <p> Colonne "Référence "</p>
+
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
-
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Colonne "Référence"</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -153,11 +153,11 @@
 
                 </mat-form-field>
             </div>
-            <p> Nom de l'adresse d'envoi</p>
+
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
-
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom de l'adresse d'envoi</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -189,7 +189,7 @@
     <div class="row pb-3 pt-3">
         <div class="col-12 col-md-12">
 
-            <h3 class="elhoo_compte_title">VOS COORDONNÉES </h3>
+            <h3 class="elhoo_compte_title">INSTRUCTIONS DE PAIEMENT </h3>
 
         </div>
     </div>
@@ -197,31 +197,32 @@
     <div class="row">
 
 
-        <div class="col-12 col-md-4">
-            <p> Code IBAN</p>
+        <div class="col-12 col-md-4  marginCol ">
+
 
             <div class="input-group mb-4 ">
-                <mat-form-field appearance="none" class="example-full-width">
 
+
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Code IBAN</mat-label>
                     <input autocomplete="off" matInput placeholder="Code IBAN" class="InputFirstSection">
 
                 </mat-form-field>
             </div>
-            <p> Code BIC</p>
+
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Code BIC</mat-label>
                     <input autocomplete="off" matInput placeholder="Code BIC" class="InputFirstSection">
 
                 </mat-form-field>
             </div>
-            <p> Type de communication</p>
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
-
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl " [errorStateMatcher]="matcher ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Type de communication</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -240,7 +241,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Instructions de paiement
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -264,8 +265,8 @@
 
                 <mat-form-field>
                     <mat-label> </mat-label>
-
-                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+                    <mat-label class="elhoo_compte_labelInputPosition">Instructions de paiement</mat-label>
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="Instructions de paiement" matInput></textarea>
 
 
                 </mat-form-field>
@@ -313,7 +314,7 @@
     <div class="row pb-3 pt-4">
         <div class="col-12 col-md-12">
 
-            <h3 class="elhoo_compte_title">CHAMPS PERSONNALISÉS </h3>
+            <h3 class="elhoo_compte_title"> CHAMPS PERSONNALISÉS </h3>
 
         </div>
     </div>
@@ -330,7 +331,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Champ personnalisé 1
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -352,17 +353,16 @@
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 1</mat-label>
                     <input autocomplete="off" matInput placeholder="Champ personnalisé 1" class="InputFirstSection">
 
                 </mat-form-field>
 
             </div>
-            <p> Valeur par défaut</p>
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
                     <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
 
                 </mat-form-field>
@@ -370,7 +370,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Champ personnalisé 2
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -392,16 +392,16 @@
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 2</mat-label>
                     <input autocomplete="off" matInput placeholder="Champ personnalisé 2" class="InputFirstSection">
 
                 </mat-form-field>
             </div>
-            <p> Valeur par défaut</p>
+
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
                     <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
 
                 </mat-form-field>
@@ -412,7 +412,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Champ personnalisé 3
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -434,17 +434,17 @@
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 3</mat-label>
                     <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
 
                 </mat-form-field>
 
             </div>
-            <p> Valeur par défaut</p>
+
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
                     <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
 
                 </mat-form-field>
@@ -452,7 +452,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Champ personnalisé 3
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -474,16 +474,16 @@
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
-                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 4</mat-label>
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 4" class="InputFirstSection">
 
                 </mat-form-field>
             </div>
-            <p> Valeur par défaut</p>
+
 
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
                     <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
 
                 </mat-form-field>
@@ -541,7 +541,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-6">
-                    Champ personnalisé 3
+
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end">
 
@@ -562,8 +562,8 @@
             </div>
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none" class="example-full-width">
-
-                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+                    <mat-label class="elhoo_compte_labelInputPosition">Sujet du mail</mat-label>
+                    <input autocomplete="off" matInput placeholder="Sujet du mail" class="InputFirstSection">
 
                 </mat-form-field>
             </div>
@@ -572,7 +572,7 @@
             <div class="row pb-2">
 
                 <div class="col-12 col-md-4">
-                    Notes libres
+
                 </div>
                 <div class="col-12 col-md-8 d-flex justify-content-end">
 
@@ -607,8 +607,8 @@
 
                 <mat-form-field>
                     <mat-label> </mat-label>
-
-                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="text" matInput> Merci de votre confiance</textarea>
+                    <mat-label class="elhoo_compte_labelInputPosition">Notes libres</mat-label>
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="Notes libres" matInput></textarea>
 
                 </mat-form-field>
 
@@ -658,13 +658,12 @@
     <div class="row">
         <div class="col-12 col-md-8">
 
-            <p> Nouvelle pièce jointe</p>
 
             <div class="row pb-2">
                 <div class="col-12 col-md-6">
                     <div class="input-group mb-4 ">
                         <mat-form-field appearance="none" class="example-full-width">
-
+                            <mat-label class="elhoo_compte_labelInputPosition">Nouvelle pièce jointe</mat-label>
                             <input disabled="true" autocomplete="off" matInput placeholder="Aucun fichier choisis" value="{{url}}" class="InputFirstSection">
 
                         </mat-form-field>
@@ -676,19 +675,25 @@
                     <button type='file' (click)="loadImage.click()" class="btn   text-uppercase btn_upload" role="button" aria-pressed="true"> 
                         Choisir un fichier
  </button>
+
                 </div>
             </div>
 
 
         </div>
         <div class="col-12 col-md-4">
-            <p> Nouvelle pièce jointe</p>
-            <p *ngIf="url==null"><small> Pas encore de pièce jointe</small></p>
-            <!-- <p><small> {{url}}</small></p> -->
-            <iframe src="{{url}}"></iframe>
-
-
             <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
+            <p> Nouvelle pièce jointe</p>
+            <p *ngIf="url==null"><small> Pas encore de pièce jointe </small></p>
+            <p *ngIf="url!=null"><small> Veuillez trouver ci-joint</small>
+                <a role="button" aria-pressed="true" (click)="openDialogFileUpload()"><small class="text-success">(voir pièce jointe) </small> </a>
+
+                <a (click)="downloadPdf()" role="button" aria-pressed="true">
+                    <small class="text-info"> (Telecharger)</small>
+                </a>
+            </p>
+            <!-- <p><small> {{url}}</small></p> -->
+
         </div>
 
     </div>
@@ -699,11 +704,10 @@
 
 
 
+
+
+
 </div>
-
-
-
-
 
 
 
