@@ -134,6 +134,19 @@ button[type="submit"] {
     }
 }
 
+button[type="file"] {
+    background-color: var(--secondary_color);
+    color: var(--primary_color);
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 13px 44px;
+    &:hover {
+        box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
+        background-color: var(--dark_color);
+        color: var(--primary_color);
+    }
+}
+
 .mat-menu-content:not(:empty) {
     background-color: var(--primary_color);
 }
