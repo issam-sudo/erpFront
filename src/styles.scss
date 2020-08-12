@@ -242,7 +242,94 @@ button {
 
 
 // ELHOO DATA TABLE
+table{
+    box-shadow:0px !important;
+    border-collapse: separate !important;
+    border-spacing: 0px 5px !important;
 
+     font-family: "Poppins"; font-weight: 600; font-style: normal;
+   
+  }
+  .mat-table{
+    box-shadow:0px !important;
+    border-collapse: separate !important;
+    border-spacing: 0px 5px !important;
+    font-family: "Poppins"; font-weight: 600; font-style: normal !important;
+    background: #eaeff2 !important; 
+  }
+  .custom-table thead {
+    background-color: #F2F5FA;
+  }
+
+  .custom-table thead th {
+    border-bottom: 0;
+    text-transform: uppercase;
+  }
+  .custom-table th {
+    border-top: 0;
+  }
+  .custom-table tbody tr:first-of-type td {
+    border-top: 0;
+  }
+ 
+// tr
+  tr.mat-footer-row, tr.mat-row {
+    height: 48px;
+    background: #F2F5FA;
+    border-radius: 12px;
+  }
+  td.mat-cell:first-child,th.mat-header-cell:first-child {
+    /* row border */
+    font-family: "Poppins"; font-weight: 400; font-style: normal;
+    border-radius: 5px 0px 0px 5px;
+    border-left: 1px solid #212529;
+    // border-top:1px solid #212529 ;
+  }
+  td.mat-cell:last-child,th.mat-header-cell:last-child {
+    /* row border */
+    font-family: "Poppins"; font-weight: 400; font-style: normal;
+     border-radius: 0px 5px 5px 0px;
+    border-right: 1px solid #212529;
+    // border-top:1px solid #212529 ;
+  }
+  .chip-cat{
+    background: #212529;
+    color: #212529!important;
+  }
+  .chip-sous-cat{
+    background: #ff4081;
+    color: #ff4081 !important;
+  }
+  mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    border-bottom-color: #333E42 !important;
+    border-top:1px solid #333E42 ;
+}
+th.mat-header-cell {
+    text-align: left;
+    background-color:#333E42;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.mat-elevation-z8 {
+    box-shadow: 0px 0px 0px !important ;
+}
+.mat-header-cell {
+    color: #F2F5FA !important;
+}
+.badge{
+  color: #F2F5FA;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 9px 9px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+}
+
+.badge.badge-send{
+    background-color: #699F00 ;
+}
 
 
 // END ELHOO DATA TABLE
