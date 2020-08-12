@@ -9,7 +9,7 @@ import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialo
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { DomSanitizer } from '@angular/platform-browser';
-import { environment } from '../../../environments/environment.prod';
+ 
 import { AccountService } from '../services/account.service';
  
 declare var require: any
@@ -156,7 +156,7 @@ if (str.search(communication) == -1 ) {
 
       reader.onload = (event) => { // called once readAsDataURL is completed
         this.url = event.target.result;
-        environment.urlFileUploadByUser =  event.target.result.toString();
+        
         this.accountService.urlPathQuote.next(event.target.result.toString()) 
         
       }
@@ -201,7 +201,7 @@ openDialogFileUpload() {
 })
 // tslint:disable-next-line:component-class-suffix
 export class Quote_fileUpload {
-  url:any =environment.urlFileUploadByUser
+  url: any;
  
   
   constructor(private router: Router, public dialogRef: MatDialogRef<Quote_fileUpload> , public accountService:AccountService ) { }
