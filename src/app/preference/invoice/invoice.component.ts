@@ -52,6 +52,7 @@ export class InvoiceComponent implements OnInit {
   bic: any;
   communication: any;
   stringComplets: any;
+  langue3: string;
  
   constructor(private router: Router ,public dialog: MatDialog ,public accountService: AccountService) { }
   
@@ -83,10 +84,8 @@ export class InvoiceComponent implements OnInit {
   clickButton(e: string) {
   
     this.langue2  =  (<HTMLInputElement>document.getElementById('textLangue')).value;
-    
- console.log(this.langue2)
- 
-    this.langueValue = e
+  console.log(this.langue2)
+     this.langueValue = e
     console.log(this.langueValue);
     this.showTradiction =true
   }

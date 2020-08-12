@@ -26,6 +26,10 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+textarea {
+    resize: none;
+}
+
 
 /* Scrollbar Styling */
 
@@ -118,6 +122,19 @@ a.btn.elhoo_btn_transparent:hover svg path {
 }
 
 button[type="submit"] {
+    background-color: var(--secondary_color);
+    color: var(--primary_color);
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 13px 44px;
+    &:hover {
+        box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
+        background-color: var(--dark_color);
+        color: var(--primary_color);
+    }
+}
+
+button[type="file"] {
     background-color: var(--secondary_color);
     color: var(--primary_color);
     font-size: 14px;
@@ -252,6 +269,13 @@ a.btn {
 
 .mat-select {
     line-height: 1;
+    font-size: 12px;
+    padding-left: 12px;
+    max-width: 97%;
+}
+
+.mat-label {
+    color: red;
 }
 
 mat-form-field {
@@ -406,3 +430,17 @@ td.mat-cell{
 
 // END LETTER SPACING
 
+.elhoo_compte_labelInputPosition {
+    line-height: 25px;
+    background-color: #eaeff2;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 12px;
+}
+
+// END ELHOO DATA TABLE
+// ELHOO BADGE STATUS
+// END ELHOO BADGE STATUS
+textarea.mat-input-element.cdk-textarea-autosize {
+    padding: 12px;
+}

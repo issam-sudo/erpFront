@@ -54,7 +54,6 @@
                 <mat-form-field appearance="none" class="w-100">
                     <mat-label class="elhoo_compte_labelInputPosition">Langue *</mat-label>
                     <mat-select class="inputModal" [(ngModel)]="selectedValue1" name="food" formControlName="langueFormControlDialog">
-
                         <mat-option *ngFor="let food of foods" [value]="food.value">
                             {{food.viewValue}}
                         </mat-option>
@@ -169,7 +168,6 @@
             <div class="col-md-12 d-flex justify-content-center">
 
                 <!--<button class="btn active text-uppercase btnEnregistrer mr-2" (click)="onNoClick()">Cancel</button>-->
-
                 <button class="btn active text-uppercase btn_Save" [disabled]="!registerForm.valid" type="submit">Submit</button>
             </div>
 
