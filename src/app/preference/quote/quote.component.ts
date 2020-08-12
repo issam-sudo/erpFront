@@ -58,7 +58,7 @@ export class QuoteComponent implements OnInit {
   communication: string;
   url: any;
   langue2: string;
-  langueValue: string;
+  langueValue: string ='fr';
   showTradiction: boolean;
   constructor(private router: Router ,public dialog: MatDialog ,public accountService: AccountService) { }
 

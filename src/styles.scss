@@ -45,10 +45,6 @@ p {
     background: var(--dark_color);
 }
 
-.mat-form-field-flex {
-    align-items: end !important;
-}
-
 .mat-badge-medium .mat-badge-content {
     width: 18px;
     height: 18px;
@@ -85,17 +81,12 @@ p {
 }
 
 .PositionContainer {
-    padding: 6.5rem 1rem 0rem 7rem;
+    padding: 6.5rem 1rem 2rem 7rem;
 }
 
-.elhoo_btn {
-    background-color: #323d41;
-    color: var(--primary_color);
-    border-color: #323d41;
-    letter-spacing: 1.2px;
-}
-
-.elhoo_btn:hover {
+a.btn:hover,
+a.btn:focus,
+a.btn:active {
     color: var(--secondary_color);
     border-color: var(--secondary_color);
     background-color: var(--primary_color);
@@ -103,26 +94,18 @@ p {
     transition: all 0.23s ease-in-out 0s;
 }
 
-.elhoo_btn:hover svg path {
+a.btn:hover svg path {
     fill: var(--secondary_color);
 }
 
-.buttonText {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 14px;
-    padding: 11px !important;
-    letter-spacing: 2px;
-}
-
-.elhoo_btn_transparent {
+a.btn.elhoo_btn_transparent {
     color: #323d41;
     border-color: #323d41;
     letter-spacing: 1.2px;
+    background-color: var(--primary_color);
 }
 
-.elhoo_btn_transparent:hover {
+a.btn.elhoo_btn_transparent:hover {
     color: var(--secondary_color);
     border-color: var(--secondary_color);
     background-color: var(--primary_color);
@@ -130,18 +113,21 @@ p {
     transition: all 0.23s ease-in-out 0s;
 }
 
-.elhoo_btn_transparent:hover svg path {
+a.btn.elhoo_btn_transparent:hover svg path {
     fill: var(--secondary_color);
 }
 
-.btn_Save {
+button[type="submit"] {
     background-color: var(--secondary_color);
-    box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
     color: var(--primary_color);
     font-size: 14px;
     letter-spacing: 2px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 13px 44px;
+    &:hover {
+        box-shadow: 4.6px 5.3px 8.7px rgba(137, 148, 169, 0.43), -4.2px -4.2px 5px #FFFFFF;
+        background-color: var(--dark_color);
+        color: var(--primary_color);
+    }
 }
 
 .mat-menu-content:not(:empty) {
@@ -174,10 +160,6 @@ p {
     margin-bottom: 15px;
 }
 
-.mat-form-field-appearance-legacy .mat-form-field-infix {
-    padding: 13px
-}
-
 .mat-datepicker-content {
     margin-top: 2px;
     margin-bottom: 2px;
@@ -206,10 +188,6 @@ p {
     background-color: var(--primary_color);
 }
 
-.mat-form-field {
-    width: 300%;
-}
-
 .modal-title {
     text-align: center;
     color: #ebeff2;
@@ -226,16 +204,56 @@ p {
     font-family: 'Poppins', sans-serif !important;
 }
 
-.elhoo_compte_title {
+button {
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif !important;
+    letter-spacing: 2px;
+    font-size: 19px;
+    text-transform: uppercase;
     border-radius: 8px;
     background-color: #323d41;
     display: flex;
     justify-content: flex-start;
     color: white;
     padding: .5rem 1.4rem;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--secondary_color);
+    font-size: 23px;
     font-family: 'Poppins', sans-serif !important;
 }
 
-button {
+h2 {
+    font-size: 14px !important;
+    letter-spacing: 0.5px !important;
+    line-height: 0px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+a.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 14px;
+    padding: 11px 32px;
     letter-spacing: 2px;
+    background-color: #323d41;
+    color: var(--primary_color);
+    border-color: #323d41;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.mat-select {
+    line-height: 1;
+}
+
+mat-form-field {
+    width: 100%;
 }
