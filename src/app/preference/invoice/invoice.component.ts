@@ -9,7 +9,6 @@ import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialo
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { DomSanitizer } from '@angular/platform-browser';
-import { environment } from '../../../environments/environment.prod';
 import { AccountService } from '../services/account.service';
  
 declare var require: any
@@ -74,7 +73,7 @@ export class InvoiceComponent implements OnInit {
 
       reader.onload = (event) => { // called once readAsDataURL is completed
         this.url = event.target.result;
-        environment.urlFileUploadByUser =  event.target.result.toString();
+ 
         this.accountService.urlPath.next(event.target.result.toString()) 
         
       }
@@ -217,8 +216,9 @@ if (str.search(communication) == -1 ) {
 })
 // tslint:disable-next-line:component-class-suffix
 export class FileUpload {
+  url: any;
  
-  url:any =environment.urlFileUploadByUser
+ 
   constructor(private router: Router, public dialogRef: MatDialogRef<FileUpload> , public accountService:AccountService) { }
   
  
