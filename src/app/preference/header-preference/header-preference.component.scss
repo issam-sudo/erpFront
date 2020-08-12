@@ -12,23 +12,43 @@
     justify-content: flex-end;
 }
 
-ul .list-group {
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    border-radius: .25rem
+ul {
+    .list-group {
+        display: flex;
+        padding-left: 0;
+        margin-bottom: 0;
+        border-radius: .25rem;
+    }
 }
 
-.elhoo_compte_IconSvgStyle:hover svg path {
-    fill: var(--secondary_color);
+.elhoo_compte_IconSvgStyle {
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
 }
 
-.elhoo_body_btn:hover svg path {
-    fill: var(--secondary_color);
+.elhoo_body_btn {
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
 }
 
-.elhoo_body_btn1:hover svg path {
-    fill: var(--secondary_color);
+.elhoo_body_btn1 {
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
 }
 
 button {

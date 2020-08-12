@@ -17,6 +17,7 @@ import { HeaderPreferenceComponent } from './preference/header-preference/header
 import { InvoiceComponent } from './preference/invoice/invoice.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FileUpload } from './preference/invoice/invoice.component';
+import { QuoteComponent } from './preference/quote/quote.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { FileUpload } from './preference/invoice/invoice.component';
     PreferenceContainerComponent,
     HeaderPreferenceComponent,
     InvoiceComponent,
-    FileUpload
+    FileUpload,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

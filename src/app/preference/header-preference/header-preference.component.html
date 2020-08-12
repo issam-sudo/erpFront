@@ -5,13 +5,13 @@
 
             <h1 *ngIf="route_active == '/preference/account'" class="text-uppercase">Mon compte </h1>
             <h1 *ngIf="route_active == '/preference/invoice'" class="text-uppercase">Ma facture </h1>
-            <h1 *ngIf="route_active == '/preference/compte'" class="text-uppercase">Mon devis </h1>
+            <h1 *ngIf="route_active == '/preference/quote'" class="text-uppercase">Mon devis </h1>
             <h1 *ngIf="route_active == '/preference/compte3'" class="text-uppercase">Rappels </h1>
             <h2>PRÉFÉRENCES </h2>
 
         </div>
 
-        <div class="col col-lg-3 col-md-6 pb-3 ml-auto">
+        <div class="col col-lg-3 col-md-6  ml-auto pt-2">
 
             <ul class="list-group ">
                 <li class="list-group-item mr-2  ">
@@ -180,10 +180,10 @@
                           <span [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/invoice' , 
                              elhoo_account_IconSvg_off : route_active != '/preference/invoice' }">Ma facture</span>
                         </button>
-                            <button (click)="setrouter('/preference/compte')" mat-menu-item>
+                            <button (click)="setrouter('/preference/quote')" mat-menu-item>
                           <mat-icon>  <svg 
-                          [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/compte' , 
-                             elhoo_account_IconSvg_off : route_active != '/preference/compte' }"
+                          [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/quote' , 
+                             elhoo_account_IconSvg_off : route_active != '/preference/quote' }"
                            width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 clip-rule="evenodd" d="M5

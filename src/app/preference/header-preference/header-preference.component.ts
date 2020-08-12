@@ -12,7 +12,7 @@ import { catchError, retry } from 'rxjs/operators';
 @Component({
   selector: 'app-header-preference',
   templateUrl: './header-preference.component.html',
-  styleUrls: ['./header-preference.component.css']
+  styleUrls: ['./header-preference.component.scss']
 })
 export class HeaderPreferenceComponent implements OnInit {
   route_active: string;

@@ -31,7 +31,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-invoice',
   templateUrl: './invoice.component.html',
-  styleUrls: ['./invoice.component.css']
+  styleUrls: ['./invoice.component.scss']
 })
 export class InvoiceComponent implements OnInit {
   
@@ -213,7 +213,7 @@ if (str.search(communication) == -1 ) {
   // tslint:disable-next-line:component-selector
   selector: 'fileUpload',
   templateUrl: 'fileUpload.html',
-  styleUrls: ['./invoice.component.css']
+  styleUrls: ['./invoice.component.scss']
 })
 // tslint:disable-next-line:component-class-suffix
 export class FileUpload {

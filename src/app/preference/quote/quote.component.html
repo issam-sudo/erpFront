@@ -1,0 +1,58 @@
+<div class="container-fluid  custom-scrollbar-css">
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">PRÉFÉRENCES GÉNÉRALES</h3>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+
+            <p> Délai de paiement par défaut *</p>
+
+            <div class="row">
+
+                <div class="col-12 col-md-4  ">
+                    <div class="input-group   mb-4">
+                        <mat-form-field appearance="none">
+
+                            <input type="number" autocomplete="off" min="1" matInput placeholder="1" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8  ">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none">
+
+                            <mat-select style="font-size: 12px; padding-left:
+                                12px;
+                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
+
+                                <mat-option *ngFor="let delai of delai" [value]="delai.value">
+                                    {{delai.viewValue}}
+                                </mat-option>
+
+                            </mat-select>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
