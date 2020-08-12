@@ -2,12 +2,11 @@
     <div class="row pb-3 pt-3">
         <div class="col-12 col-md-12">
 
-            <h3 class="elhoo_compte_title">PRÉFÉRENCES GÉNÉRALES</h3>
+            <h3 class="elhoo_compte_title">PRÉFÉRENCES GÉNÉRALES </h3>
+
 
         </div>
     </div>
-
-
     <div class="row">
         <div class="col-12 col-md-4">
 
@@ -45,6 +44,132 @@
 
             </div>
 
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-4">
+
+                </div>
+                <div class="col-12 col-md-8 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="input-group  ">
+
+                <mat-form-field>
+                    <mat-label class="elhoo_compte_labelInputPosition"> Notes libres</mat-label>
+
+                    <textarea id="textLangue" (keydown)="textAreaSaisie()" #Input placeholder="Describe yourself here..." rows="8" cols="40" placeholder="Notes libres" matInput></textarea>
+
+                </mat-form-field>
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-4 ">
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 ">
+
+
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Colonne "Quantité"</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+
+
+                </mat-form-field>
+            </div>
+
+
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Colonne "Référence"</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+
+
+                </mat-form-field>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none " class="example-full-width ">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom de l'adresse d'envoi</mat-label>
+                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+
+                        <mat-option *ngFor="let delai of delai " [value]="delai.value ">
+                            {{delai.viewValue}}
+                        </mat-option>
+
+                    </mat-select>
+
+
+                </mat-form-field>
+            </div>
+
 
 
         </div>
@@ -52,7 +177,490 @@
 
 
 
+    </div>
 
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">INSTRUCTIONS DE PAIEMENT </h3>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group  ">
+
+                <mat-form-field>
+                    <mat-label> </mat-label>
+                    <mat-label class="elhoo_compte_labelInputPosition">Instructions de paiement</mat-label>
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="Instructions de paiement" matInput></textarea>
+
+
+                </mat-form-field>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-12 col-md-8">
+
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+            </div>
+
+
+
+        </div>
 
     </div>
+
+
+
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">CHAMPS PERSONNALISÉS</h3>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 1</mat-label>
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 1" class="InputFirstSection">
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 2</mat-label>
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 2" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 3</mat-label>
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 3" class="InputFirstSection">
+
+                </mat-form-field>
+
+            </div>
+
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Champ personnalisé 4</mat-label>
+                    <input autocomplete="off" matInput placeholder="Champ personnalisé 4" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+
+
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Valeur par défaut</mat-label>
+                    <input autocomplete="off" matInput placeholder="Valeur par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-4">
+
+
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">ENVOI DES FACTURES PAR EMAIL</h3>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-md-4">
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-6">
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+                </div>
+            </div>
+            <div class="input-group mb-4 ">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Sujet du mail</mat-label>
+                    <input autocomplete="off" matInput placeholder="Sujet du mail" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+
+            <div class="row pb-2">
+
+                <div class="col-12 col-md-4">
+
+                </div>
+                <div class="col-12 col-md-8 d-flex justify-content-end">
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
+                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')" class="astext text-uppercase" id="language"> fr <span class="divider"> |&nbsp; </span>  </button>
+
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
+                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')" class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
+                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')" class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
+                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')" class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
+
+
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
+                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')" class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
+                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
+                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')" class="astext text-uppercase" id="language"> ca  </button>
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="input-group  ">
+
+                <mat-form-field>
+                    <mat-label> </mat-label>
+                    <mat-label class="elhoo_compte_labelInputPosition">Notes libres</mat-label>
+                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="Notes libres" matInput></textarea>
+
+                </mat-form-field>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-md-4">
+
+
+            <p class="pb-4 "> En personnalisant vos notes de bas de facture, vous pouvez utiliser des variables qui seront automatiquement remplacées lors de la création de vos factures.</p>
+            <div class="row ">
+
+                <div class="col-6 col-md-4 ">
+                    <p> %invoicedate% </p>
+                    <p> %duedate% </p>
+                    <p> %totalamount% </p>
+                    <p> %invoicenumber% </p>
+                    <p> %iban% </p>
+                    <p> %bic% </p>
+                    <p> %communication% </p>
+
+
+                </div>
+                <div class="col-6 col-md-8 ">
+                    <p> la date de facture </p>
+                    <p> la date d'échéance </p>
+                    <p> le montant total </p>
+                    <p> le numéro de facture </p>
+                    <p> IBAN </p>
+                    <p> Le code BIC </p>
+                    <p> La communication </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row pb-3 pt-3">
+        <div class="col-12 col-md-12">
+
+            <h3 class="elhoo_compte_title">Pièces jointes </h3>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-8">
+
+
+            <div class="row pb-2">
+                <div class="col-12 col-md-6">
+                    <div class="input-group mb-4 ">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Nouvelle pièce jointe</mat-label>
+                            <input disabled="true" autocomplete="off" matInput placeholder="Aucun fichier choisis" value="{{url}}" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+
+
+                    <button type='file' (click)="loadImage.click()" class="btn   text-uppercase btn_upload" role="button" aria-pressed="true"> 
+                        Choisir un fichier
+                    </button>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-4">
+            <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
+            <p> Nouvelle pièce jointe</p>
+            <p *ngIf="url==null"><small> Pas encore de pièce jointe </small></p>
+            <p *ngIf="url!=null"><small> Veuillez trouver ci-joint</small>
+                <a role="button" aria-pressed="true"><small class="text-success">(voir pièce jointe) </small> </a>
+
+                <a (click)="downloadPdf()" role="button" aria-pressed="true">
+                    <small class="text-info"> (Telecharger)</small>
+                </a>
+            </p>
+
+
+        </div>
+
+    </div>
+
+    <div class="pr-2 pb-3 justify-content-end d-flex">
+        <button class="btn active text-uppercase btn_Save" role="button" aria-pressed="true">enregristrer</button>
+    </div>
+
+
+
 </div>
+
+
+<!-- 
+    <a (click)="addUser()">Add User</a>
+    <div *ngFor="let user of users; let i = index">
+    <label>Name</label>
+    <input [(ngModel)]="user.name" name="name">
+    <label>Age</label>
+    <input [(ngModel)]="user.age" name="age">
+    <a (click)="removeUser(i)">Remove</a>
+</div> -->

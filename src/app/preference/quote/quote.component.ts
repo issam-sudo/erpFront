@@ -12,6 +12,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment.prod';
 import { AccountService } from '../services/account.service';
 
+declare var require: any
+const FileSaver = require('file-saver');
 interface delai {
   value: string;
   viewValue: string;
@@ -54,13 +56,42 @@ export class QuoteComponent implements OnInit {
   iban: string;
   bic: string;
   communication: string;
+  url: any;
+  langue2: string;
+  langueValue: string;
+  showTradiction: boolean;
   constructor() { }
 
   ngOnInit(): void {
     this.textAreaSaisie()
   }
-
+ 
+  clickButton(e: string) {
   
+    this.langue2  =  (<HTMLInputElement>document.getElementById('textLangue')).value;
+    
+ console.log(this.langue2)
+ 
+    this.langueValue = e
+    console.log(this.langueValue);
+    this.showTradiction =true
+  }
+ 
+  onSelectFile(event) { // called each time file input changes
+   
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+        environment.urlFileUploadByUser =  event.target.result.toString();
+        
+        
+      }
+    }
+}
   textAreaSaisie(){
     var nameSearchElement: any = document.getElementById("textLangue")
    
@@ -130,6 +161,12 @@ if (str.search(communication) == -1 ) {
 
 
 
+  }
+
+  downloadPdf() {
+    const pdfUrl = this.url;
+    const pdfName = 'your_pdf_file';
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
 }
