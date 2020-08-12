@@ -49,11 +49,7 @@
      margin-bottom: 0;
      border-radius: .25rem
  }
- 
- mat-form-field {
-     width: 300%;
- }
- 
+  
  .elhoo_compte_labelInputPosition {
      line-height: 25px;
      background-color: #eaeff2;
