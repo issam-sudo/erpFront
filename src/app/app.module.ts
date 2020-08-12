@@ -38,7 +38,7 @@ import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.
     QuoteComponent,
     SaleContainerComponent,
     RecurringBillsComponent,
-    SaleInvoiceComponent
+    SaleInvoiceComponent,
   ],
   imports: [
     BrowserModule,
