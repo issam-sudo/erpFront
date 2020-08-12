@@ -9,7 +9,7 @@
             <h1 *ngIf="route_active == '/sale/purchase-orders'" class="text-uppercase">Bon de commande </h1>
             <h1 *ngIf="route_active == '/sale/delivry-note'" class="text-uppercase">Bon de livraison </h1>
             <h1 *ngIf="route_active == '/sale/new-product-service'" class="text-uppercase">Nouveau produit ou service </h1>
-            <h2>vente </h2>
+            <h2>Vente</h2>
 
         </div>
 
@@ -63,12 +63,10 @@
                             <button (click)="setrouter('/sale/quote')" mat-menu-item>
                                 <mat-icon>
                                      <svg [ngClass]="{elhoo_account_IconSvg_on: route_active == '/sale/quote' , 
-                             elhoo_account_IconSvg_off : route_active != '/sale/quote' }" width="17" height="24"
-                                        viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M5.31252 -0.000366211H11.6875V2.79232H5.31252V-0.000366211ZM3.82506 13.0579H5.10012V14.4642H3.82506V13.0579ZM12.9625 4.19865V1.38598H17V23.9994H0V1.38598H4.03756V4.19865H12.9625ZM6.37508 5.83911H2.55V10.0582H6.37508V5.83911ZM6.37508 11.6516H2.55V15.8705H6.37508V11.6516ZM2.22688 19.5554L3.95258 21.4586L6.74092 18.3835L5.83936 17.389L3.95258 19.4698L3.12844 18.5608L2.22688 19.5554ZM8.5 20.1829H14.4501V18.7767H8.5V20.1829ZM8.5 14.4642H14.4501V13.0579H8.5V14.4642ZM8.5 8.6517H14.4501V7.24543H8.5V8.6517ZM5.10012 7.24543H3.82506V8.6517H5.10012V7.24543Z"
-                                            fill="#F2F5FA" />
-                                    </svg>
+                             elhoo_account_IconSvg_off : route_active != '/sale/quote' }" idth="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.31252 -0.000366211H11.6875V2.79238H5.31252V-0.000366211ZM3.82506 13.0579H5.10012V14.4642H3.82506V13.0579ZM12.9625 4.1987V1.38603H17V23.9994H0V1.38603H4.03756V4.1987H12.9625ZM6.37508 5.83914H2.55V10.0582H6.37508V5.83914ZM6.37508 11.6517H2.55V15.8705H6.37508V11.6517ZM2.22688 19.5554L3.95258 21.4587L6.74092 18.3835L5.83936 17.389L3.95258 19.4698L3.12844 18.5608L2.22688 19.5554ZM8.5 20.1829H14.4501V18.7767H8.5V20.1829ZM8.5 14.4642H14.4501V13.0579H8.5V14.4642ZM8.5 8.6517H14.4501V7.24546H8.5V8.6517ZM5.10012 7.24546H3.82506V8.6517H5.10012V7.24546Z" fill="#333E42"/>
+                             </svg>
+                             
                                 </mat-icon>
                                 <span [ngClass]="{elhoo_account_IconSvg_on: route_active == '/sale/quote' , 
                              elhoo_account_IconSvg_off : route_active != '/sale/quote' }">Devis</span>

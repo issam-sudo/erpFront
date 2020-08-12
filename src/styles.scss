@@ -266,6 +266,15 @@ table {
     font-family: "Poppins";
     font-weight: 600;
     font-style: normal;
+
+    svg{
+        fill: var(--dark_color);
+        transition: .3s;
+        
+        &:hover{
+            fill: var(--secondary_color);
+        }
+    }
 }
 
 .mat-table {
@@ -305,10 +314,7 @@ tr.mat-row {
 
 td.mat-cell:first-child,
 th.mat-header-cell:first-child {
-    /* row border */
-    font-family: "Poppins";
-    font-weight: 400;
-    font-style: normal;
+  
     border-radius: 5px 0px 0px 5px;
     border-left: 1px solid #212529;
     // border-top:1px solid #212529 ;
@@ -317,9 +323,7 @@ th.mat-header-cell:first-child {
 td.mat-cell:last-child,
 th.mat-header-cell:last-child {
     /* row border */
-    font-family: "Poppins";
-    font-weight: 400;
-    font-style: normal;
+  
     border-radius: 0px 5px 5px 0px;
     border-right: 1px solid #212529;
     // border-top:1px solid #212529 ;
@@ -349,8 +353,16 @@ th.mat-header-cell {
     text-align: left;
     background-color: #333E42;
     font-family: "Poppins", sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+td.mat-cell{
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 .mat-elevation-z8 {
@@ -360,6 +372,13 @@ th.mat-header-cell {
 .mat-header-cell {
     color: #F2F5FA !important;
 }
+
+
+// END ELHOO DATA TABLE
+
+
+
+// ELHOO BADGE STATUS
 
 .badge {
     color: #F2F5FA;
@@ -373,7 +392,17 @@ th.mat-header-cell {
 .badge.badge-send {
     background-color: #699F00;
 }
-
-// END ELHOO DATA TABLE
-// ELHOO BADGE STATUS
 // END ELHOO BADGE STATUS
+
+
+// LETTER SPACING
+
+.text-spacing-1{
+    letter-spacing: 1px;
+}
+.text-spacing-2{
+    letter-spacing: 2px;
+}
+
+// END LETTER SPACING
+
