@@ -1,3 +1,4 @@
+import { SaleInvoiceComponent } from './sale/sale-invoice/sale-invoice.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,8 @@ import { InvoiceComponent } from './preference/invoice/invoice.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FileUpload } from './preference/invoice/invoice.component';
 import { QuoteComponent } from './preference/quote/quote.component';
+import { SaleContainerComponent } from './sale/sale-container/sale-container.component';
+import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { QuoteComponent } from './preference/quote/quote.component';
     HeaderPreferenceComponent,
     InvoiceComponent,
     FileUpload,
-    QuoteComponent
+    QuoteComponent,
+    SaleContainerComponent,
+    RecurringBillsComponent,
+    SaleInvoiceComponent
   ],
   imports: [
     BrowserModule,

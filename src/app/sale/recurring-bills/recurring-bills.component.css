@@ -1,0 +1,112 @@
+.elhoo_body_canvas {
+    width: 20px;
+    height: 108px;
+}
+
+.elhoo_body_img_TableauBord_padding {
+    padding-left: 140px;
+}
+
+.elhoo_compte_IconSvgStyle {
+    text-align: center;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elhoo_body_title_textStyle {
+    width: 256px;
+    font-weight: normal;
+    letter-spacing: 1.16667px;
+    color: #D22254;
+    font-size: 23px;
+}
+
+.elhoo_body_subtitle_textStyle {
+    font-size: 14px;
+    letter-spacing: 0.166667px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.elhoo_body_subtitle_textStyle2 {
+    font-size: 14px;
+    letter-spacing: 0.166667px;
+    font-family: 'Poppins', sans-serif;
+    color: #D22254;
+}
+
+.list-group-item {
+    padding: 0;
+    background-color: #fff0;
+    border: 0;
+    display: flex;
+    padding-left: 0px;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.elhoo_compte_labelInputPosition {
+    line-height: 25px;
+    background-color: #eaeff2;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 12px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+.elhoo-button-sale {
+    width: 45% ;
+    color: #fff;
+    background-color: #333E42;
+    border-color: #333E42;
+}
+.elhoo-button-hide-key-figure {
+    width: 30%;
+    color: #fff;
+    border-color: #333E42;
+}
+table {
+    width: 100%;
+  }
+  .elhoo_body_canvas  {
+    display: block !important;
+    width: 75% !important;
+    height: 30% !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 50%;
+    height: 60%;
+}
+
+    .mat-form-field-infix {
+        /* padding: .5em 0; */
+        border-top: 0px solid #333e42 !important;
+        
+    
+    }
+
+    .styleSelect {
+        width: 300px !important;
+
+    }
+    
+
+
+
