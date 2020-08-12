@@ -634,7 +634,7 @@
             <p> Nouvelle pièce jointe</p>
             <p *ngIf="url==null"><small> Pas encore de pièce jointe </small></p>
             <p *ngIf="url!=null"><small> Veuillez trouver ci-joint</small>
-                <a role="button" aria-pressed="true"><small class="text-success">(voir pièce jointe) </small> </a>
+                <a role="button" aria-pressed="true"><small class="text-success" (click)="openDialogFileUpload()">(voir pièce jointe) </small> </a>
 
                 <a (click)="downloadPdf()" role="button" aria-pressed="true">
                     <small class="text-info"> (Telecharger)</small>

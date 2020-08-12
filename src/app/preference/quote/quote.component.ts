@@ -11,7 +11,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { DomSanitizer } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment.prod';
 import { AccountService } from '../services/account.service';
-
+ 
 declare var require: any
 const FileSaver = require('file-saver');
 interface delai {
@@ -60,7 +60,7 @@ export class QuoteComponent implements OnInit {
   langue2: string;
   langueValue: string;
   showTradiction: boolean;
-  constructor() { }
+  constructor(private router: Router ,public dialog: MatDialog ,public accountService: AccountService) { }
 
   ngOnInit(): void {
     this.textAreaSaisie()
@@ -77,21 +77,6 @@ export class QuoteComponent implements OnInit {
     this.showTradiction =true
   }
  
-  onSelectFile(event) { // called each time file input changes
-   
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-
-      reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-      reader.onload = (event) => { // called once readAsDataURL is completed
-        this.url = event.target.result;
-        environment.urlFileUploadByUser =  event.target.result.toString();
-        
-        
-      }
-    }
-}
   textAreaSaisie(){
     var nameSearchElement: any = document.getElementById("textLangue")
    
@@ -162,11 +147,73 @@ if (str.search(communication) == -1 ) {
 
 
   }
+  onSelectFile(event) { // called each time file input changes
+   
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
 
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+        environment.urlFileUploadByUser =  event.target.result.toString();
+        this.accountService.urlPathQuote.next(event.target.result.toString()) 
+        
+      }
+    }
+}
   downloadPdf() {
     const pdfUrl = this.url;
     const pdfName = 'your_pdf_file';
     FileSaver.saveAs(pdfUrl, pdfName);
   }
+
+
+  /* 
+users: any[] = [];
+addUser(){
+    this.users.push({});//push empty object of type user
+}
+removeUser(i){
+    this.users.splice(i, 1);    
+} */
+
+openDialogFileUpload() {
+  this.dialog.open(Quote_fileUpload,{
+ 
+    data: {
+      animal: 'panda'
+    },
+    width: '50%',
+    height: '60%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'quote_fileUpload',
+  templateUrl: 'quote_fileUpload.html',
+  styleUrls: ['./quote.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class Quote_fileUpload {
+  url:any =environment.urlFileUploadByUser
+ 
+  
+  constructor(private router: Router, public dialogRef: MatDialogRef<Quote_fileUpload> , public accountService:AccountService ) { }
+  
+ 
+  
+  ngOnInit(): void {
+ 
+    this.accountService.currentdataQuote.subscribe(data=>{
+      this.url =data
+   
+  })
+}
 
 }

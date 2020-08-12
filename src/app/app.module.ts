@@ -18,6 +18,7 @@ import { HeaderPreferenceComponent } from './preference/header-preference/header
 import { InvoiceComponent } from './preference/invoice/invoice.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FileUpload } from './preference/invoice/invoice.component';
+import { Quote_fileUpload } from './preference/quote/quote.component';
 import { QuoteComponent } from './preference/quote/quote.component';
 import { SaleContainerComponent } from './sale/sale-container/sale-container.component';
 import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
@@ -38,7 +39,8 @@ import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.
     QuoteComponent,
     SaleContainerComponent,
     RecurringBillsComponent,
-    SaleInvoiceComponent
+    SaleInvoiceComponent,
+    Quote_fileUpload
   ],
   imports: [
     BrowserModule,
