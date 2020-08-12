@@ -77,12 +77,14 @@
             </div>
 
 
-            <div class="input-group  ">
+            <div class="input-group">
 
                 <mat-form-field>
-                    <mat-label class="elhoo_compte_labelInputPosition"> Notes libres</mat-label>
+                    <mat-label class="elhoo_compte_labelInputPosition">Notes libres</mat-label>
 
-                    <textarea id="textLangue" (keydown)="textAreaSaisie()" #Input placeholder="Describe yourself here..." rows="8" cols="40" placeholder="Notes libres" matInput></textarea>
+                    <textarea cdkTextareaAutosize id="textLangue" (keydown)="textAreaSaisie()" #Input placeholder="Notes libres" rows="8" cols="40" placeholder="Notes libres" matInput> </textarea>
+
+
 
                 </mat-form-field>
 
@@ -125,7 +127,7 @@
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
                     <mat-label class="elhoo_compte_labelInputPosition">Colonne "Quantité"</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+                    <mat-select [(ngModel)]="selectedValue1 " name="Délai ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -142,7 +144,7 @@
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
                     <mat-label class="elhoo_compte_labelInputPosition">Colonne "Référence"</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+                    <mat-select [(ngModel)]="selectedValue1 " name="Délai ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -157,7 +159,7 @@
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom de l'adresse d'envoi</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+                    <mat-select [(ngModel)]="selectedValue1 " name="Délai ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -222,7 +224,7 @@
             <div class="input-group mb-4 ">
                 <mat-form-field appearance="none " class="example-full-width ">
                     <mat-label class="elhoo_compte_labelInputPosition">Type de communication</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px; max-width:97%; " [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
+                    <mat-select [(ngModel)]="selectedValue1 " name="Délai " [formControl]="delaiFormControl ">
 
                         <mat-option *ngFor="let delai of delai " [value]="delai.value ">
                             {{delai.viewValue}}
@@ -264,9 +266,9 @@
             <div class="input-group  ">
 
                 <mat-form-field>
-                    <mat-label> </mat-label>
+
                     <mat-label class="elhoo_compte_labelInputPosition">Instructions de paiement</mat-label>
-                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="Instructions de paiement" matInput></textarea>
+                    <textarea cdkTextareaAutosize id="textLangue" placeholder="Describe yourself here..." rows="14" cols="40" placeholder="Instructions de paiement" matInput></textarea>
 
 
                 </mat-form-field>
@@ -608,7 +610,7 @@
                 <mat-form-field>
                     <mat-label> </mat-label>
                     <mat-label class="elhoo_compte_labelInputPosition">Notes libres</mat-label>
-                    <textarea id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="Notes libres" matInput></textarea>
+                    <textarea cdkTextareaAutosize id="textLangue" placeholder="Describe yourself here..." rows="10" cols="40" placeholder="Notes libres" matInput></textarea>
 
                 </mat-form-field>
 
@@ -764,10 +766,10 @@
 <div>
 
 
-    <textarea id="username " class="transOutput "> bonjour  </textarea>
+    <textarea cdkTextareaAutosize  id="username " class="transOutput "> bonjour  </textarea>
 </div>
 <div *ngIf="showTradiction ">
-    <textarea class="transOutput ">   </textarea>
+    <textarea cdkTextareaAutosize  class="transOutput ">   </textarea>
 </div>
 
 

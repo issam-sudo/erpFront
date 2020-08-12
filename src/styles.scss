@@ -26,6 +26,10 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+textarea {
+    resize: none;
+}
+
 
 /* Scrollbar Styling */
 
@@ -252,6 +256,13 @@ a.btn {
 
 .mat-select {
     line-height: 1;
+    font-size: 12px;
+    padding-left: 12px;
+    max-width: 97%;
+}
+
+.mat-label {
+    color: red;
 }
 
 mat-form-field {
@@ -372,6 +383,14 @@ th.mat-header-cell {
 
 .badge.badge-send {
     background-color: #699F00;
+}
+
+.elhoo_compte_labelInputPosition {
+    line-height: 25px;
+    background-color: #eaeff2;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 12px;
 }
 
 // END ELHOO DATA TABLE

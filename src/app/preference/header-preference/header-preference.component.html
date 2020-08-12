@@ -16,14 +16,14 @@
                 <li class="list-group-item mr-2  ">
                     <a class="elhoo_compte_IconSvgStyle">
                         <button mat-icon-button [matMenuTriggerFor]="menu">
-                        <mat-icon class="w-100"><svg width="49"   viewBox="0 0 49 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0292969 0.0818024H48.8773V5.40163H0.0292969V0.0818024ZM48.8773 13.3814H20.0125V18.7012H48.8773V13.3814ZM48.8773 26.6806H8.91086V32H48.8773V26.6806Z" fill="#323D41"/>
+                        <mat-icon class="w-100"><svg width="49"  fill="#323D41" viewBox="0 0 49 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0292969 0.0818024H48.8773V5.40163H0.0292969V0.0818024ZM48.8773 13.3814H20.0125V18.7012H48.8773V13.3814ZM48.8773 26.6806H8.91086V32H48.8773V26.6806Z" />
                             </svg></mat-icon>
                       </button>
                         <mat-menu #menu="matMenu" class="mt-2">
                             <button (click)="setrouter('/preference/account')" mat-menu-item>
                           <mat-icon> <svg [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/account' , 
-                             elhoo_account_IconSvg_off : route_active != '/preference/account' }" width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             elhoo_account_IconSvg_off : route_active != '/preference/account' }" width="27" height="25"  fill="#323d41" viewBox="0 0 27 25"   xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M22.6627 3.84597C22.6627 5.96996 20.9353
                                 7.69204 18.8047 7.69204C16.674 7.69204 14.9467
@@ -64,6 +64,7 @@
                                 19.3025 25.6214 18.7322 27.0001 17.9915C26.9442
                                 15.3498 26.0905 12.9735 24.5816 11.2743C23.0809
                                 9.5844 21.0291 8.6535 18.8047 8.6535Z"
+                     
                                />
                             </svg></mat-icon>
                           <span  [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/account' , 
@@ -75,7 +76,7 @@
                           [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/invoice' , 
                              elhoo_account_IconSvg_off : route_active != '/preference/invoice' }"
                           
-                          width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          width="27" height="23" viewBox="0 0 20 23"  fill="#323d41"  xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M13.1528 1.14894V3.68958C13.1528 4.11278
                                 13.4979 4.45593 13.9237
@@ -174,7 +175,8 @@
                                 17.5072 13.4087L16.918 13.9914C16.5413
                                 13.6696 16.0516 13.4748 15.5155
                                 13.4748C14.6822 13.4748 13.9619 13.9436
-                                13.6017 14.6303H15.5155Z"   />
+                                13.6017 14.6303H15.5155Z" 
+                                 />
                             </svg></mat-icon>
                           <span [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/invoice' , 
                              elhoo_account_IconSvg_off : route_active != '/preference/invoice' }">Ma facture</span>
@@ -183,7 +185,7 @@
                           <mat-icon>  <svg 
                           [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/quote' , 
                              elhoo_account_IconSvg_off : route_active != '/preference/quote' }"
-                           width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           width="27" height="23" viewBox="0 0 16 22" fill="#323d41"  xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 clip-rule="evenodd" d="M5
                                 -0.000183105H11V2.55982H5V-0.000183105ZM3.60002
@@ -199,6 +201,7 @@
                                 13.259H13.6V11.9699H8.00001V13.259ZM8.00001
                                 7.93094H13.6V6.64177H8.00001V7.93094ZM4.80007
                                 6.64177H3.60002V7.93094H4.80007V6.64177Z"
+                                
                                   />
                             </svg></mat-icon>
                           <span [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/quote' , 
@@ -208,8 +211,8 @@
                             <mat-icon> <svg 
                             
                             [ngClass]="{elhoo_account_IconSvg_on: route_active == '/preference/reminder' , 
-                             elhoo_account_IconSvg_off : route_active != '/preference/reminder' }" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.13296 1.76084L4.59836 0.219667C1.97259 2.20212 0.219024 5.27887 0 8.79564H2.19302C2.41207 5.82619 3.83445 3.29642 6.13296 1.76084ZM20.8069 8.79564H23C22.781 5.27887 21.1382 2.20212 18.5085 0.219667L16.9724 1.76084C19.1654 3.29642 20.5878 5.82619 20.8069 8.79564ZM18.6207 9.34982C18.6207 5.93884 16.3208 3.18934 13.1449 2.42209V1.64807C13.1449 0.768242 12.3742 -0.000183105 11.4966 -0.000183105C10.6259 -0.000183105 9.85514 0.768242 9.85514 1.64807V2.42209C6.67909 3.18934 4.37931 5.93884 4.37931 9.34982V15.3962L2.19302 17.5984V18.6997H20.8069V17.5984L18.6207 15.3962V9.34982ZM11.4966 21.9965H11.9361C12.7054 21.8893 13.2515 21.3366 13.4706 20.6754C13.5829 20.4555 13.6896 20.1282 13.6896 19.7942H9.31029C9.31029 21.008 10.2946 21.9965 11.4966 21.9965Z"  />
+                             elhoo_account_IconSvg_off : route_active != '/preference/reminder' }" width="27" height="23" viewBox="0 0 23 22" fill="#323d41" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.13296 1.76084L4.59836 0.219667C1.97259 2.20212 0.219024 5.27887 0 8.79564H2.19302C2.41207 5.82619 3.83445 3.29642 6.13296 1.76084ZM20.8069 8.79564H23C22.781 5.27887 21.1382 2.20212 18.5085 0.219667L16.9724 1.76084C19.1654 3.29642 20.5878 5.82619 20.8069 8.79564ZM18.6207 9.34982C18.6207 5.93884 16.3208 3.18934 13.1449 2.42209V1.64807C13.1449 0.768242 12.3742 -0.000183105 11.4966 -0.000183105C10.6259 -0.000183105 9.85514 0.768242 9.85514 1.64807V2.42209C6.67909 3.18934 4.37931 5.93884 4.37931 9.34982V15.3962L2.19302 17.5984V18.6997H20.8069V17.5984L18.6207 15.3962V9.34982ZM11.4966 21.9965H11.9361C12.7054 21.8893 13.2515 21.3366 13.4706 20.6754C13.5829 20.4555 13.6896 20.1282 13.6896 19.7942H9.31029C9.31029 21.008 10.2946 21.9965 11.4966 21.9965Z"   />
                                 </svg>
     </mat-icon>
                             <span 
