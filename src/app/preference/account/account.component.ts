@@ -10,13 +10,6 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 
- 
- 
-
- 
-
-
-
 interface Food {
   value: string;
   viewValue: string;
@@ -38,7 +31,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   // tslint:disable-next-line:component-selector
   selector: 'accountAddUser',
   templateUrl: 'accountAddUser.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.scss']
 })
 // tslint:disable-next-line:component-class-suffix
 export class AccountAddUserFrom {
@@ -96,7 +89,7 @@ export class AccountAddUserFrom {
   // tslint:disable-next-line:component-selector
   selector: 'accountFacturation',
   templateUrl: 'accountFacturation.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.scss']
 })
 // tslint:disable-next-line:component-class-suffix
 export class AccountFacturationFrom {
@@ -166,7 +159,7 @@ class ImageSnippet {
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  styleUrls: ['./account.component.scss']
 })
 
 

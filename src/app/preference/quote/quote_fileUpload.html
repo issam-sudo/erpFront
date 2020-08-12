@@ -1,0 +1,13 @@
+<div class="custom-scrollbar-css">
+    <h2 class="modal-title">
+
+        MA FACTURE Pièces jointes</h2>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <img src="{{url}}" alt="">
+
+    </div>
+
+
+    <pdf-viewer *ngIf="url!=null" [src]="url" [render-text]="true" style="display: flex;justify-content: center;align-items: center;">
+    </pdf-viewer>
+</div>

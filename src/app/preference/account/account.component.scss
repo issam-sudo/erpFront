@@ -11,6 +11,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
 }
 
 .elhoo_body_subtitle_textStyle {
@@ -38,11 +45,13 @@
     border: 0;
 }
 
-ul list-group {
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    border-radius: .25rem
+ul {
+    list-group {
+        display: flex;
+        padding-left: 0;
+        margin-bottom: 0;
+        border-radius: .25rem;
+    }
 }
 
 .elhoo_compte_labelInputPosition {
@@ -91,31 +100,32 @@ ul list-group {
     height: 100px;
 }
 
-ul.elhoo_account_listeIcon li a {
-    background-color: rgba(50, 61, 65, 0.5);
-    width: 33px;
-    height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-    border-radius: 7px;
-}
-
-ul.elhoo_account_listeIcon li a:hover {
-    background-color: rgba(50, 61, 65, 1);
-}
-
-ul.elhoo_account_listeIcon li a svg path {
-    fill: var(--primary_color);
-}
-
-ul.elhoo_account_listeIcon li a:hover svg path {
-    fill: var(--secondary_color);
-}
-
-.elhoo_compte_IconSvgStyle:hover svg path {
-    fill: var(--secondary_color);
+ul.elhoo_account_listeIcon {
+    li {
+        a {
+            background-color: rgba(50, 61, 65, 0.5);
+            width: 33px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+            border-radius: 7px;
+            &:hover {
+                background-color: rgba(50, 61, 65, 1);
+                svg {
+                    path {
+                        fill: var(--secondary_color);
+                    }
+                }
+            }
+            svg {
+                path {
+                    fill: var(--primary_color);
+                }
+            }
+        }
+    }
 }
 
 .InputFirstSection {

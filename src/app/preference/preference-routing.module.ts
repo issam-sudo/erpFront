@@ -4,6 +4,7 @@ import { AccountComponent } from './account/account.component';
  import { PreferenceContainerComponent } from './preference-container/preference-container.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { QuoteComponent } from './quote/quote.component';
+import { PreferenceReminderComponent } from './preference-reminder/preference-reminder.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
     {path:"account" , component:AccountComponent},
     {path:"invoice" , component:InvoiceComponent},
     {path:"quote" , component:QuoteComponent},
+    {path:"reminder" , component:PreferenceReminderComponent},
   ]}
 ];
 
