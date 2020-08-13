@@ -9,6 +9,7 @@
     --badge_color_success: #28a745;
     --badge_color_warn: #D22254;
     --dark_color: #323d41;
+    --clear_gray: #ECEFF4;
 }
 
 html,
@@ -29,6 +30,11 @@ p {
 textarea {
     resize: none;
 }
+
+.bg_clear_gray {
+    background-color: var(--clear_gray);
+}
+
 
 
 /* Scrollbar Styling */
