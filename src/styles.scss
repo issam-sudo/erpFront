@@ -296,6 +296,13 @@ table {
     font-family: "Poppins";
     font-weight: 600;
     font-style: normal;
+    svg {
+        fill: var(--dark_color);
+        transition: .3s;
+        &:hover {
+            fill: var(--secondary_color);
+        }
+    }
 }
 
 .mat-table {
@@ -335,10 +342,6 @@ tr.mat-row {
 
 td.mat-cell:first-child,
 th.mat-header-cell:first-child {
-    /* row border */
-    font-family: "Poppins";
-    font-weight: 400;
-    font-style: normal;
     border-radius: 5px 0px 0px 5px;
     border-left: 1px solid #212529;
     // border-top:1px solid #212529 ;
@@ -347,9 +350,6 @@ th.mat-header-cell:first-child {
 td.mat-cell:last-child,
 th.mat-header-cell:last-child {
     /* row border */
-    font-family: "Poppins";
-    font-weight: 400;
-    font-style: normal;
     border-radius: 0px 5px 5px 0px;
     border-right: 1px solid #212529;
     // border-top:1px solid #212529 ;
@@ -379,8 +379,16 @@ th.mat-header-cell {
     text-align: left;
     background-color: #333E42;
     font-family: "Poppins", sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+td.mat-cell {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 .mat-elevation-z8 {
@@ -391,6 +399,8 @@ th.mat-header-cell {
     color: #F2F5FA !important;
 }
 
+// END ELHOO DATA TABLE
+// ELHOO BADGE STATUS
 .badge {
     color: #F2F5FA;
     font-weight: normal;
@@ -404,6 +414,17 @@ th.mat-header-cell {
     background-color: #699F00;
 }
 
+// END ELHOO BADGE STATUS
+// LETTER SPACING
+.text-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.text-spacing-2 {
+    letter-spacing: 2px;
+}
+
+// END LETTER SPACING
 .elhoo_compte_labelInputPosition {
     line-height: 25px;
     background-color: #eaeff2;
@@ -421,4 +442,46 @@ textarea.mat-input-element.cdk-textarea-autosize {
 
 .mt-28 {
     margin-top: 28px;
+}
+
+.BtnLanguageActive {
+    color: var(--secondary_color);
+}
+
+.BtnLanguageInactive {
+    color: var(--dark_color);
+}
+
+.astext {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+// ********** Switch:
+.slider-v2::after {
+    position: absolute;
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    top: 0.74em;
+    left: 0.5em;
+    border-radius: 50%;
+    transition: 250ms ease-in-out;
+    background: linear-gradient(#f5f5f5 10%, #eee);
+}
+
+// ********** Channel:
+.slider-v2::before {
+    position: absolute;
+    content: '';
+    width: 3em;
+    height: 1.3em;
+    top: 0.85em;
+    left: 1em;
+    border-radius: 0.75em;
+    transition: 250ms ease-in-out;
+    background: linear-gradient(rgba(#000, 0.07), rgba(#fff, 0.1)), #d0d0d0;
 }

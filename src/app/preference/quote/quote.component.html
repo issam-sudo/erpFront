@@ -27,9 +27,7 @@
                     <div class="input-group mb-4">
                         <mat-form-field appearance="none">
 
-                            <mat-select style="font-size: 12px; padding-left:
-                                12px;
-                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
+                            <mat-select [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
                                 <mat-option *ngFor="let delai of delai" [value]="delai.value">
                                     {{delai.viewValue}}
                                 </mat-option>
@@ -137,8 +135,7 @@
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Colonne "Quantité"
                     </mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai">
+                    <mat-select [(ngModel)]="selectedValue1" name="Délai">
                         <mat-option *ngFor="let delai of delai" [value]="delai.value">
                             {{delai.viewValue}}
                         </mat-option>
@@ -155,8 +152,7 @@
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Colonne "Référence"
                     </mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai">
+                    <mat-select [(ngModel)]="selectedValue1" name="Délai">
                         <mat-option *ngFor="let delai of delai" [value]="delai.value">
                             {{delai.viewValue}}
                         </mat-option>
@@ -170,8 +166,7 @@
             <div class="input-group mb-4">
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom de l'adresse d'envoi</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="Délai">
+                    <mat-select [(ngModel)]="selectedValue1" name="Délai">
                         <mat-option *ngFor="let delai of delai" [value]="delai.value">
                             {{delai.viewValue}}
                         </mat-option>

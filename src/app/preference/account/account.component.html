@@ -56,8 +56,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Langue *</mat-label>
-                    <mat-select style="font-size: 12px; padding-left: 12px;
-                        max-width:97%;" [(ngModel)]="selectedValue1" name="food" [formControl]="langueFormControl" [errorStateMatcher]="matcher">
+                    <mat-select [(ngModel)]="selectedValue1" name="food" [formControl]="langueFormControl" [errorStateMatcher]="matcher">
 
                         <mat-option *ngFor="let food of foods" [value]="food.value">
                             {{food.viewValue}}
@@ -226,8 +225,7 @@
                         <mat-form-field appearance="none" class="w-100">
                             <mat-label class="elhoo_compte_labelInputPosition">Ville *
                             </mat-label>
-                            <mat-select style="font-size: 12px; padding-left:
-                                12px; max-width:96%;" [(ngModel)]="selectedValue" name="car" [formControl]="villeFormControl" [errorStateMatcher]="matcher">
+                            <mat-select [(ngModel)]="selectedValue" name="car" [formControl]="villeFormControl" [errorStateMatcher]="matcher">
 
                                 <mat-option *ngFor="let car of cars" [value]="car.value">
                                     {{car.viewValue}}
@@ -271,29 +269,18 @@
                 </mat-form-field>
 
             </div>
-
-
-
         </div>
-
-
-
 
         <div class="col-12 col-md-2 d-flex justify-content-center
             align-content-center">
 
             <div class="h-100 elhoo_compte-logo" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' ,'width.px':
-                elhoolink.offsetHeight}" style="width: 80%; background-image:
-                aliceblue; background-image: url('../../assets/elhooLogo.png');
-                background-size: 70%; background-repeat: no-repeat;
-                background-position: center; position: absolute;">
+                elhoolink.offsetHeight}">
             </div>
 
             <div class="mt-5 pt-4">
                 <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
-                <ul class="list-group pt-2 elhoo_account_listeIcon
-                    justify-content-center d-flex" style="flex-direction:
-                    unset;">
+                <ul class="list-group pt-2 elhoo_account_listeIcon  justify-content-center d-flex">
                     <li (click)="onSelectFileEmpty($event)" class="list-group-item
                         mr-2">
                         <a>
@@ -574,19 +561,13 @@
                     <section class="example-section w-100">
                         <mat-checkbox class="example-margin" [(ngModel)]="checked">
 
-                            <p class="text-uppercase" style="margin: 0 0-24px;">
+                            <p class="text-uppercase">
                                 Inscription au rapport hebdomadaire
                             </p>
-                            <br>
-                            <p *ngIf="checked ==false" style="font-size:
-                                                    smaller;" style="margin: 0 0
-                                                    -11px;
-                                                    font-size: 11px;"> Vous n'êtes désormais inscrit au rapport hebdomadaire</p>
 
-                            <p *ngIf="checked ==true" style="font-size:
-                                                    smaller;" style="margin: 0 0
-                                                    -11px;font-size: 11px;
-                                                    color: #D22254;"> Vous êtes désormais inscrit au rapport hebdomadaire
+                            <p *ngIf="checked ==false" class="msgRapport"> <small> Vous n'êtes désormais inscrit au rapport hebdomadaire</small></p>
+
+                            <p *ngIf="checked ==true" class="msgRapportSuccess"> <small> Vous êtes désormais inscrit au rapport hebdomadaire</small>
                             </p>
 
 

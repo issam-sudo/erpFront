@@ -26,9 +26,7 @@
                     <div class="input-group mb-4">
                         <mat-form-field appearance="none">
 
-                            <mat-select style="font-size: 12px; padding-left:
-                                12px;
-                                max-width:97%;" [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
+                            <mat-select [(ngModel)]="selectedValue1" name="Délai" [formControl]="delaiFormControl">
                                 <mat-option *ngFor="let delai of delai" [value]="delai.value">
                                     {{delai.viewValue}}
                                 </mat-option>

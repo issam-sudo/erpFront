@@ -72,6 +72,12 @@ ul {
     display: inline-block;
     justify-content: center;
     align-content: center;
+    width: 80%;
+    position: absolute;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../assets/elhooLogo.png);
 }
 
 .elhoo_img {
@@ -93,6 +99,7 @@ ul {
 }
 
 ul.elhoo_account_listeIcon {
+    flex-direction: unset;
     li {
         a {
             background-color: rgba(50, 61, 65, 0.5);
@@ -134,4 +141,17 @@ h4 {
 .inputModal {
     font-size: 12px;
     padding-left: 12px;
+}
+
+::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+    line-height: 8px !important;
+}
+
+.msgRapport {
+    margin: 0;
+}
+
+.msgRapportSuccess {
+    margin: 0;
+    color: var(--secondary_color);
 }

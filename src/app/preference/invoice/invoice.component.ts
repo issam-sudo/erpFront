@@ -114,6 +114,8 @@ export class InvoiceComponent implements OnInit {
     {value: '1', viewValue: 'jours fin de mois'},
     {value: '2', viewValue: 'jours fin de mois'}
   ];
+
+  
   textAreaSaisie(){
     var nameSearchElement: any = document.getElementById("textLangue")
    

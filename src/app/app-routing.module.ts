@@ -7,12 +7,14 @@ import { SaleModule } from './sale/sale.module';
 
 
 const routes: Routes = [
+
   { path: '', component: HomeComponent, children: [
     //{ path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'  }
     { path: 'dashboard', loadChildren: () => DashboardModule  },
     { path: 'preference', loadChildren: () => PreferenceModule  },
     { path: 'sale', loadChildren: () => SaleModule  },
-  ]}
+  ]},
+  {path: '**' , redirectTo:'/dashboard'},
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { RecurringBillsComponent } from './recurring-bills/recurring-bills.compo
 import { QuoteComponent } from './quote/quote.component';
 import { NewProductServiceComponent } from './new-product-service/new-product-service.component';
 import {DeliveryNoteComponent } from './delivery-note/delivery-note.component' ;
+import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     {path:"quote" , component:QuoteComponent},
     {path:"new-product-service" , component:NewProductServiceComponent},
     {path:"delivry-note" , component:DeliveryNoteComponent},
-    {path:"purchase-orders" , component:DeliveryNoteComponent},
+    {path:"purchase-orders" , component:PurchaseOrdersComponent},
     {path:"invoice" , component:SaleInvoiceComponent},
 
   ]}
