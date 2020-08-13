@@ -22,6 +22,8 @@ import { Quote_fileUpload } from './preference/quote/quote.component';
 import { QuoteComponent } from './preference/quote/quote.component';
 import { SaleContainerComponent } from './sale/sale-container/sale-container.component';
 import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
+import { PreferenceReminderComponent } from './preference/preference-reminder/preference-reminder.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,7 @@ import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.
     RecurringBillsComponent,
     SaleInvoiceComponent,
     Quote_fileUpload,
+    PreferenceReminderComponent
   ],
   imports: [
     BrowserModule,

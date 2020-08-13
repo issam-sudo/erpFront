@@ -244,12 +244,18 @@ h1 {
     color: var(--secondary_color);
     font-size: 23px;
     font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+}
+
+.mat-h1,
+.mat-headline,
+.mat-typography h1 {
+    margin: 0 0 0px;
 }
 
 h2 {
     font-size: 14px !important;
     letter-spacing: 0.5px !important;
-    line-height: 0px !important;
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -411,4 +417,8 @@ th.mat-header-cell {
 // END ELHOO BADGE STATUS
 textarea.mat-input-element.cdk-textarea-autosize {
     padding: 12px;
+}
+
+.mt-28 {
+    margin-top: 28px;
 }
