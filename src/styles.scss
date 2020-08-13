@@ -365,8 +365,8 @@ th.mat-header-cell:last-child {
 }
 
 .chip-sous-cat {
-    background: #ff4081;
-    color: #ff4081 !important;
+    background: var(--secondary_color);
+    color: var(--secondary_color) !important;
 }
 
 mat-row,
@@ -452,4 +452,32 @@ textarea.mat-input-element.cdk-textarea-autosize {
 }
 .mt-28{
     margin-top: 28px;
+}
+
+// style document
+
+.elhoo_document_actions{
+    a{
+        width: 45px;
+        height: 45px;
+        border: 1px solid var(--dark_color);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary_color);
+        transition: .3s;
+        cursor: pointer;
+        svg, path{
+            fill: var(--dark_color);
+            height: 28px;
+            transition: .15s;
+        }
+        &:hover{
+            border-color: var(--secondary_color);
+            svg, path{
+                fill: var(--secondary_color);
+            }
+        }
+    }
 }
