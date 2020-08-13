@@ -1,154 +1,163 @@
-<a class="mr-5 pr-5" *ngIf="hidden==='page2'" (click)="pageprincipale()" > <retour</a>
-<app-delivery-note-page2 *ngIf="hidden==='page2'"></app-delivery-note-page2>
+<a class="mr-5 pr-5" *ngIf="hidden==='page2'" (click)="pageprincipale()">
+    <retour</a>
+        <app-delivery-note-page2 *ngIf="hidden==='page2'"></app-delivery-note-page2>
 
-<div class="container-fluid elhoo_body_img_TableauBord_padding pt-5" *ngIf="hidden==='pagepincipale'" >
-
-
-
-  <div class="row ">
-    <div class="col-6 col-md-6 pl-1">
-     
-    </div>
-    <div class="col-6 col-md-6 " class="col-6 col-md- d-flex justify-content-end mb-3">
-      <a class="btn upercase" (click)="page2()">Créer un bon de livraison</a>
-    </div>
-  </div>
+        <div class="container-fluid elhoo_body_img_TableauBord_padding pt-5" *ngIf="hidden==='pagepincipale'">
 
 
 
+            <div class="row ">
+                <div class="col-6 col-md-6 pl-1">
+
+                </div>
+                <div class="col-6 col-md-6 " class="col-6 col-md- d-flex justify-content-end mb-3">
+                    <a class="btn upercase" (click)="page2()">Créer un bon de livraison</a>
+                </div>
+            </div>
 
 
 
-<div class="row ">
-  <div class="col-md-4 d-flex align-items-center">
-    <p class="mb-0 mr-4 text-nowrap text-uppercase text-spacing-1">Listing | </p>
-
-    <mat-form-field appearance="none" class="mr-3">
-      <mat-label class="elhoo_compte_labelInputPosition">TOUS LES BON DE LIVRAISON </mat-label>
-      <mat-select>
-        <mat-option value="1">Option 1</mat-option>
-        <mat-option value="2">Option 2</mat-option>
-        <mat-option value="3">Option 3</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field appearance="none">
-      <mat-label class="elhoo_compte_labelInputPosition">ACTION RAPIDE</mat-label>
-      <mat-select>
-        <mat-option value="1">Option 1</mat-option>
-        <mat-option value="2">Option 2</mat-option>
-        <mat-option value="3">Option 3</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-  </div>
 
 
-  <div class="col-md-3 ml-auto d-flex justify-content-end">
-    <mat-form-field appearance="none">
-      <!-- <mat-label>Recherche</mat-label> -->
-      <input type="search" matInput placeholder="Recherche">
-      <mat-icon matSuffix>
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+
+            <div class="row ">
+                <div class="col-md-4 d-flex align-items-center">
+                    <p class="mb-0 mr-4 text-nowrap text-uppercase text-spacing-1">Listing | </p>
+
+                    <mat-form-field appearance="none" class="mr-3">
+                        <mat-label class="elhoo_compte_labelInputPosition">TOUS LES BON DE LIVRAISON </mat-label>
+                        <mat-select>
+                            <mat-option value="1">Option 1</mat-option>
+                            <mat-option value="2">Option 2</mat-option>
+                            <mat-option value="3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="none">
+                        <mat-label class="elhoo_compte_labelInputPosition">ACTION RAPIDE</mat-label>
+                        <mat-select>
+                            <mat-option value="1">Option 1</mat-option>
+                            <mat-option value="2">Option 2</mat-option>
+                            <mat-option value="3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </div>
+
+
+                <div class="col-md-3 ml-auto d-flex justify-content-end">
+                    <mat-form-field appearance="none">
+                        <!-- <mat-label>Recherche</mat-label> -->
+                        <input type="search" matInput placeholder="Recherche">
+                        <mat-icon matSuffix>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
               d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
             <path fill-rule="evenodd"
               d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
           </svg>
-      </mat-icon>
-    </mat-form-field>
+                        </mat-icon>
+                    </mat-form-field>
 
-  </div>
-</div>
-<!-- LIST OF SALE -->
-<!-- <div class="row row-cols-7 border border-dark bg-black rounded-lg mt-3 mb-3 pt-3 elhoo-list-header text-body"> -->
-
-
-  <div class="row py-4">
-      <div class="col-12">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
-
-    <ng-container matColumnDef="act">
-      <th mat-header-cell *matHeaderCellDef> ACTION</th>
-      <td mat-cell *matCellDef="let element">
-        <section class="example-section">
-          <mat-checkbox class="example-margin"></mat-checkbox>
-        </section>
-      </td>
-    </ng-container>
-
-  <ng-container matColumnDef="devis">
-    <th mat-header-cell *matHeaderCellDef> Num devis</th>
-    <td mat-cell *matCellDef="let element">{{element.devis}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="date">
-    <th mat-header-cell *matHeaderCellDef> date</th>
-    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="client">
-    <th mat-header-cell *matHeaderCellDef> client </th>
-    <td mat-cell *matCellDef="let element"> {{element.client}} </td>
-  </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="montant">
-    <th mat-header-cell *matHeaderCellDef> montant</th>
-    <td mat-cell *matCellDef="let element"> {{element.montant}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="status">
-    <th mat-header-cell *matHeaderCellDef> status </th>
-    <td mat-cell *matCellDef="let element"> <span class="badge badge-send">Envoyée</span></td>
-  </ng-container>
+                </div>
+            </div>
+            <!-- LIST OF SALE -->
+            <!-- <div class="row row-cols-7 border border-dark bg-black rounded-lg mt-3 mb-3 pt-3 elhoo-list-header text-body"> -->
 
 
+            <div class="row py-4">
+                <div class="col-12">
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
 
-  <ng-container matColumnDef="action">
-    <th mat-header-cell *matHeaderCellDef> ACTION </th>
-    <td mat-cell *matCellDef="let element"> 
-      <button class="border-0 bg-transparent">
+                        <ng-container matColumnDef="act">
+                            <th mat-header-cell *matHeaderCellDef> ACTION</th>
+                            <td mat-cell *matCellDef="let element">
+                                <section class="example-section">
+                                    <mat-checkbox class="example-margin"></mat-checkbox>
+                                </section>
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="devis">
+                            <th mat-header-cell *matHeaderCellDef> Num devis</th>
+                            <td mat-cell *matCellDef="let element">{{element.devis}} </td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef> date</th>
+                            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="client">
+                            <th mat-header-cell *matHeaderCellDef> client </th>
+                            <td mat-cell *matCellDef="let element"> {{element.client}} </td>
+                        </ng-container>
+
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="montant">
+                            <th mat-header-cell *matHeaderCellDef> montant</th>
+                            <td mat-cell *matCellDef="let element"> {{element.montant}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="status">
+                            <th mat-header-cell *matHeaderCellDef> status </th>
+                            <td mat-cell *matCellDef="let element"> <span class="badge badge-send">Envoyée</span></td>
+                        </ng-container>
+
+
+
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell *matHeaderCellDef> ACTION </th>
+                            <td mat-cell *matCellDef="let element">
+                                <button class="border-0 bg-transparent">
         <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M5.36536 1.02622H8.30152V1.50426H9.36176V0.95934C9.36194 0.43048 8.9175 0 8.37117 0H5.2957C4.74939 0 4.30492 0.43048 4.30492 0.95934V1.50426H5.36536V1.02622ZM11.8106 5.5699H1.85633C1.58358 5.5699 1.36887 5.7951 1.39083 6.0582L2.223 16.016C2.26941 16.572 2.74845 17 3.32421 17H10.3425C10.9181 17 11.3974 16.572 11.4437 16.0158L12.2759 6.0582C12.298 5.7951 12.0833 5.5699 11.8106 5.5699ZM4.26653 15.938C4.25547 15.9386 4.2444 15.939 4.23333 15.939C3.95531 15.939 3.72197 15.7295 3.70482 15.4574L3.18323 7.28252C3.16533 6.99966 3.3876 6.75622 3.67981 6.73886C3.97109 6.72168 4.22373 6.93636 4.24163 7.21948L4.76304 15.3943C4.78112 15.6771 4.55875 15.9205 4.26653 15.938ZM7.36951 15.4259C7.36951 15.7092 7.13221 15.9388 6.83935 15.9388C6.54649 15.9388 6.30908 15.7092 6.30908 15.4259V7.25094C6.30908 6.96758 6.54649 6.73784 6.83935 6.73784C7.13211 6.73784 7.36951 6.96758 7.36951 7.25094V15.4259ZM10.4837 7.28106L9.98578 15.456C9.96925 15.7286 9.73545 15.9388 9.45699 15.9388C9.44655 15.9388 9.43586 15.9386 9.42534 15.9382C9.13304 15.9213 8.91002 15.6786 8.92727 15.3956L9.42515 7.22076C9.44222 6.93782 9.69236 6.72194 9.9854 6.73878C10.2778 6.75528 10.5008 6.99828 10.4837 7.28106ZM13.6441 3.98642L13.2959 2.97646C13.2041 2.7101 12.9465 2.53048 12.6563 2.53048H1.01049C0.720317 2.53048 0.462699 2.7101 0.370984 2.97646L0.0227731 3.98642C-0.0444109 4.18136 0.0430711 4.38004 0.206203 4.4791C0.272537 4.51946 0.351247 4.54366 0.437794 4.54366H13.2292C13.3155 4.54366 13.3944 4.51946 13.4608 4.479C13.6238 4.37988 13.7113 4.18118 13.6441 3.98642Z" />
         </svg>
       </button>
-      <button class="border-0 bg-transparent"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                <button class="border-0 bg-transparent"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M13.6185 8.92417C13.2446 8.92417 12.9422 9.22567 12.9422 9.59705V14.9808C12.9422 15.3517 12.6394 15.6538 12.2661 15.6538H2.7991C2.42579 15.6538 2.12287 15.3517 2.12287 14.9808V5.55923C2.12287 5.18853 2.42579 4.88633 2.7991 4.88633H8.20887C8.58274 4.88633 8.88501 4.58483 8.88501 4.21337C8.88501 3.84189 8.58274 3.54039 8.20887 3.54039H2.7991C1.68063 3.54039 0.770508 4.44619 0.770508 5.55923V14.9808C0.770508 16.0939 1.68063 16.9998 2.7991 16.9998H12.2661C13.3846 16.9998 14.2948 16.0939 14.2948 14.9808V9.59705C14.2948 9.22499 13.9924 8.92417 13.6185 8.92417ZM7.1106 8.31115C7.06317 8.35819 7.03144 8.41807 7.01797 8.48265L6.53984 10.8623C6.51759 10.9726 6.55276 11.0864 6.63256 11.1665C6.69678 11.2304 6.78332 11.2647 6.872 11.2647C6.8935 11.2647 6.91593 11.2627 6.93816 11.258L9.32864 10.7824C9.39489 10.7688 9.45514 10.7372 9.50173 10.6899L14.852 5.36541L12.4616 2.98665L7.1106 8.31115ZM16.5046 1.34127C15.8453 0.685152 14.7729 0.685152 14.1141 1.34127L13.1783 2.27255L15.5687 4.65147L16.5046 3.72001C16.8238 3.40311 16.9996 2.98041 16.9996 2.53093C16.9996 2.08137 16.8238 1.65877 16.5046 1.34127Z" />
         </svg></button>
-    </td>
-  </ng-container>
+                            </td>
+                        </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-</div>
-</div>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>
 
 
 
-<nav class="mt-5 d-flex flex-row-reverse" aria-label="Page navigation example">
-  <ul class="pagination pagination-lg">
-    <li class=" page-item">
-      <a class="btn btn-outline-dark pl-4 pr-4" routerLink="/preference/sale" aria-label="Previous">
-        <span aria-hidden="true"><img src="../../../../assets/Combined shape 4804.svg"/></span>
-      </a>
-    </li>
-    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">1</a></li>
-    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">2</a></li>
-    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">3</a></li>
-    <li class="page-item">
-      <a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale" aria-label="Next">
-        <span aria-hidden="true"><img src="../../../../assets/Combined shape 4802.svg"/></span>
-      </a>
-    </li>
-  </ul>
-</nav>
+            <nav class="mt-5 d-flex flex-row-reverse" aria-label="Page navigation example">
+                <ul class="pagination pagination-lg">
+                    <li class=" page-item">
+                        <a class="btn btn-outline-dark pl-4 pr-4" routerLink="/preference/sale" aria-label="Previous">
+                            <span aria-hidden="true"><img src="../../../../assets/Combined shape 4804.svg"/></span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">1</a></li>
+                    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">2</a></li>
+                    <li class="page-item"><a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale">3</a></li>
+                    <li class="page-item">
+                        <a class="btn btn-outline-dark pl-4 pr-4 ml-2" routerLink="/preference/sale" aria-label="Next">
+                            <span aria-hidden="true"><img src="../../../../assets/Combined shape 4802.svg"/></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-</div>
+        </div>
+
+
+        <input (keydown)="getUser()" class="uk-input uk-form-width-small uk-search-input " mdInput id="searchInput" #Input type="text" placeholder="Search ...">
+        <div *ngFor="let item of repos">
+            <p>{{item.owner.avatar_url}}</p>
+            <p>{{item.id}}</p>
+            <p>{{item.name}}</p>
+
+        </div>

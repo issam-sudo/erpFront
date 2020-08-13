@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
-  name: string;
+  name: any;
   position: number;
   weight: number;
   symbol: string;
@@ -29,7 +29,11 @@ export class DeliveryNoteComponent implements OnInit {
   route_active: string;
   displayedColumns: string[] = ['act', 'devis', 'date', 'client', 'montant', 'status', 'action'];
   dataSource = elemnt;
-
+  usersSelect: any;
+  name: any ="wiwikuan";
+  URL: string;
+  repos: any;
+ 
   constructor() { }
 pageprincipale(){
   this.hidden = 'pagepincipale';
@@ -39,6 +43,42 @@ page2(){
 }
 
   ngOnInit(): void {
+ 
+ 
   }
+
+ 
+  async  getUser(){
+
+    this.URL = 'https://api.github.com/search/repositories?q=created:>2020-06-21&sort=stars&order=desc&page='
+
+    const response = await fetch(this.URL);
+
+    if (response.ok) {
+      const json = await response.json();
+      console.log(json);
+         // tslint:disable-next-line:prefer-const
+    // tslint:disable-next-line:no-var-keyword
+    // tslint:disable-next-line:prefer-const
+    let nameSearchElement: any = document.getElementById('searchInput');
+    console.log(nameSearchElement.value);
+    if (nameSearchElement.value.length)
+     {
+        // tslint:disable-next-line:only-arrow-functions
+        this.repos =  await json.items.filter(function(Allrepos) {
+        return Allrepos.name.includes(nameSearchElement.value);
+
+        }.bind(this));
+          // tslint:disable-next-line:align
+          console.log(this.repos);
+          console.log(this.repos.owner.avatar_url);
+
+    }
+  } else {
+    // tslint:disable-next-line:quotemark
+    alert("HTTP-Error: " + response.status);
+}
+}
+
 
 }
