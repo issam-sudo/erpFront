@@ -46,7 +46,7 @@ page2(){
  
  
   }
-
+ 
  
   async  getUser(){
 
@@ -71,7 +71,7 @@ page2(){
         }.bind(this));
           // tslint:disable-next-line:align
           console.log(this.repos);
-          console.log(this.repos.owner.avatar_url);
+      
 
     }
   } else {
