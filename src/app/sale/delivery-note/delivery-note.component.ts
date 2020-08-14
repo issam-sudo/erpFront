@@ -57,10 +57,9 @@ page2(){
     if (response.ok) {
       const json = await response.json();
       console.log(json);
-         // tslint:disable-next-line:prefer-const
-    // tslint:disable-next-line:no-var-keyword
-    // tslint:disable-next-line:prefer-const
+
     let nameSearchElement: any = document.getElementById('searchInput');
+    
     console.log(nameSearchElement.value);
     if (nameSearchElement.value.length)
      {

@@ -17,7 +17,7 @@ interface delai{
 export class DeliveryNotePage2Component implements OnInit {
 
   value: string;
-  selectedValue1: string;
+  selectedUsers: string;
   delaiFormControl = new FormControl('', [
     Validators.required,
 
@@ -27,6 +27,12 @@ export class DeliveryNotePage2Component implements OnInit {
     { name: 'Hjije Youssef',adress:'Rue La fontaine 150 brussels'},
     { name: 'majed',adress:'Rue La fontaine 150 brussels'}
   ];
+
+
+  filterUsers(event) {
+    const value = event.value;
+    console.log(value)
+}
   constructor() { }
 
   ngOnInit(): void {

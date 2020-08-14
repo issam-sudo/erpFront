@@ -152,158 +152,6 @@
     </div>
 
 
-    <!-- <div class="row  mb-4 style-border-nps   d-flex justify-content-canter justify-items-center" >
-
-        <div class="col-12 col-md-4">
-            <div class="input-group mb-4 mt-4">
-                <mat-form-field appearance="none">
-                    <mat-label class="elhoo_compte_labelInputPosition">Réference</mat-label>
-                    <input autocomplete="off" matInput placeholder="Réference" class="InputFirstSection">
-                </mat-form-field>
-            </div>
-
-
-            <div class="row pb-2 ">
-
-                <div class="col-12 col-md-6">
-
-                </div>
-                <div class="col-12 col-md-6 d-flex justify-content-end">
-
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
-                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')"
-                        class="astext text-uppercase " id="language"> fr <span class="divider "> |&nbsp; </span>
-                    </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
-                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')"
-                        class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
-                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')"
-                        class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
-                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')"
-                        class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
-                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')"
-                        class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
-                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')"
-                        class="astext text-uppercase" id="language"> ca </button>
-
-                </div>
-            </div>
-
-
-            <div class="input-group">
-
-                <mat-form-field>
-
-                    <mat-label class="elhoo_compte_labelInputPosition">Description *
-                    </mat-label>
-                    <textarea cdkTextareaAutosize id="textLangue" rows="9" cols="40" placeholder="Description *"
-                        matInput></textarea>
-                </mat-form-field>
-
-
-            </div>
-        </div>
-
-
-
-
-
-        <div class="col-12 col-md-4 ">
-            <div class="row pt-1">
-                <div class="col-12 col-md-6 ml-auto d-flex justify-content-end">
-
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'fr' , 
-                    BtnLanguageInactive : langueValue != 'fr' }" (click)="clickButton('fr')"
-                        class="astext text-uppercase " id="language"> fr <span class="divider "> |&nbsp; </span>
-                    </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'nl' , 
-                    BtnLanguageInactive : langueValue != 'nl' }" (click)="clickButton('nl')"
-                        class="astext text-uppercase" id="language"> nl<span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'en' , 
-                    BtnLanguageInactive : langueValue != 'en' }" (click)="clickButton('en')"
-                        class="astext text-uppercase" id="language"> en <span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'de' , 
-                    BtnLanguageInactive : langueValue != 'de' }" (click)="clickButton('de')"
-                        class="astext text-uppercase" id="language"> de<span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'es' , 
-                    BtnLanguageInactive : langueValue != 'es' }" (click)="clickButton('es')"
-                        class="astext text-uppercase" id="language"> es <span class="divider"> |&nbsp; </span> </button>
-                    <button [ngClass]="{BtnLanguageActive: langueValue == 'ca' , 
-                    BtnLanguageInactive : langueValue != 'ca' }" (click)="clickButton('ca')"
-                        class="astext text-uppercase" id="language"> ca </button>
-
-                </div>
-                <div class="col-12">
-                    <div class="input-group mb-4">
-                        <mat-form-field appearance="none" class="example-full-width">
-
-                            <mat-label class="elhoo_compte_labelInputPosition">Libelle</mat-label>
-                            <input autocomplete="off" matInput placeholder="Libelle" class="InputFirstSection">
-
-                        </mat-form-field>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="row mt-4">
-                <div class="col-12 d-flex aling-items-center">
-                    <mat-form-field appearance="none" class="example-full-width">
-                        <mat-label class="elhoo_compte_labelInputPosition">PRIX</mat-label>
-                        <input autocomplete="off" matInput placeholder="PRIX" class="InputFirstSection">
-                    </mat-form-field>
-                    <span class="d-flex align-items-center justify-content-center mx-1">€</span>
-                    <mat-form-field appearance="none">
-                        <mat-label class="elhoo_compte_labelInputPosition">TOUTES LES FACTURES</mat-label>
-                        <mat-select>
-                            <mat-option value="1">Option 1</mat-option>
-                            <mat-option value="2">Option 2</mat-option>
-                            <mat-option value="3">Option 3</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-
-
-            </div>
-
-
-        </div>
-        <div class="col-12 col-md-4 ">
-            <div class="row pb-2">
-                <div class="col-12">
-                    <mat-form-field appearance="none" class=" mt-4 mb-3">
-                        <mat-label class="elhoo_compte_labelInputPosition">Catégorie </mat-label>
-                        <mat-select>
-                            <mat-option value="1">Option 1</mat-option>
-                            <mat-option value="2">Option 2</mat-option>
-                            <mat-option value="3">Option 3</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div class="col-6 mt-4">
-                    <mat-form-field appearance="none " class="mt-1">
-                        <mat-label class="elhoo_compte_labelInputPosition">Taux TVA *</mat-label>
-                        <input autocomplete="off" matInput placeholder="TVA % "
-                            style="font-size: 12px; padding-left: 12px;">
-
-                    </mat-form-field>
-                </div>
-                <div class="col-6 mt-4">
-                    <a href="" class="btn w-100">Enregistrer</a>
-                </div>
-
- 
-            </div>
-        </div>
-
-
-    </div> -->
 
 </div>
 <div class="row ">
@@ -346,9 +194,9 @@
             <ng-container matColumnDef="act">
                 <th mat-header-cell *matHeaderCellDef> ACTION</th>
                 <td mat-cell *matCellDef="let element">
-                    <section class="example-section">
+                   
                         <mat-checkbox class="example-margin"></mat-checkbox>
-                    </section>
+                   
                 </td>
             </ng-container>
 
@@ -386,8 +234,10 @@
             </ng-container>
 
             <ng-container matColumnDef="action">
-                <th mat-header-cell *matHeaderCellDef> ACTION </th>
-                <td mat-cell *matCellDef="let element">
+                <th mat-header-cell *matHeaderCellDef style="
+                text-align: end;"> ACTION </th>
+                <td mat-cell *matCellDef="let element" style="
+                text-align: end;">
                     <button class="border-0 bg-transparent">
                         <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
