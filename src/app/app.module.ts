@@ -24,6 +24,13 @@ import { SaleContainerComponent } from './sale/sale-container/sale-container.com
 import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
 import { PreferenceReminderComponent } from './preference/preference-reminder/preference-reminder.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ContactSuppliersComponent } from './contact/contact-suppliers/contact-suppliers.component';
+import { ContactContainerComponent } from './contact/contact-container/contact-container.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
+import { MatTableExporterModule } from 'mat-table-exporter';
 
 @NgModule({
   declarations: [
@@ -44,18 +51,21 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RecurringBillsComponent,
     SaleInvoiceComponent,
     Quote_fileUpload,
-    PreferenceReminderComponent
+    PreferenceReminderComponent,
+    ContactSuppliersComponent,
+    ContactContainerComponent,
+    ContactHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   
     SharedModule,
     HttpClientModule,
     PdfViewerModule,
-    NgxPaginationModule,
-   
+    MatPaginatorModule,
+    MatTableExporterModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,17 +36,17 @@
     }
     /* Scrollbar Styling */
     
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         width: 5px;
     }
     
-    ::-webkit-scrollbar-track {
+     ::-webkit-scrollbar-track {
         background-color: var(--primary_color);
         -webkit-border-radius: 10px;
         border-radius: 10px;
     }
     
-    ::-webkit-scrollbar-thumb {
+     ::-webkit-scrollbar-thumb {
         -webkit-border-radius: 10px;
         border-radius: 10px;
         background: var(--dark_color);
@@ -347,15 +347,14 @@
     th.mat-header-cell:first-child {
         border-radius: 5px 0px 0px 5px;
         border-left: 1px solid #212529;
-        // border-top:1px solid #212529 ;
     }
     
     td.mat-cell:last-child,
     th.mat-header-cell:last-child {
-        /* row border */
         border-radius: 0px 5px 5px 0px;
         border-right: 1px solid #212529;
-        // border-top:1px solid #212529 ;
+        text-align: right;
+        padding-right: 24px;
     }
     
     .chip-cat {
@@ -379,7 +378,6 @@
     }
     
     th.mat-header-cell {
-        text-align: left;
         background-color: #333E42;
         font-family: "Poppins", sans-serif;
         letter-spacing: 2px;

@@ -3,10 +3,6 @@
     padding-left: 12px;
 }
 
-.sectionSolde {
-    bottom: 12px;
-}
-
 h5 {
     font-size: 30px;
 }
@@ -26,4 +22,8 @@ input:checked[checked="true"]+.slider-v2::before {
 
 input:checked+.slider-v2::after {
     left: 3em;
+}
+
+h3 {
+    margin-bottom: 0 !important;
 }

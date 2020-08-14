@@ -4,6 +4,7 @@ import { HomeComponent } from './core/home/home.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { PreferenceModule } from './preference/preference.module';
 import { SaleModule } from './sale/sale.module';
+import { ContactModule } from './contact/contact.module';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'dashboard', loadChildren: () => DashboardModule  },
     { path: 'preference', loadChildren: () => PreferenceModule  },
     { path: 'sale', loadChildren: () => SaleModule  },
+    { path: 'contact', loadChildren: () => ContactModule  },
   ]},
   {path: '**' , redirectTo:'/dashboard'},
 ];
