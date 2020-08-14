@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 
 interface delai {
@@ -9,13 +8,7 @@ interface delai {
   adress: string;
   adressLivr: string;
 }
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
 
-  }
-}
 
 @Component({
   selector: 'app-delivery-note-page2',
@@ -37,11 +30,12 @@ export class DeliveryNotePage2Component implements OnInit {
   ];
 
   champPersoForm = new FormGroup({
-    title: new FormControl('testx '),
-    content: new FormControl(),
+    title: new FormControl("", [Validators.required]),
+    content: new FormControl("", [Validators.required]),
   });
 
-  champsPerso: any[];
+  champsPerso: any = [];
+  disableForm = false;
 
   selectedUser: any;
 
@@ -53,10 +47,24 @@ export class DeliveryNotePage2Component implements OnInit {
   onSelectUserChange(event) {
     this.selectedUser = event.value;
   }
-  matcher = new MyErrorStateMatcher();
-
+  
   onChampPersoSubmit(){
-    console.log(this.champPersoForm.value);
+    if(this.champPersoForm.valid){
+      this.champsPerso.push(this.champPersoForm.value);
+      this.champPersoForm.reset();
+      this.disableChampPersoForm();
+    }
+  }
+
+  onChampPersoDelete(index){
+    this.champsPerso.splice(index, 1);
+    this.disableChampPersoForm();
+  }
+//desable button 
+  disableChampPersoForm(){
+    const len = this.champsPerso.length;
+    if(len==4) { this.disableForm = true }
+    else this.disableForm = false;
   }
 
 

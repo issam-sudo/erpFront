@@ -45,15 +45,15 @@
             {{ selectedUser.adress }}
           </p><br>
           <p>MODIFIER VOS CHAMPS PERSONNALISÉS</p>
-          <form [formGroup]='champPersoForm' class="row">
+          <form [formGroup]='champPersoForm' class="row" (ngSubmit)='onChampPersoSubmit()'>
             <div class="col-5">
               <div class="input-group mb-4">
-                <mat-form-field appearance="none"  >
+                <mat-form-field appearance="none">
                   <mat-label class="elhoo_compte_labelInputPosition">Intitulé</mat-label>
-                  <input fromControlName = "title" autocomplete="off" matInput placeholder="Intitulé">
+                  <input formControlName="title" autocomplete="off" matInput placeholder="Intitulé">
                 </mat-form-field>
 
-                
+
 
               </div>
             </div>
@@ -61,28 +61,70 @@
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
                   <mat-label class="elhoo_compte_labelInputPosition">Contenu</mat-label>
-                  <input  fromControlName = "content" autocomplete="off" matInput placeholder="Contenu" >
+                  <input formControlName="content" autocomplete="off" matInput placeholder="Contenu">
                 </mat-form-field>
 
               </div>
             </div>
 
 
-            <div class="col-2">
-              <a  (click)='onChampPersoSubmit()' class="btn w-100"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+            <div class="col-2 ">
+              <button [disabled]="disableForm" class="style_button"><svg width="17" height="17" viewBox="0 0 17 17"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M6.64158 0.77771V6.92229H0.757568V10.4829H6.64158V16.6913H10.2641V10.4829H16.1258V6.92229H10.2641V0.77771H6.64158Z"
                     fill="#F2F5FA" />
-                </svg></a>
+                </svg></button>
+
             </div>
 
           </form>
 
+
         </div>
 
 
+
       </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-4 style-border bg_clear_gray ">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.8746 7.49922C11.529 7.49922 11.2496 7.77926 11.2496 8.12412V13.1246C11.2496 13.4691 10.9697 13.7496 10.6247 13.7496H1.87466C1.52968 13.7496 1.24974 13.4691 1.24974 13.1246V4.37395C1.24974 4.02959 1.52968 3.74888 1.87466 3.74888H6.87476C7.2203 3.74888 7.49968 3.46884 7.49968 3.12389C7.49968 2.77885 7.2203 2.49882 6.87476 2.49882H1.87466C0.840889 2.49882 -0.000305176 3.34012 -0.000305176 4.37395V13.1246C-0.000305176 14.1585 0.840889 14.9997 1.87466 14.9997H10.6247C11.6585 14.9997 12.4997 14.1585 12.4997 13.1246V8.12412C12.4997 7.77858 12.2203 7.49922 11.8746 7.49922ZM5.85963 6.92984C5.81589 6.97355 5.78646 7.02913 5.774 7.08909L5.33214 9.29943C5.31155 9.40182 5.34404 9.50744 5.41775 9.58185C5.47719 9.64122 5.55718 9.67304 5.63911 9.67304C5.65904 9.67304 5.6797 9.67115 5.70028 9.66689L7.90963 9.22502C7.9709 9.21244 8.02654 9.1831 8.06973 9.13923L13.0147 4.1939L10.8053 1.98451L5.85963 6.92984ZM14.5421 0.456215C13.9328 -0.153211 12.9416 -0.153211 12.3328 0.456215L11.4678 1.32121L13.6772 3.53076L14.5421 2.66561C14.8372 2.37129 14.9996 1.97869 14.9996 1.5612C14.9996 1.14373 14.8372 0.751127 14.5421 0.456215Z"
+              fill="#323D41" />
+          </svg>
+
+
+        </div>
+        <div class="col-8 style-border bg_clear_gray  d-flex justify-content-center">
+
+          <ul class="list-inline">
+            <p>champs personnalisés</p>
+            <li *ngFor="let champ of champsPerso; let index = index">
+
+              <p> <a class="delet" (click)="onChampPersoDelete(index)"><svg width="13" height="13" viewBox="0 0 13 13"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.10218 1.95156V1.01815H4.89762V1.95156H8.10218ZM3.80527 1.95156V0.848358C3.80527 0.380582 4.21354 -0.00012207 4.71557 -0.00012207H8.28423C8.78616 -0.00012207 9.19455 0.380582 9.19455 0.848358V1.95156H13V2.96983H11.8432L10.9401 12.5352C10.9155 12.7981 10.6791 12.9998 10.3961 12.9998H2.5853C2.30221 12.9998 2.066 12.7982 2.04128 12.5354L1.13826 2.96983H-6.10352e-05V1.95156H3.80527ZM9.89568 11.9816H3.08547L2.23485 2.96983H10.7466L9.89568 11.9816ZM7.82944 10.4694L8.92106 10.5066L9.15781 4.48196L8.06602 4.44466L7.82944 10.4694ZM3.84179 4.4818L4.07847 10.5066L5.17018 10.4693L4.93351 4.4445L3.84179 4.4818ZM5.95363 10.4881H7.04608V4.46332H5.95363V10.4881Z"
+                      fill="#323D41" />
+                  </svg>
+                </a> {{champ.title}} : {{ champ.content }}</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <mat-slide-toggle>Montants TVA comprise</mat-slide-toggle>
+          <mat-slide-toggle> Afficher la référence d'article</mat-slide-toggle>
+          <mat-slide-toggle>Afficher l'unité</mat-slide-toggle>
+
+        </div>
+      </div>
+
     </div>
 
 
