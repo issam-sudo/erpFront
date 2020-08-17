@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DeliveryNotePage2Component } from './delivery-note-page2.component';
 
+
+
+
 describe('DeliveryNotePage2Component', () => {
   let component: DeliveryNotePage2Component;
   let fixture: ComponentFixture<DeliveryNotePage2Component>;

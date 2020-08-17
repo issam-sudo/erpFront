@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import {MatTableDataSource} from '@angular/material/table';
 
 
-interface delai {
+interface Facture {
 
-  name: string;
-  adress: string;
-  adressLivr: string;
+  art: string;
+  description: string;
+  quantite: string;
+  unite: string;
+  unit: string;
+  montant: string;
 }
 
+
+const ELEMENT_DATA: Facture[] = [
+  {art: 'Rocca10',description :'description', quantite:'12', unite:'Kg',unit:'1200 £',montant:'1200 £'},
+
+
+];
 
 @Component({
   selector: 'app-delivery-note-page2',
@@ -16,13 +26,60 @@ interface delai {
   styleUrls: ['./delivery-note-page2.component.scss']
 })
 export class DeliveryNotePage2Component implements OnInit {
+  displayedColumns: string[] = ['art','description', 'quantite', 'unite','unit','montant','action'];
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  
+
+
+
+
+  facture : Facture = {
+    art :"",
+    description :"",
+    quantite:"",
+    unite: "",
+    unit:"",
+    montant:"",
+
+  };
+  ELEMENT_DATA: any;
+  invoiceForm= new FormGroup({
+    art: new FormControl("", [Validators.required]),
+    description: new FormControl("", [Validators.required]),
+    quantite: new FormControl("", [Validators.required]),
+    unite: new FormControl("", [Validators.required]),
+    unit: new FormControl("", [Validators.required]),
+    montant: new FormControl("", [Validators.required]),
+  });
+
+  addNew(){
+    if(this.invoiceForm.valid){
+    ELEMENT_DATA.push(this.invoiceForm.value)
+   this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+   this.facture = {
+    art :"",
+    description :"",
+    quantite:"",
+    unite: "",
+    unit:"",
+    montant:"",
+
+
+  };
+  this.invoiceForm.reset();
+ 
+ }
+}
 
   value: string;
   selectedUsers: string;
   delaiFormControl = new FormControl('', [
     Validators.required,
+   
+  ])
 
-  ]);
+
   users = [
     { name: 'Hjije Youssef', adress: 'Rue La fontaine 150 brussels', adressLivr: 'Rue La fontaine 150 brussels llllllll' },
     { name: 'Hjije Youssef', adress: 'Rue La fontaine 150 brussels' },
@@ -33,6 +90,8 @@ export class DeliveryNotePage2Component implements OnInit {
     title: new FormControl("", [Validators.required]),
     content: new FormControl("", [Validators.required]),
   });
+
+ 
 
   champsPerso: any = [];
   disableForm = false;
@@ -66,6 +125,15 @@ export class DeliveryNotePage2Component implements OnInit {
     if(len==4) { this.disableForm = true }
     else this.disableForm = false;
   }
+
+
+  onDeleteRowTable(index){
+    this.ELEMENT_DATA.splice(index, 1);
+
+  }
+
+
+  
 
 
 
