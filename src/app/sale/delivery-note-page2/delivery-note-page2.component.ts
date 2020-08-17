@@ -31,7 +31,7 @@ export class DeliveryNotePage2Component implements OnInit {
 
   
 
-
+  url: string | ArrayBuffer ='../../assets/addLogoElhoo.png';
 
 
   facture : Facture = {
@@ -43,7 +43,6 @@ export class DeliveryNotePage2Component implements OnInit {
     montant:"",
 
   };
-  ELEMENT_DATA: any;
   invoiceForm= new FormGroup({
     art: new FormControl("", [Validators.required]),
     description: new FormControl("", [Validators.required]),
@@ -128,9 +127,22 @@ export class DeliveryNotePage2Component implements OnInit {
 
 
   onDeleteRowTable(index){
-    this.ELEMENT_DATA.splice(index, 1);
-
+    ELEMENT_DATA.splice(index, 1);
   }
+
+  onSelectFile(event) { // called each time file input changes
+    console.log(event);
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.url = event.target.result;
+
+      }
+    }
+}
 
 
   
