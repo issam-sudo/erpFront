@@ -1,0 +1,28 @@
+    * {
+        font-family: 'Poppins', sans-serif !important;
+    }
+    
+    .elhoo_compte_messageErrorPosition {
+        margin-top: 18px;
+        color: var(--secondary_color);
+    }
+    
+    .InputFirstSection {
+        font-size: 12px;
+        padding-left: 12px;
+        font-family: 'Poppins', sans-serif !important;
+        line-height: 0px;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px;
+    }
+    
+    .table thead {
+        tr {
+            background-color: salmon;
+            border-color: salmon !important;
+            border-style: solid !important;
+        }
+    }

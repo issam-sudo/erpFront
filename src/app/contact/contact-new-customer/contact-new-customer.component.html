@@ -1,0 +1,301 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>CLIENT</h3>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Référence</mat-label>
+                    <input autocomplete="off" matInput placeholder="Référence" class="InputFirstSection">
+
+                </mat-form-field>
+
+
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Nom *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Nom is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Nom ligne 2 </mat-label>
+                    <input autocomplete="off" matInput placeholder="Nom ligne 2" class="InputFirstSection">
+
+                </mat-form-field>
+
+
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Email *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Nom *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <h3>ADRESSE</h3>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Adresse *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Adresse *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Adresse is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Adresse (ligne 2)</mat-label>
+                    <input autocomplete="off" matInput placeholder="Adresse (ligne 2)" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Code postal * </mat-label>
+                            <input autocomplete="off" matInput placeholder="Code postal *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Code postal is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Ville *</mat-label>
+                            <input autocomplete="off" matInput placeholder="Ville *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Ville is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Pays *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Pays *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Pays is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <h3>FACTURATION</h3>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Langue *</mat-label>
+                    <input autocomplete="off" matInput placeholder="Langue *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                        Langue is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Numéro de TVA </mat-label>
+                    <input autocomplete="off" matInput placeholder="Numéro de TVA" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Taux de TVA par défaut</mat-label>
+                    <input autocomplete="off" matInput placeholder="Taux de TVA par défaut" class="InputFirstSection">
+
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Code postal * </mat-label>
+                            <input autocomplete="off" matInput placeholder="Code postal *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Code postal is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Ville *</mat-label>
+                            <input autocomplete="off" matInput placeholder="Ville *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Ville is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+            </div>
+            <section class="example-section pb-3">
+                <mat-checkbox class="example-margin" [(ngModel)]="checkedMail">Exclure du cycle de rappels automatique</mat-checkbox>
+            </section>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>EXPORT EN COMPTABILITÉ</h3>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Référence client</mat-label>
+                    <input autocomplete="off" matInput placeholder="Référence client" class="InputFirstSection">
+
+                </mat-form-field>
+
+
+            </div>
+            <div class="input-group mb-4">
+                <mat-form-field appearance="none" class="example-full-width">
+                    <mat-label class="elhoo_compte_labelInputPosition">Numéro de client</mat-label>
+                    <input autocomplete="off" matInput placeholder="Numéro de client" class="InputFirstSection">
+
+                </mat-form-field>
+
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3>PERSONNE DE CONTACT</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <table class="table" data-toggle="table" data-striped="true">
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">Civilité</th>
+                        <th scope="col">Nom Fonction</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Num de téléphone </th>
+                        <th scope="col">Num de téléphone (2)</th>
+                        <th scope="col"></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users; let i = index">
+                        <td>
+                            <div class="input-group mb-4">
+                                <mat-form-field appearance="none" class="example-full-width">
+                                    <mat-label class="elhoo_compte_labelInputPosition">Civilité</mat-label>
+                                    <input [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Civilité" class="InputFirstSection">
+
+                                </mat-form-field>
+
+
+                            </div>
+
+
+
+                        </td>
+
+                        <td>
+
+
+                            <div class="input-group mb-4">
+                                <mat-form-field appearance="none" class="example-full-width">
+                                    <mat-label class="elhoo_compte_labelInputPosition">Nom Fonction</mat-label>
+                                    <input [(ngModel)]="user.age" name="age" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Nom Fonction" class="InputFirstSection">
+
+                                </mat-form-field>
+
+
+                            </div>
+
+                        </td>
+                        <td>
+
+                            <div class="input-group mb-4">
+                                <mat-form-field appearance="none" class="example-full-width">
+                                    <mat-label class="elhoo_compte_labelInputPosition">Email</mat-label>
+                                    <input [(ngModel)]="user.age1" name="age1" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Email" class="InputFirstSection">
+
+                                </mat-form-field>
+
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <div class="input-group mb-4">
+                                <mat-form-field appearance="none" class="example-full-width">
+                                    <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone </mat-label>
+                                    <input [(ngModel)]="user.age2" name="age2" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Num de téléphone" class="InputFirstSection">
+
+                                </mat-form-field>
+
+
+                            </div>
+
+
+
+                            <td>
+
+                                <div class="input-group mb-4">
+                                    <mat-form-field appearance="none" class="example-full-width">
+                                        <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone (2)</mat-label>
+                                        <input [(ngModel)]="user.age3" name="age3" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Num de téléphone (2)" class="InputFirstSection">
+
+                                    </mat-form-field>
+
+
+                                </div>
+                            </td>
+                            <td> <a (click)="removeUser(i)">Remove</a><br> <a (click)="addUser()">Add User</a></td>
+
+                    </tr>
+
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</div>

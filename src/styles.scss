@@ -519,3 +519,27 @@
             }
         }
     }
+    
+    .colorBg {
+        background-color: #323d41;
+        color: #ebeff2;
+    }
+    
+    .colorBg1 {
+        background-color: #323d41;
+        color: #ebeff2;
+    }
+    
+    .colorBg2 {
+        background-color: #323d41;
+        color: #ebeff2;
+    }
+    
+    ul {
+        .list-group {
+            display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+            border-radius: .25rem;
+        }
+    }
