@@ -128,6 +128,7 @@ export class DeliveryNotePage2Component implements OnInit {
 
   onDeleteRowTable(index){
     ELEMENT_DATA.splice(index, 1);
+    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
   }
 
   onSelectFile(event) { // called each time file input changes

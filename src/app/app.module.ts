@@ -34,7 +34,7 @@ import { MatTableExporterModule } from 'mat-table-exporter';
 import { ContactCustomerComponent } from './contact/contact-customer/contact-customer.component';
 import { ContactNewCustomerComponent } from './contact/contact-new-customer/contact-new-customer.component';
 import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/contact-new-suppliers.component';
-
+import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,8 @@ import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/co
     ContactHeaderComponent,
     ContactCustomerComponent,
     ContactNewCustomerComponent,
-    ContactNewSuppliersComponent
+    ContactNewSuppliersComponent,
+    PurchaseOrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +73,7 @@ import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/co
     PdfViewerModule,
     MatPaginatorModule,
     MatTableExporterModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
