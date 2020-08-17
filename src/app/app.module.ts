@@ -31,6 +31,9 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
+import { ContactCustomerComponent } from './contact/contact-customer/contact-customer.component';
+import { ContactNewCustomerComponent } from './contact/contact-new-customer/contact-new-customer.component';
+import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/contact-new-suppliers.component';
 
 
 @NgModule({
@@ -55,7 +58,10 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     PreferenceReminderComponent,
     ContactSuppliersComponent,
     ContactContainerComponent,
-    ContactHeaderComponent
+    ContactHeaderComponent,
+    ContactCustomerComponent,
+    ContactNewCustomerComponent,
+    ContactNewSuppliersComponent
   ],
   imports: [
     BrowserModule,

@@ -13,8 +13,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatTableExporterModule } from 'mat-table-exporter';
 
-
-
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -34,11 +32,11 @@ const elemnt: any[] = [
 
 ]
 @Component({
-  selector: 'app-contact-suppliers',
-  templateUrl: './contact-suppliers.component.html',
-  styleUrls: ['./contact-suppliers.component.scss']
+  selector: 'app-contact-customer',
+  templateUrl: './contact-customer.component.html',
+  styleUrls: ['./contact-customer.component.scss']
 })
-export class ContactSuppliersComponent implements OnInit {
+export class ContactCustomerComponent implements OnInit {
   isClients: boolean;
   route_active: string;
   displayedColumns: string[] = ['act','devis', 'date', 'client', 'montant','status','new' ,'action'];
@@ -95,8 +93,9 @@ pageSizeOptions = [5, 10, 25, 100];
 
     if (response.ok) {
       const json = await response.json();
-      console.log(json);
+      console.log('dfsdfsdf'+json.items.length);
       this.lengthTotal =json.items.length
+ 
   
       this.repos =  await json.items 
       this.repos2 =  await json.items 
@@ -189,7 +188,5 @@ console.log(this.collection)
 public clearManualPage(): void {
   this.manualPage = 0;
 }
- 
-
  
 }
