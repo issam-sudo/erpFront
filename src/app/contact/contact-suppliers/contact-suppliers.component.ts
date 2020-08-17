@@ -89,8 +89,8 @@ pageSizeOptions = [5, 10, 25, 100];
  
  
     
-    this.URL = 'https://api.github.com/search/repositories?q=created:>2020-06-21&sort=stars&order=desc&page='
-
+    this.URL = 'https://api.github.com/search/repositories?q=created:>2017-08-21&sort=stars&order=desc&page='
+9
     const response = await fetch(this.URL);
 
     if (response.ok) {

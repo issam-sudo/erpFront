@@ -14,15 +14,20 @@
         line-height: 0px;
     }
     
-    .table th,
-    .table td {
-        border: 1px;
-    }
-    
-    .table thead {
-        tr {
-            background-color: salmon;
-            border-color: salmon !important;
-            border-style: solid !important;
+    .buttonAddRemove {
+        border-style: solid;
+        border-radius: 5px;
+        background-color: #323d41;
+        border-color: #323d41;
+        border-width: 1px;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--primary_color);
+            border-color: var(--secondary_color);
+            svg {
+                path {
+                    fill: var(--secondary_color);
+                }
+            }
         }
     }

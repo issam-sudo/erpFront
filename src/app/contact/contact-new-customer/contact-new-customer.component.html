@@ -167,7 +167,7 @@
 
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 ">
             <h3>EXPORT EN COMPTABILITÉ</h3>
             <div class="input-group mb-4">
                 <mat-form-field appearance="none" class="example-full-width">
@@ -178,7 +178,7 @@
 
 
             </div>
-            <div class="input-group mb-4">
+            <div class="input-group mb-4  ">
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Numéro de client</mat-label>
                     <input autocomplete="off" matInput placeholder="Numéro de client" class="InputFirstSection">
@@ -191,102 +191,145 @@
         <div class="col-md-8">
             <h3>PERSONNE DE CONTACT</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <table class="table" data-toggle="table" data-striped="true">
-                <thead>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
 
-                    <tr>
+                <ng-container matColumnDef="art">
+                    <th mat-header-cell *matHeaderCellDef> Civilité</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <input disabled="true" autocomplete="off" matInput value="{{element.art}}" class="InputFirstSection">
+                    </td>
 
-                        <th scope="col">Civilité</th>
-                        <th scope="col">Nom Fonction</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Num de téléphone </th>
-                        <th scope="col">Num de téléphone (2)</th>
-                        <th scope="col"></th>
-                    </tr>
+                </ng-container>
 
-                </thead>
-                <tbody>
-                    <tr *ngFor="let user of users; let i = index">
-                        <td>
-                            <div class="input-group mb-4">
-                                <mat-form-field appearance="none" class="example-full-width">
-                                    <mat-label class="elhoo_compte_labelInputPosition">Civilité</mat-label>
-                                    <input [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Civilité" class="InputFirstSection">
-
-                                </mat-form-field>
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Nom Fonction </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <input disabled="true" autocomplete="off" matInput value="{{element.description}}" class="InputFirstSection">
+                    </td>
+                </ng-container>
 
 
-                            </div>
+                <ng-container matColumnDef="quantite">
+                    <th mat-header-cell *matHeaderCellDef> Email </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <input disabled="true" autocomplete="off" matInput value="{{element.quantite}}" class="InputFirstSection">
+                    </td>
+                </ng-container>
 
 
+                <ng-container matColumnDef="unite">
+                    <th mat-header-cell *matHeaderCellDef> Num de téléphone </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <input disabled="true" autocomplete="off" matInput value="{{element.unite}}" class="InputFirstSection"> </td>
+                </ng-container>
 
-                        </td>
+                <ng-container matColumnDef="unit">
+                    <th mat-header-cell *matHeaderCellDef>Num de téléphone (2)</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <input disabled="true" autocomplete="off" matInput value="{{element.unit}}" class="InputFirstSection">
+                    </td>
+                </ng-container>
 
-                        <td>
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <a (click)="removenew(i)" class="buttonAddRemove p-1">
+                            <svg width="16" height="17" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2185 2.85238V1.48816H6.78142V2.85238H11.2185ZM5.26886 2.85238V1.24006C5.26886 0.556302 5.83428 -0.00012207 6.52934 -0.00012207H11.4706C12.1655 -0.00012207 12.731 0.556302 12.731 1.24006V2.85238H18V4.34065H16.3983L15.1479 18.3208C15.1139 18.705 14.7866 18.9999 14.3946 18.9999H3.57972C3.18776 18.9999 2.86077 18.7053 2.82654 18.321L1.57611 4.34065H0V2.85238H5.26886ZM13.7019 17.5116H4.27228L3.09448 4.34065H14.88L13.7019 17.5116ZM10.8408 15.3016L12.3524 15.3559L12.6801 6.55071L11.1685 6.49613L10.8408 15.3016ZM5.31953 6.5504L5.64726 15.3559L7.1588 15.3014L6.83115 6.49586L5.31953 6.5504ZM8.24359 15.3289H9.75622V6.52338H8.24359V15.3289Z" fill="#F2F5FA"/>
+                        </svg>
+                        </a>
 
-
-                            <div class="input-group mb-4">
-                                <mat-form-field appearance="none" class="example-full-width">
-                                    <mat-label class="elhoo_compte_labelInputPosition">Nom Fonction</mat-label>
-                                    <input [(ngModel)]="user.age" name="age" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Nom Fonction" class="InputFirstSection">
-
-                                </mat-form-field>
-
-
-                            </div>
-
-                        </td>
-                        <td>
-
-                            <div class="input-group mb-4">
-                                <mat-form-field appearance="none" class="example-full-width">
-                                    <mat-label class="elhoo_compte_labelInputPosition">Email</mat-label>
-                                    <input [(ngModel)]="user.age1" name="age1" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Email" class="InputFirstSection">
-
-                                </mat-form-field>
-
-
-                            </div>
-
-                        </td>
-
-                        <td>
-                            <div class="input-group mb-4">
-                                <mat-form-field appearance="none" class="example-full-width">
-                                    <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone </mat-label>
-                                    <input [(ngModel)]="user.age2" name="age2" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Num de téléphone" class="InputFirstSection">
-
-                                </mat-form-field>
-
-
-                            </div>
+                    </td>
+                </ng-container>
 
 
 
-                            <td>
-
-                                <div class="input-group mb-4">
-                                    <mat-form-field appearance="none" class="example-full-width">
-                                        <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone (2)</mat-label>
-                                        <input [(ngModel)]="user.age3" name="age3" [(ngModel)]="user.name" name="name" autocomplete="off" matInput placeholder="Num de téléphone (2)" class="InputFirstSection">
-
-                                    </mat-form-field>
-
-
-                                </div>
-                            </td>
-                            <td> <a (click)="removeUser(i)">Remove</a><br> <a (click)="addUser()">Add User</a></td>
-
-                    </tr>
-
-
-
-                </tbody>
-
-
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
 
+
+            <form [formGroup]='invoiceForm' class="row pt-3">
+                <div class="col ">
+
+
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Civilité</mat-label>
+
+
+
+
+                            <mat-select matInput [(ngModel)]="selectedValue1" name="art" formControlName="art">
+
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+
+                            </mat-select>
+
+
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="col">
+
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Nom Fonction</mat-label>
+                            <input autocomplete="off" matInput placeholder="Nom Fonction" formControlName="description" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Email</mat-label>
+                            <input autocomplete="off" matInput placeholder="Email" formControlName="quantite" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+
+
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone </mat-label>
+                            <input autocomplete="off" matInput placeholder="Num de téléphone" formControlName="unite" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="col">
+
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Num de téléphone (2)</mat-label>
+                            <input autocomplete="off" matInput placeholder="Num de téléphone (2)" formControlName="unit" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+
+                <div class="col">
+                    <button [disabled]="disableForm" class="buttonAddRemove p-2" (click)="addNew()">
+                        <svg width="25" height="25" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.64171 0.777925V6.92249H0.757671V10.483H6.64171V16.6914H10.2642V10.483H16.1259V6.92249H10.2642V0.777925H6.64171Z" fill="#F2F5FA"/>
+                            </svg>
+                            
+                    </button>
+
+                </div>
+            </form>
         </div>
 
 
@@ -295,7 +338,9 @@
 
 
 
-
+    <div class="  justify-content-end d-flex">
+        <button class="btn text-uppercase" type="submit" aria-pressed="true">enregristrer</button>
+    </div>
 
 
 </div>
