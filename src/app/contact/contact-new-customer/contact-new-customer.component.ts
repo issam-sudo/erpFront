@@ -10,10 +10,30 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { MatTableDataSource } from '@angular/material/table';
 
-interface Food {
+interface Langue {
   value: string;
   viewValue: string;
 }
+
+interface Ville {
+  value: string;
+  viewValue: string;
+}
+interface Civilite {
+  value: string;
+  viewValue: string;
+}
+
+interface TauxTva {
+  value: string;
+  viewValue: string;
+}
+
+interface DelaiPaiement {
+  value: string;
+  viewValue: string;
+}
+
 interface Facture {
 
   art: string;
@@ -27,8 +47,7 @@ interface Facture {
 
 
 const ELEMENT_DATA: Facture[] = [
-  {art: 'hkj',description :'dfgdf', quantite:'dfgdf', unite:'dfg',unit:'3'},
-
+ 
 
 ];
 
@@ -62,13 +81,14 @@ export class ContactNewCustomerComponent implements OnInit {
   invoiceForm= new FormGroup({
     art: new FormControl("", [Validators.required]),
     description: new FormControl("", [Validators.required]),
-    quantite: new FormControl("", [Validators.required]),
+    quantite: new FormControl("", [Validators.required,Validators.pattern('^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$')]),
     unite: new FormControl("", [Validators.required]),
     unit: new FormControl("", [Validators.required]),
    
   });
   disabled: boolean;
   selectedValue2: any;
+  route_active: any;
 
 
 
@@ -82,12 +102,8 @@ export class ContactNewCustomerComponent implements OnInit {
     quantite:"",
     unite: "",
     unit:""
-  
-
-
   };
   this.invoiceForm.reset();
- 
  }
 }
 removenew(i){
@@ -98,10 +114,10 @@ removenew(i){
 
   checkedMail = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.route_active =this.router.url
   }
 /* 
  update(i){
@@ -116,14 +132,78 @@ removenew(i){
     Validators.required,
 
   ]);
+  emailFormControl = new FormControl('', [
+    Validators.required
+    , Validators.email
+
+  ]);
+  adresseFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+  codePostalFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+  paysFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+
+  villeFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+
+  langueFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+
   matcher = new MyErrorStateMatcher();
 
   selectedValue1: string;
-  foods: Food[] = [
+  langues: Langue[] = [
     {value: 'Francais', viewValue: 'Francais'},
     {value: 'Anglais', viewValue: 'Anglais'},
     {value: 'Allemand', viewValue: 'Allemand'}
   ];
+  selectedValueVille: string;
+  villes: Ville[] = [
+    {value: 'Anvers', viewValue: 'Anvers'},
+    {value: 'Gand', viewValue: 'Gand'},
+    {value: 'Louvain', viewValue: 'Louvain'}
+  ];
+  selectedValueCivilite: string;
+  civilites: Civilite[] = [
+    {value: 'Mr', viewValue: 'Mr'},
+    {value: 'Mme', viewValue: 'Mme'},
+    {value: 'Mlle', viewValue: 'Mlle'}
+  ];
 
-  
+  selectedValueTva: string;
+  tauxTva: TauxTva[] = [
+    {value: '0.25', viewValue: '25%'},
+    {value: '0.20', viewValue: '20%'},
+    {value: '0.21', viewValue: '21%'}
+  ];
+
+
+
+  selectedValueDelaiPaiement: string;
+  delaiPaiement: DelaiPaiement[] = [
+    {value: 'jours fin de mois', viewValue: 'jours fin de mois'},
+    {value: 'jours fin de mois', viewValue: 'jours fin de mois'},
+    {value: 'jours fin de mois', viewValue: 'jours fin de mois'}
+  ];
+
+
+  setrouter(e){
+    this.route_active = e;
+    console.log(this.route_active)
+    this.router.navigate([this.route_active]).then(() => {
+      window.location.reload();
+    }); ;
+
+  }
 }

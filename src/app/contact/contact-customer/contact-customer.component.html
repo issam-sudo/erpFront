@@ -8,15 +8,24 @@
             <h2 *ngIf="route_active == '/contact/customer'">Vous avez deja {{lengthTotal}} clients </h2>
 
         </div>
+        <div class="col col-md-1">
+            <button type="button" style="transform: translate(50%,38%);" class="btn btn-secondary">Ajouter</button>
+
+        </div>
         <div class="col col-md-1 ml-auto d-flex justify-content-end">
 
+
             <div class="row">
+
+
                 <div class="col col-md-4">
+
+
                     <a class="elhoo_compte_IconSvgStyle">
-                        <button mat-icon-button>
+                        <button (click)="setrouter('/contact/newcustomer')" mat-icon-button>
                             <mat-icon>
                                
-                                    <svg width="35" height="42"  viewBox="0 0 20 21" fill="#323d41" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="26" height="40"  viewBox="0 0 20 21" fill="#323d41" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2331 10.0916C12.6742 10.0916 14.653 8.03974 14.653 5.50852C14.653 2.97744 12.6742 0.925491 10.2331 0.925491C7.79187 0.925491 5.81291 2.97744 5.81291 5.50852C5.81291 8.03974 7.79187 10.0916 10.2331 10.0916ZM10.233 13.2808C11.8529 13.2808 13.2653 12.3744 14.0349 11.0269C17.3993 12.5493 19.7531 16.0249 19.7531 20.0743H0.712891C0.712891 16.0249 3.06674 12.5493 6.43111 11.0269C7.20082 12.3744 8.61316 13.2808 10.233 13.2808Z" fill="#323d41"/>
                                         </svg>
                                         
@@ -30,7 +39,7 @@
                     <a class="elhoo_compte_IconSvgStyle">
                         <button mat-icon-button>
                                 <mat-icon>
-                                    <svg width="35" height="42" viewBox="0 0 20
+                                    <svg width="26" height="40" viewBox="0 0 20
                                         19" fill="#323d41"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -119,7 +128,7 @@
                     {Author: 'devcom'}})" class="elhoo_compte_IconSvgStyle">
                         <button mat-icon-button>
                                     <mat-icon>
-                                        <svg width="35" height="42" viewBox="0 0
+                                        <svg width="26" height="40" viewBox="0 0
                                             22 19" fill="#323d41"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
@@ -179,7 +188,7 @@
                 <li class="list-group-item mr-2">
                     <a class="elhoo_compte_IconSvgStyle">
                         <button mat-icon-button [matMenuTriggerFor]="menu">
-                                        <mat-icon class="w-100"><svg width="40"
+                                        <mat-icon class="w-100"><svg width="30"
                                                 fill="#323d41"
                                                 viewBox="0
                                                 0 49 32"

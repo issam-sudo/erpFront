@@ -33,6 +33,8 @@ import { ContactCustomerComponent } from './contact/contact-customer/contact-cus
 import { ContactNewCustomerComponent } from './contact/contact-new-customer/contact-new-customer.component';
 import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/contact-new-suppliers.component';
 import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.component';
+import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.component';
+import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.
     ContactCustomerComponent,
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
-    PurchaseOrdersComponent
+    DeliveryNoteComponent,
+    PurchaseOrdersComponent,
+    DeliveryNotePage2Component
   ],
   imports: [
     BrowserModule,
