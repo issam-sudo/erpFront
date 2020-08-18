@@ -27,15 +27,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ContactSuppliersComponent } from './contact/contact-suppliers/contact-suppliers.component';
 import { ContactContainerComponent } from './contact/contact-container/contact-container.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
 import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { ContactCustomerComponent } from './contact/contact-customer/contact-customer.component';
 import { ContactNewCustomerComponent } from './contact/contact-new-customer/contact-new-customer.component';
 import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/contact-new-suppliers.component';
-import { ErrorsComponent } from './errors/errors.component';
-
+import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.component';
+import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.component';
+import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +62,9 @@ import { ErrorsComponent } from './errors/errors.component';
     ContactCustomerComponent,
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
-    ErrorsComponent
+    DeliveryNoteComponent,
+    PurchaseOrdersComponent,
+    DeliveryNotePage2Component
   ],
   imports: [
     BrowserModule,
@@ -74,7 +75,7 @@ import { ErrorsComponent } from './errors/errors.component';
     PdfViewerModule,
     MatPaginatorModule,
     MatTableExporterModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

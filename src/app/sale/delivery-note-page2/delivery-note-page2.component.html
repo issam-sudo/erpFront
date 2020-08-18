@@ -5,58 +5,15 @@
         <div class="col-12 style-border p-5">
           <div class="row">
             <div class="col-sm-3">
-
-              <div class="h-100 elhoo_compte-logo style-border" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' ,'width.px':
-                elhoolink.offsetHeight}">
-             
+              
               <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
-              <ul class="list-group pt-2 elhoo_account_listeIcon  justify-content-center d-flex">
-                <li class="list-group-item">
-                  <a (click)="loadImage.click()">
-                    <svg width="20" height="20" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3876
-                                13.1878C20.767 13.1878 20.2651 13.6798
-                                20.2651 14.2859V23.0724C20.2651 23.6779
-                                19.7625 24.1708 19.1429
-                                24.1708H3.42963C2.80996 24.1708 2.30722
-                                23.6779 2.30722 23.0724V7.69588C2.30722
-                                7.09099 2.80996 6.59782 3.42963
-                                6.59782H12.4087C13.0293 6.59782 13.531
-                                6.10561 13.531 5.49943C13.531 4.89316
-                                13.0293 4.40104 12.4087
-                                4.40104H3.42963C1.57311 4.40104 0.0625
-                                5.87947 0.0625 7.69588V23.0724C0.0625
-                                24.8893 1.57311 26.3676 3.42963
-                                26.3676H19.1429C20.9995 26.3676 22.5101
-                                24.8893 22.5101 23.0724V14.2859C22.5101
-                                13.6787 22.0083 13.1878 21.3876
-                                13.1878ZM10.5858 12.1873C10.5071 12.2641
-                                10.4545 12.3617 10.4321 12.467L9.63844
-                                16.3509C9.60156 16.5309 9.65993 16.7165
-                                9.79235 16.8472C9.89901 16.9515 10.0426
-                                17.0076 10.1899 17.0076C10.2255 17.0076
-                                10.2627 17.0043 10.2996 16.9967L14.2673
-                                16.2204C14.3772 16.1981 14.4773 16.1467
-                                14.5547 16.0695L23.435 7.37965L19.4674
-                                3.49726L10.5858 12.1873ZM26.178
-                                0.811904C25.0837 -0.258916 23.3037
-                                -0.258916 22.2102 0.811904L20.6571
-                                2.33176L24.6246 6.21436L26.178
-                                4.69426C26.7078 4.17694 26.9996 3.48721
-                                26.9996 2.75347C26.9996 2.02 26.7078
-                                1.33 26.178 0.811904Z" fill="#F2F5FA" />
-                    </svg>
+              <div class="h-100 elhoo_compte-logo style-border mr-5" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' }" (click)="loadImage.click()"> </div>
 
-                  </a>
-                </li>
-              </ul> </div>
-
-
-
-              <p>adresse</p>
+              <p>Hjije Youssef</p>
+              <p>Rue La fontaine150 brussels</p>
             </div>
-            <div class="offset-sm-4 col-sm-5">
-              <div class="input-group mb-4">
+            <div class="offset-sm-4 col-sm-5 ">
+              <div class="input-group mb-4 ">
                 <mat-form-field appearance="none">
                   <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -129,12 +86,26 @@
           <div class="row">
             <div class="col-4 ">
               <div class=" style-border bg_clear_gray h-100 p-3">
-                <ul class="list-inline">
+                <ul class="list-inline" *ngIf="selectedUser">
+                  <li>BON DE livraison</li>
                   <li>
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M11.8746 7.49922C11.529 7.49922 11.2496 7.77926 11.2496 8.12412V13.1246C11.2496 13.4691 10.9697 13.7496 10.6247 13.7496H1.87466C1.52968 13.7496 1.24974 13.4691 1.24974 13.1246V4.37395C1.24974 4.02959 1.52968 3.74888 1.87466 3.74888H6.87476C7.2203 3.74888 7.49968 3.46884 7.49968 3.12389C7.49968 2.77885 7.2203 2.49882 6.87476 2.49882H1.87466C0.840889 2.49882 -0.000305176 3.34012 -0.000305176 4.37395V13.1246C-0.000305176 14.1585 0.840889 14.9997 1.87466 14.9997H10.6247C11.6585 14.9997 12.4997 14.1585 12.4997 13.1246V8.12412C12.4997 7.77858 12.2203 7.49922 11.8746 7.49922ZM5.85963 6.92984C5.81589 6.97355 5.78646 7.02913 5.774 7.08909L5.33214 9.29943C5.31155 9.40182 5.34404 9.50744 5.41775 9.58185C5.47719 9.64122 5.55718 9.67304 5.63911 9.67304C5.65904 9.67304 5.6797 9.67115 5.70028 9.66689L7.90963 9.22502C7.9709 9.21244 8.02654 9.1831 8.06973 9.13923L13.0147 4.1939L10.8053 1.98451L5.85963 6.92984ZM14.5421 0.456215C13.9328 -0.153211 12.9416 -0.153211 12.3328 0.456215L11.4678 1.32121L13.6772 3.53076L14.5421 2.66561C14.8372 2.37129 14.9996 1.97869 14.9996 1.5612C14.9996 1.14373 14.8372 0.751127 14.5421 0.456215Z"
                         fill="#323D41" /></svg>
+                        Date : {{ selectedUser.date }}
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.8746 7.49922C11.529 7.49922 11.2496 7.77926 11.2496 8.12412V13.1246C11.2496 13.4691 10.9697 13.7496 10.6247 13.7496H1.87466C1.52968 13.7496 1.24974 13.4691 1.24974 13.1246V4.37395C1.24974 4.02959 1.52968 3.74888 1.87466 3.74888H6.87476C7.2203 3.74888 7.49968 3.46884 7.49968 3.12389C7.49968 2.77885 7.2203 2.49882 6.87476 2.49882H1.87466C0.840889 2.49882 -0.000305176 3.34012 -0.000305176 4.37395V13.1246C-0.000305176 14.1585 0.840889 14.9997 1.87466 14.9997H10.6247C11.6585 14.9997 12.4997 14.1585 12.4997 13.1246V8.12412C12.4997 7.77858 12.2203 7.49922 11.8746 7.49922ZM5.85963 6.92984C5.81589 6.97355 5.78646 7.02913 5.774 7.08909L5.33214 9.29943C5.31155 9.40182 5.34404 9.50744 5.41775 9.58185C5.47719 9.64122 5.55718 9.67304 5.63911 9.67304C5.65904 9.67304 5.6797 9.67115 5.70028 9.66689L7.90963 9.22502C7.9709 9.21244 8.02654 9.1831 8.06973 9.13923L13.0147 4.1939L10.8053 1.98451L5.85963 6.92984ZM14.5421 0.456215C13.9328 -0.153211 12.9416 -0.153211 12.3328 0.456215L11.4678 1.32121L13.6772 3.53076L14.5421 2.66561C14.8372 2.37129 14.9996 1.97869 14.9996 1.5612C14.9996 1.14373 14.8372 0.751127 14.5421 0.456215Z"
+                        fill="#323D41" /></svg>Date de livraison : {{ selectedUser.dateLivraison }}
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.8746 7.49922C11.529 7.49922 11.2496 7.77926 11.2496 8.12412V13.1246C11.2496 13.4691 10.9697 13.7496 10.6247 13.7496H1.87466C1.52968 13.7496 1.24974 13.4691 1.24974 13.1246V4.37395C1.24974 4.02959 1.52968 3.74888 1.87466 3.74888H6.87476C7.2203 3.74888 7.49968 3.46884 7.49968 3.12389C7.49968 2.77885 7.2203 2.49882 6.87476 2.49882H1.87466C0.840889 2.49882 -0.000305176 3.34012 -0.000305176 4.37395V13.1246C-0.000305176 14.1585 0.840889 14.9997 1.87466 14.9997H10.6247C11.6585 14.9997 12.4997 14.1585 12.4997 13.1246V8.12412C12.4997 7.77858 12.2203 7.49922 11.8746 7.49922ZM5.85963 6.92984C5.81589 6.97355 5.78646 7.02913 5.774 7.08909L5.33214 9.29943C5.31155 9.40182 5.34404 9.50744 5.41775 9.58185C5.47719 9.64122 5.55718 9.67304 5.63911 9.67304C5.65904 9.67304 5.6797 9.67115 5.70028 9.66689L7.90963 9.22502C7.9709 9.21244 8.02654 9.1831 8.06973 9.13923L13.0147 4.1939L10.8053 1.98451L5.85963 6.92984ZM14.5421 0.456215C13.9328 -0.153211 12.9416 -0.153211 12.3328 0.456215L11.4678 1.32121L13.6772 3.53076L14.5421 2.66561C14.8372 2.37129 14.9996 1.97869 14.9996 1.5612C14.9996 1.14373 14.8372 0.751127 14.5421 0.456215Z"
+                        fill="#323D41" /></svg>Info :
                   </li>
                 </ul>
               </div>
@@ -145,7 +116,7 @@
                 <p>champs personnalisés</p>
                 <ul class="list-inline">
                   <li *ngFor="let champ of champsPerso; let index = index">
-                    <p> <a class="delet" (click)="onChampPersoDelete(index)"><svg width="13" height="13"
+                    <p> <a class="delet" (click)="onChampPersoDelete(index)" class="cursor-pointer"><svg width="13" height="13"
                           viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M8.10218 1.95156V1.01815H4.89762V1.95156H8.10218ZM3.80527 1.95156V0.848358C3.80527 0.380582 4.21354 -0.00012207 4.71557 -0.00012207H8.28423C8.78616 -0.00012207 9.19455 0.380582 9.19455 0.848358V1.95156H13V2.96983H11.8432L10.9401 12.5352C10.9155 12.7981 10.6791 12.9998 10.3961 12.9998H2.5853C2.30221 12.9998 2.066 12.7982 2.04128 12.5354L1.13826 2.96983H-6.10352e-05V1.95156H3.80527ZM9.89568 11.9816H3.08547L2.23485 2.96983H10.7466L9.89568 11.9816ZM7.82944 10.4694L8.92106 10.5066L9.15781 4.48196L8.06602 4.44466L7.82944 10.4694ZM3.84179 4.4818L4.07847 10.5066L5.17018 10.4693L4.93351 4.4445L3.84179 4.4818ZM5.95363 10.4881H7.04608V4.46332H5.95363V10.4881Z"
@@ -187,7 +158,7 @@
 
 
                 <ng-container matColumnDef="quantite">
-                  <th mat-header-cell *matHeaderCellDef> Q</th>
+                  <th mat-header-cell *matHeaderCellDef> quantité</th>
                   <td mat-cell *matCellDef="let element"> {{element.quantite}} </td>
                 </ng-container>
 
@@ -210,7 +181,7 @@
                 <ng-container matColumnDef="action">
                   <th mat-header-cell *matHeaderCellDef></th>
                   <td mat-cell *matCellDef="let element; let i=index">
-                    <a class="delet" (click)="onDeleteRowTable(i)"><svg width="18" height="19" viewBox="0 0 18 19"
+                    <a class="delet cursor-pointer" (click)="onDeleteRowTable(i)"><svg width="18" height="19" viewBox="0 0 18 19"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M11.2184 2.85219V1.48803H6.7813V2.85219H11.2184ZM5.26876 2.85219V1.2399C5.26876 0.556158 5.83416 -0.000244141 6.52922 -0.000244141H11.4705C12.1654 -0.000244141 12.7309 0.556158 12.7309 1.2399V2.85219H17.9999V4.34055H16.3982L15.1478 18.3206C15.1137 18.7049 14.7865 18.9997 14.3945 18.9997H3.5796C3.18766 18.9997 2.86064 18.7052 2.82641 18.3209L1.57601 4.34055H-0.00012207V2.85219H5.26876ZM13.7018 17.5115H4.27216L3.09435 4.34055H14.8798L13.7018 17.5115ZM10.8407 15.3014L12.3523 15.3558L12.68 6.55054L11.1684 6.49596L10.8407 15.3014ZM5.31941 6.55028L5.64713 15.3558L7.15867 15.3012L6.83103 6.49572L5.31941 6.55028ZM8.24347 15.3288H9.75612V6.52326H8.24347V15.3288Z"
@@ -229,16 +200,16 @@
 
           <form [formGroup]='invoiceForm' class="row">
             <div class="col-2 pr-2">
-              <div class="input-group mb-4">
+              <div class="input-group mb-4 ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Réf art" formControlName="art">
+                  <input matInput placeholder="Réf art" formControlName="art" class="text-input">
                 </mat-form-field>
               </div>
             </div>
             <div class="col-3 px-2">
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Description" formControlName="description">
+                  <input matInput placeholder="Description" formControlName="description" class="text-input">
                 </mat-form-field>
 
               </div>
@@ -246,7 +217,7 @@
             <div class="col-1 px-2">
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="QUANTITÉ" formControlName="quantite" type="number">
+                  <input matInput placeholder="QUANTITÉ" formControlName="quantite" type="number" class="text-input">
                 </mat-form-field>
 
               </div>
@@ -254,7 +225,7 @@
             <div class="col-1 px-2">
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="unité" formControlName="unite">
+                  <input matInput placeholder="unité" formControlName="unite" class="text-input">
                 </mat-form-field>
 
               </div>
@@ -262,13 +233,13 @@
             <div class="col-4 d-flex px-2">
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Prix unitaire" formControlName="unit" type="number">
+                  <input matInput placeholder="Prix unitaire" formControlName="unit" type="number" class="text-input">
                 </mat-form-field>
               </div>
               <span class="px-3 d-flex justify-content-center align-items-center">£</span>
               <div class="input-group mb-4">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Montant" formControlName="montant">
+                  <input matInput placeholder="Montant" formControlName="montant" class="text-input">
                 </mat-form-field>
               </div>
             </div>
