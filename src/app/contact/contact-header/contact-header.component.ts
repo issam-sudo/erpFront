@@ -15,11 +15,22 @@ import { catchError, retry } from 'rxjs/operators';
   styleUrls: ['./contact-header.component.scss']
 })
 export class ContactHeaderComponent implements OnInit {
+  route_active: string;
  
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-   
+    this.route_active =this.router.url
   }
+
+  setrouter(e){
+    this.route_active = e;
+    console.log(this.route_active)
+    this.router.navigate([this.route_active]).then(() => {
+      window.location.reload();
+    }); ;
+
+  }
+
  
 }

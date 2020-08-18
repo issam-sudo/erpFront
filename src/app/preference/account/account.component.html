@@ -13,7 +13,7 @@
             <div class="input-group mb-4">
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom *</mat-label>
-                    <input autocomplete="off" matInput placeholder="Nom *" [formControl]="nomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Nom *" [formControl]="nomFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="nomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
                         Nom is <strong>required</strong>
                     </mat-error>
@@ -27,7 +27,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Prénom *</mat-label>
-                    <input autocomplete="off" matInput placeholder="Prénom *" [formControl]="prenomFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Prénom *" [formControl]="prenomFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="prenomFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
                         Prénom is <strong>required</strong>
                     </mat-error>
@@ -42,7 +42,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Téléphone</mat-label>
-                    <input type="number" autocomplete="off" matInput placeholder="Téléphone" class="InputFirstSection">
+                    <input type="number" autocomplete="off" matInput placeholder="Téléphone">
                 </mat-form-field>
 
 
@@ -76,7 +76,7 @@
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom d'utilisateur *</mat-label>
                     <input autocomplete="off" matInput placeholder="Nom
-                        d'utilisateur *" [formControl]="usernameFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                        d'utilisateur *" [formControl]="usernameFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="usernameFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
                         Nom d'utilisateur is <strong>required</strong>
                     </mat-error>
@@ -90,7 +90,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Mot de passe actuel</mat-label>
-                    <input class="InputFirstSection" autocomplete="off" matInput placeholder="Mot de passe actuel">
+                    <input autocomplete="off" matInput placeholder="Mot de passe actuel">
 
                 </mat-form-field>
 
@@ -105,7 +105,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Mot-de-passe</mat-label>
-                    <input class="InputFirstSection" autocomplete="off" matInput placeholder="Mot-de-passe">
+                    <input autocomplete="off" matInput placeholder="Mot-de-passe">
 
                 </mat-form-field>
 
@@ -119,7 +119,7 @@
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Répéter mot-de-passe
                     </mat-label>
-                    <input class="InputFirstSection" autocomplete="off" matInput placeholder="Répéter mot-de-passe">
+                    <input autocomplete="off" matInput placeholder="Répéter mot-de-passe">
 
                 </mat-form-field>
 
@@ -130,7 +130,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Email *</mat-label>
-                    <input class="InputFirstSection" autocomplete="off" matInput placeholder="Email *" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <input autocomplete="off" matInput placeholder="Email *" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                     <mat-error class="elhoo_compte_messageErrorPosition" *ngIf="emailFormControl.hasError('email') &&
                         !emailFormControl.hasError('required')">
                         Please enter a valid email address
@@ -163,8 +163,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Nom la société *</mat-label>
-                    <input autocomplete="off" matInput placeholder="Nom la
-                        société *" [formControl]="societeFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Nom la société *" [formControl]="societeFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="societeFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
                         Nom la société <strong>required</strong>
                     </mat-error>
@@ -177,7 +176,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Adresse</mat-label>
-                    <input autocomplete="off" matInput placeholder="Adresse" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Adresse">
 
                 </mat-form-field>
 
@@ -190,7 +189,7 @@
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">Adr.(ligne 2)
                     </mat-label>
-                    <input autocomplete="off" matInput placeholder="Téléphone" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="Téléphone">
 
                 </mat-form-field>
 
@@ -209,7 +208,7 @@
 
                         <mat-form-field appearance="none" class="w-100">
                             <mat-label class="elhoo_compte_labelInputPosition">Code postal * </mat-label>
-                            <input type="number" autocomplete="off" matInput placeholder="Code postal *" [formControl]="codePostalFormControl" [errorStateMatcher]="matcher" class="InputFirstSection">
+                            <input type="number" autocomplete="off" matInput placeholder="Code postal *" [formControl]="codePostalFormControl" [errorStateMatcher]="matcher">
                             <mat-error *ngIf="codePostalFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
                                 Code postal is <strong>required</strong>
                             </mat-error>
@@ -247,7 +246,7 @@
 
                 <mat-form-field appearance="none" class="example-full-width">
                     <mat-label class="elhoo_compte_labelInputPosition">N°TVA</mat-label>
-                    <input autocomplete="off" matInput placeholder="N°TVA" class="InputFirstSection">
+                    <input autocomplete="off" matInput placeholder="N°TVA">
 
                 </mat-form-field>
 
@@ -260,7 +259,7 @@
 
                 <mat-form-field appearance="none">
                     <mat-label class="elhoo_compte_labelInputPosition">Début de votre excercice</mat-label>
-                    <input disabled autocomplete="off" min="1990" max="2020" class="InputFirstSection" matInput [matDatepicker]="picker1">
+                    <input disabled autocomplete="off" min="1990" max="2020" matInput [matDatepicker]="picker1">
 
                     <mat-datepicker-toggle matSuffix [for]="picker1">
                         <mat-icon matDatepickerToggleIcon><img class="elhoo_body_input_date" src="../../assets/Combined shape 4438.svg" /></mat-icon>

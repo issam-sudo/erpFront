@@ -35,7 +35,7 @@ import { ContactNewSuppliersComponent } from './contact/contact-new-suppliers/co
 import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.component';
 import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.component';
 import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +74,8 @@ import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-
     HttpClientModule,
     PdfViewerModule,
     MatPaginatorModule,
-    MatTableExporterModule
+    MatTableExporterModule,
+    MatTooltipModule
 
   ],
   providers: [],

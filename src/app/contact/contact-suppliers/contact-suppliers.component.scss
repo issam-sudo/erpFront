@@ -175,3 +175,29 @@ a.btn:visited {
     fill: var(--dark_color);
     color: var(--dark_color);
 }
+
+.elhoo_compte_IconSvgStyle1 {
+    text-align: center;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeff2;
+    border: solid 1px #333E42;
+    border-radius: 5px;
+}
+
+.elhoo_compte_IconSvgStyle1 {
+    &:hover {
+        border: solid 1px var(--secondary_color);
+        border-radius: 5px;
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
+}
