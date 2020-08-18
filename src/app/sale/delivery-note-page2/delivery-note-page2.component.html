@@ -6,8 +6,8 @@
           <div class="row">
             <div class="col-sm-3">
               
-              <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
-              <div class="h-100 elhoo_compte-logo style-border mr-5" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' }" (click)="loadImage.click()"> </div>
+              <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none ">
+              <div class="elhoo_compte-logo style-border document_cammpany_logo mb-5" #elhoolink [ngStyle]="{'background-image': 'url(' + url + ')' }" (click)="loadImage.click()"> </div>
 
               <p>Hjije Youssef</p>
               <p>Rue La fontaine150 brussels</p>
@@ -48,15 +48,14 @@
                 {{ selectedUser.name }}<br>
                 {{ selectedUser.adress }}
               </p>
-
             </div>
           </div>
           <div class="row justify-content-end">
-            <div class="col-sm-5">
+            <div class="col-sm-5 mb-4">
               <p>MODIFIER VOS CHAMPS PERSONNALISÉS</p>
               <form [formGroup]='champPersoForm' class="row" (ngSubmit)='onChampPersoSubmit()'>
                 <div class="col-5 pr-2">
-                  <div class="input-group mb-4">
+                  <div class="input-group ">
                     <mat-form-field appearance="none">
                       <mat-label class="elhoo_compte_labelInputPosition">Intitulé</mat-label>
                       <input formControlName="title" autocomplete="off" matInput placeholder="Intitulé">
@@ -64,15 +63,15 @@
                   </div>
                 </div>
                 <div class="col-5 px-2">
-                  <div class="input-group mb-4">
+                  <div class="input-group ">
                     <mat-form-field appearance="none">
                       <mat-label class="elhoo_compte_labelInputPosition">Contenu</mat-label>
                       <input formControlName="content" autocomplete="off" matInput placeholder="Contenu">
                     </mat-form-field>
                   </div>
                 </div>
-                <div class="col-2 pl-2">
-                  <button [disabled]="disableForm" class="style_button w-100"><svg width="17" height="17"
+                <div class="col-2 pl-2 ">
+                  <button [disabled]="disableForm" class="style_button w-100 h-100"><svg width="17" height="17"
                       viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M6.64158 0.77771V6.92229H0.757568V10.4829H6.64158V16.6913H10.2641V10.4829H16.1258V6.92229H10.2641V0.77771H6.64158Z"
@@ -130,18 +129,18 @@
           </div>
 
 
-          <div class="row">
+          <div class="row mt-5">
 
             <div class="col-12 d-flex justify-content-end">
-              <mat-slide-toggle>Montants TVA comprise</mat-slide-toggle>
-              <mat-slide-toggle class="mr-3"> Afficher la référence d'article</mat-slide-toggle>
+              <mat-slide-toggle >Montants TVA comprise</mat-slide-toggle>
+              <mat-slide-toggle > Afficher la référence d'article</mat-slide-toggle>
               <mat-slide-toggle>Afficher l'unité</mat-slide-toggle>
 
             </div>
 
           </div>
 
-          <div class="row py-3">
+          <div class="row ">
             <div class="col-12">
               <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
 
@@ -198,55 +197,63 @@
             </div>
           </div>
 
-          <form [formGroup]='invoiceForm' class="row">
-            <div class="col-2 pr-2">
-              <div class="input-group mb-4 ">
+          <form [formGroup]='invoiceForm' class="row mb-4">
+            <div class="col-2 pr-2 ">
+              <div class="input-group   text-input">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Réf art" formControlName="art" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">Réf art</mat-label>
+                  
+                  <input matInput placeholder="Réf art" formControlName="art" >
                 </mat-form-field>
               </div>
             </div>
             <div class="col-3 px-2">
-              <div class="input-group mb-4">
+              <div class="input-group ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Description" formControlName="description" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">Description</mat-label>
+                  <input matInput placeholder="Description" formControlName="description">
                 </mat-form-field>
 
               </div>
             </div>
             <div class="col-1 px-2">
-              <div class="input-group mb-4">
+              <div class="input-group ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="QUANTITÉ" formControlName="quantite" type="number" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">QUANTITÉ</mat-label>
+                  <input matInput placeholder="QUANTITÉ" formControlName="quantite" type="number">
                 </mat-form-field>
 
               </div>
             </div>
             <div class="col-1 px-2">
-              <div class="input-group mb-4">
+              <div class="input-group ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="unité" formControlName="unite" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">Unité</mat-label>
+
+                  <input matInput placeholder="unité" formControlName="unite" >
                 </mat-form-field>
 
               </div>
             </div>
             <div class="col-4 d-flex px-2">
-              <div class="input-group mb-4">
+              <div class="input-group ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Prix unitaire" formControlName="unit" type="number" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">Prix unitaire</mat-label>
+                  <input matInput placeholder="Prix unitaire" formControlName="unit" type="number" >
                 </mat-form-field>
               </div>
               <span class="px-3 d-flex justify-content-center align-items-center">£</span>
-              <div class="input-group mb-4">
+              <div class="input-group ">
                 <mat-form-field appearance="none">
-                  <input matInput placeholder="Montant" formControlName="montant" class="text-input">
+                  <mat-label class="elhoo_compte_labelInputPosition">Montant</mat-label>
+                  <input matInput placeholder="Montant" formControlName="montant">
                 </mat-form-field>
               </div>
             </div>
 
 
             <div class="col-1 pl-2">
-              <button [disabled]="disableForm" class="style_button w-100" (click)="addNew()"><svg width="17" height="17"
+              <button [disabled]="disableForm" class="style_button w-100 h-100" (click)="addNew()"><svg width="17" height="17"
                   viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M6.64158 0.77771V6.92229H0.757568V10.4829H6.64158V16.6913H10.2641V10.4829H16.1258V6.92229H10.2641V0.77771H6.64158Z"
@@ -255,8 +262,8 @@
             </div>
           </form>
 
-          <div class="row d-flex justify-content-end p-3">
-            <div class="col-3 style-border  bg_clear_gray ">
+          <div class="row d-flex justify-content-end px-4">
+            <div class="col-3 style-border  bg_clear_gray py-3 ">
               <div class="row">
                 <div class="col-6">Remise 6,00%</div>
                 <div class="col-6">-6,77 €</div>
