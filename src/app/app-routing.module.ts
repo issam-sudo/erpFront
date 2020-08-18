@@ -5,9 +5,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PreferenceModule } from './preference/preference.module';
 import { SaleModule } from './sale/sale.module';
 import { ContactModule } from './contact/contact.module';
+import { ErrorsComponent } from './errors/errors.component';
 
 
 const routes: Routes = [
+ 
 
   { path: '', component: HomeComponent, children: [
     //{ path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'  }
@@ -16,7 +18,9 @@ const routes: Routes = [
     { path: 'sale', loadChildren: () => SaleModule  },
     { path: 'contact', loadChildren: () => ContactModule  },
   ]},
+ 
   {path: '**' , redirectTo:'/dashboard'},
+  
 ];
 
 @NgModule({
