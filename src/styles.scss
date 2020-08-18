@@ -547,6 +547,21 @@
     cursor: pointer
 }
 .text-input{
-    text-align: center
+    text-align: center;
+
 }
-    
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb{
+    background-color: var(--secondary_color);
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+    background-color: unset;
+    border: 1px solid var(--dark_color);
+}
+.document_cammpany_logo{
+    background-repeat: no-repeat;
+    height: 185px;
+    background-position: center;
+    background-size: cover;
+    margin-right: 6rem;
+}
