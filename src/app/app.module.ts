@@ -27,8 +27,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ContactSuppliersComponent } from './contact/contact-suppliers/contact-suppliers.component';
 import { ContactContainerComponent } from './contact/contact-container/contact-container.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
 import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { ContactCustomerComponent } from './contact/contact-customer/contact-customer.component';

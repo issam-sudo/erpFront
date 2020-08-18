@@ -1,17 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
-import {FormControl, FormGroupDirective, NgForm, Validators , FormGroup , FormBuilder} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
-import { Moment } from 'moment';
-import { MatDatepicker } from '@angular/material/datepicker';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import {  Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatTableExporterModule } from 'mat-table-exporter';
+
 
 export interface PeriodicElement {
   name: string;
@@ -48,6 +40,7 @@ export class PurchaseOrdersComponent implements OnInit {
   route_active: string;
   displayedColumns: string[] = ['act', 'devis', 'date', 'client', 'montant', 'status', 'action'];
   displayedColumns1: string[] = ['act', 'devis', 'date', 'client', 'montant', 'status', 'new' , 'action'];
+  
   ee: any = null;
   URL: string;
   repos: any;

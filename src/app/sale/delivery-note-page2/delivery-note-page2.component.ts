@@ -80,7 +80,7 @@ export class DeliveryNotePage2Component implements OnInit {
 
 
   users = [
-    { name: 'Hjije Youssef', adress: 'Rue La fontaine 150 brussels', adressLivr: 'Rue La fontaine 150 brussels llllllll' },
+    { name: 'Hjije Youssef', adress: 'Rue La fontaine 150 brussels', adressLivr: 'Rue La fontaine 150 brussels llllllll', date:'20/05/2020', dateLivraison:'20/05/2021' },
     { name: 'Hjije Youssef', adress: 'Rue La fontaine 150 brussels' },
     { name: 'majd', adress: 'Rue La fontaine 150 brussels' }
   ];
