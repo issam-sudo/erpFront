@@ -41,6 +41,9 @@ import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase
 import { Category_fileUpload } from './purchase/purchase-category/purchase-category.component';
 import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
 import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
+import { QuotePage2Component } from './sale/quote-page2/quote-page2.component';
+import { InvoicePage2Component } from './sale/invoice-page2/invoice-page2.component';
+
 
 
 
@@ -71,13 +74,24 @@ import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchas
     ContactCustomerComponent,
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
-    DeliveryNoteComponent,
-    PurchaseOrdersComponent,
-    DeliveryNotePage2Component,
+   
+    
     PurchaseCategoryComponent,
+   
+
+    //sale 
     QuoteComponent,
     NewProductServiceComponent,
-    PurchaseOrderPage2Component
+    PurchaseOrderPage2Component,
+    QuotePage2Component,
+    DeliveryNotePage2Component, 
+    DeliveryNoteComponent,
+    PurchaseOrdersComponent,
+    RecurringBillsComponent,
+    SaleInvoiceComponent,
+   SaleContainerComponent,
+   InvoicePage2Component
+    
   ],
   imports: [
     BrowserModule,

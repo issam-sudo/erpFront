@@ -1,4 +1,8 @@
-<div class="container-fluid ">
+
+<a class="mr-5 pr-5" *ngIf="hidden==='page2'" (click)="pageprincipale()">
+  <retour </a>
+      <app-invoice-page2 *ngIf="hidden==='page2'"></app-invoice-page2>
+<div class="container-fluid " *ngIf="hidden==='pagepincipale'">
 
 
   <div class="col col-lg-3 col-md-4 pb-3 ml-auto">
@@ -10,7 +14,7 @@
       <a class="btn">CACHER LES CHIFFRES-CLÉS</a>
     </div>
     <div class="col-6 col-md-6 " class="col-6 col-md- d-flex justify-content-end">
-      <a class="btn elhoo_btn_transparent mr-2">Créer une facture</a>
+      <a class="btn elhoo_btn_transparent mr-2" (click)="page2()">Créer une facture</a>
       <a class="btn">Créer une note de crédit</a>
     </div>
   </div>
