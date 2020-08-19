@@ -1,16 +1,16 @@
-<div class="container-fluid elhoo_body_img_TableauBord_padding ">
 
+<a class="mr-5 pr-5" *ngIf="hidden==='page2'" (click)="pageprincipale()">
+  <retour </a>
+      <app-recurring-bills-page2 *ngIf="hidden==='page2'"></app-recurring-bills-page2>
+<div class="container-fluid elhoo_body_img_TableauBord_padding " *ngIf="hidden==='pagepincipale'">
 
   <div class="col col-lg-3 col-md-4 pb-3 ml-auto">
 
-
   </div>
-
-
 
   <div class="row mb-4">
     <div class="col-12 d-flex justify-content-end">
-      <a class="btn">PROGRAMMER UNE FACTURE RÉCURRENTE</a>
+      <a class="btn" (click)="page2()">PROGRAMMER UNE FACTURE RÉCURRENTE</a>
     </div>
 
   </div>

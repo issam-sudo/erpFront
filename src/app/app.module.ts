@@ -43,6 +43,8 @@ import { NewProductServiceComponent } from './sale/new-product-service/new-produ
 import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
 import { QuotePage2Component } from './sale/quote-page2/quote-page2.component';
 import { InvoicePage2Component } from './sale/invoice-page2/invoice-page2.component';
+import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recurring-bills-page2.component';
+
 
 
 
@@ -90,7 +92,8 @@ import { InvoicePage2Component } from './sale/invoice-page2/invoice-page2.compon
     RecurringBillsComponent,
     SaleInvoiceComponent,
    SaleContainerComponent,
-   InvoicePage2Component
+   InvoicePage2Component,
+   RecurringBillsPage2Component
     
   ],
   imports: [
