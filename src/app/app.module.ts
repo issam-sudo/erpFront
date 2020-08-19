@@ -40,6 +40,7 @@ import { QuoteComponent } from './sale/quote/quote.component';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
 import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
 import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
+import { QuotePage2Component } from './sale/quote-page2/quote-page2.component';
 
 
 
@@ -59,9 +60,8 @@ import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchas
     InvoiceComponent,
     FileUpload,
   
-    SaleContainerComponent,
-    RecurringBillsComponent,
-    SaleInvoiceComponent,
+    
+    
     Quote_fileUpload,
     PreferenceReminderComponent,
     ContactSuppliersComponent,
@@ -70,13 +70,23 @@ import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchas
     ContactCustomerComponent,
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
-    DeliveryNoteComponent,
-    PurchaseOrdersComponent,
-    DeliveryNotePage2Component,
+   
+    
     PurchaseCategoryComponent,
+   
+
+    //sale 
     QuoteComponent,
     NewProductServiceComponent,
-    PurchaseOrderPage2Component
+    PurchaseOrderPage2Component,
+    QuotePage2Component,
+    DeliveryNotePage2Component, 
+    DeliveryNoteComponent,
+    PurchaseOrdersComponent,
+    RecurringBillsComponent,
+    SaleInvoiceComponent,
+   SaleContainerComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -46,8 +46,15 @@ export class QuoteComponent implements OnInit {
   repos2: any;
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  hidden: any = 'pagepincipale';
  
   constructor(private router: Router) { }
+  pageprincipale(){
+    this.hidden = 'pagepincipale';
+  }
+  page2(){
+    this.hidden = 'page2';
+  }
 
   public pageSize = 10;
   public currentPage = 0;
