@@ -3,17 +3,13 @@
         <div class="col col-md-9">
 
             <h1 *ngIf="route_active == '/contact/customer'" class="text-uppercase">Contact Client</h1>
-
-
-            <h2 *ngIf="route_active == '/contact/customer'">Vous avez deja 30 clients </h2>
             <h1 *ngIf="route_active == '/contact/suppliers'" class="text-uppercase">Liste Fournisseurs </h1>
-
-
+            <h2 *ngIf="route_active == '/contact/customer'">Vous avez deja 30 clients </h2>
             <h2 *ngIf="route_active == '/contact/suppliers'">Vous avez deja 30 fournisseurs </h2>
 
         </div>
 
-        <div class="col col-md-3 d-flex align-items-center justify-content-between">
+        <div class="col col-md-3 d-flex   justify-content-between">
 
 
             <div *ngIf="route_active == '/contact/customer'" (click)="setrouter('/contact/newcustomer')">
@@ -58,22 +54,16 @@
                 <li class="list-group-item elhoo_compte_IconSvgStyle">
 
                     <button mat-icon-button [matMenuTriggerFor]="menu">
-                                        <mat-icon class="w-100"><svg width="30"
-                                                fill="#323d41"
-                                                viewBox="0
-                                                0 49 32"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M0.0292969
-                                                    0.0818024H48.8773V5.40163H0.0292969V0.0818024ZM48.8773
-                                                    13.3814H20.0125V18.7012H48.8773V13.3814ZM48.8773
-                                                    26.6806H8.91086V32H48.8773V26.6806Z"
-                                                    />
-                                                </svg></mat-icon>
-                                        </button>
+                        <mat-icon class="w-100"><svg width="30" fill="#323d41" viewBox="0
+                            0 49 32" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0292969
+                              0.0818024H48.8773V5.40163H0.0292969V0.0818024ZM48.8773
+                              13.3814H20.0125V18.7012H48.8773V13.3814ZM48.8773
+                              26.6806H8.91086V32H48.8773V26.6806Z" />
+                            </svg></mat-icon>
+                        </button>
 
-                    <mat-menu #menu="matMenu" class="mt-2">
+                    <mat-menu #menu="matMenu">
 
                         <button (click)="setrouter('/contact/customer')" mat-menu-item>
                                

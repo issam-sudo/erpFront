@@ -11,11 +11,35 @@ import { catchError, retry } from 'rxjs/operators';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AccountService } from 'src/app/preference/services/account.service';
 import { environment } from '../../../environments/environment.prod';
+
+interface Pays {
+  value: string;
+  viewValue: string;
+}
+interface Devise {
+  value: string;
+  viewValue: string;
+}
+
+interface Type {
+  value: string;
+  viewValue: string;
+}
+ /** Error when invalid control is dirty, touched, or submitted. */
+ export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
  @Component({
   selector: 'app-purchase-category',
   templateUrl: './purchase-category.component.html',
   styleUrls: ['./purchase-category.component.scss']
 })
+
+
 export class PurchaseCategoryComponent implements OnInit {
   url: any;
    
@@ -43,13 +67,76 @@ export class PurchaseCategoryComponent implements OnInit {
       data: {
         animal: 'panda'
       },
-      width: '50%',
-      height: '60%',
+      width: '40%',
+      height: '45%',
       panelClass: 'my-custom-dialog-class'
     });
   
   }
-  
+
+  selectedValueTypes: string;
+  types: Type[] = [
+    {value: 'Facture', viewValue: 'Facture'},
+    {value: 'Facture', viewValue: 'Facture'},
+    {value: 'Facture', viewValue: 'Facture'}
+  ];
+  selectedValuePays: string;
+pays: Pays[] = [
+  {value: 'Belgique', viewValue: 'Belgique'},
+  {value: 'France', viewValue: 'France'},
+  {value: 'Maroc', viewValue: 'Maroc'}
+];
+selectedValueDevise: string;
+devise: Devise[] = [
+  {value: 'MAD', viewValue: 'MAD'},
+  {value: 'EUR', viewValue: 'EUR'},
+  {value: 'USD', viewValue: 'USD'}
+];
+
+
+
+
+NumeroFactureControl = new FormControl('', [
+  Validators.required,
+
+]);
+
+NomControl = new FormControl('', [
+  Validators.required,
+
+]);
+
+EcheanceControl = new FormControl('', [
+  Validators.required,
+
+]);
+
+DeviseControl = new FormControl('', [
+  Validators.required,
+
+]);
+HtvaControl = new FormControl('', [
+  Validators.required,
+
+]);
+TvaControl = new FormControl('', [
+  Validators.required,
+
+]);
+TvacControl = new FormControl('', [
+  Validators.required,
+
+]);
+DateControl = new FormControl('', [
+  Validators.required,
+
+]);
+matcher = new MyErrorStateMatcher();
+
+
+
+
+
 }
 
 var reader = new FileReader();
@@ -63,7 +150,10 @@ var reader = new FileReader();
 // tslint:disable-next-line:component-class-suffix
 export class Category_fileUpload {
   url: any;
-  urlActive: boolean;
+ 
+  size: any;
+  type: any;
+  name: any;
   
  
   
@@ -72,6 +162,8 @@ export class Category_fileUpload {
    }
   
  
+
+
   
   ngOnInit(): void {
     console.log(this.url)
@@ -82,10 +174,16 @@ onSelectFile(event) { // called each time file input changes
 
     reader.readAsDataURL(event.target.files[0]); // read file as data url
     console.log(event.target.files[0])
-
+    this.name = event.target.files[0].name
+    this.size = event.target.files[0].size
+    this.type = event.target.files[0].type
+    
+ 
     reader.onload = (event) => { // called once readAsDataURL is completed
+     
       this.url = event.target.result;
-      this.accountService.urlPathPurchase.next(this.url.toString()) 
+   
+      
      
       
     }
@@ -95,7 +193,10 @@ onSelectFile(event) { // called each time file input changes
 }
 
 validerbtn(event){
-
  
+  this.accountService.urlPathPurchase.next(this.url.toString()) 
+  this.dialogRef.close();
 }
+
+
 }
