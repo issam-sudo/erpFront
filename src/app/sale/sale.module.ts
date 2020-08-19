@@ -10,7 +10,7 @@ import { SaleHeaderComponent } from './sale-header/sale-header.component';
 
 
 @NgModule({
-  declarations: [QuoteComponent, NewProductServiceComponent, SaleHeaderComponent],
+  declarations: [ QuoteComponent, NewProductServiceComponent, SaleHeaderComponent],
   imports: [
     CommonModule,
     SaleRoutingModule,

@@ -19,7 +19,6 @@ import { InvoiceComponent } from './preference/invoice/invoice.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FileUpload } from './preference/invoice/invoice.component';
 import { Quote_fileUpload } from './preference/quote/quote.component';
-import { QuoteComponent } from './preference/quote/quote.component';
 import { SaleContainerComponent } from './sale/sale-container/sale-container.component';
 import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
 import { PreferenceReminderComponent } from './preference/preference-reminder/preference-reminder.component';
@@ -36,6 +35,7 @@ import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.
 import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.component';
 import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { QuoteComponent } from './sale/quote/quote.component';
 @NgModule({
   declarations: [
     AppComponent,
