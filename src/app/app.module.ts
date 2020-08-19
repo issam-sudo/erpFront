@@ -19,6 +19,7 @@ import { InvoiceComponent } from './preference/invoice/invoice.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FileUpload } from './preference/invoice/invoice.component';
 import { Quote_fileUpload } from './preference/quote/quote.component';
+
 import { SaleContainerComponent } from './sale/sale-container/sale-container.component';
 import { RecurringBillsComponent } from './sale/recurring-bills/recurring-bills.component';
 import { PreferenceReminderComponent } from './preference/preference-reminder/preference-reminder.component';
@@ -36,7 +37,8 @@ import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.compon
 import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { QuoteComponent } from './sale/quote/quote.component';
-@NgModule({
+import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
+ @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
@@ -50,7 +52,7 @@ import { QuoteComponent } from './sale/quote/quote.component';
     HeaderPreferenceComponent,
     InvoiceComponent,
     FileUpload,
-    QuoteComponent,
+  
     SaleContainerComponent,
     RecurringBillsComponent,
     SaleInvoiceComponent,
@@ -64,7 +66,9 @@ import { QuoteComponent } from './sale/quote/quote.component';
     ContactNewSuppliersComponent,
     DeliveryNoteComponent,
     PurchaseOrdersComponent,
-    DeliveryNotePage2Component
+    DeliveryNotePage2Component,
+    PurchaseCategoryComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
