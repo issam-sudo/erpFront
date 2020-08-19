@@ -38,6 +38,8 @@ import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { QuoteComponent } from './sale/quote/quote.component';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
+import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
+
  @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +70,8 @@ import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase
     PurchaseOrdersComponent,
     DeliveryNotePage2Component,
     PurchaseCategoryComponent,
-    QuoteComponent
+    QuoteComponent,
+    NewProductServiceComponent
   ],
   imports: [
     BrowserModule,
