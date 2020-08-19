@@ -41,7 +41,7 @@ const elemnt: any[] = [
   styleUrls: ['./sale-invoice.component.scss']
 })
 export class SaleInvoiceComponent implements OnInit {
-
+  hidden: any = 'pagepincipale';
   isClients: boolean;
   route_active: string;
   displayedColumns: string[] = ['act','facture', 'date', 'client', 'montant','status', 'financement','action'];
@@ -59,6 +59,20 @@ export class SaleInvoiceComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   constructor(private router: Router) { }
+
+
+
+
+  pageprincipale(){
+    this.hidden = 'pagepincipale';
+  }
+  page2(){
+    this.hidden = 'page2';
+   
+  
+  }
+
+
   public pageSize = 10;
   public currentPage = 0;
   public totalSize = 0;
