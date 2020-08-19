@@ -36,8 +36,15 @@ import { PurchaseOrdersComponent } from './sale/purchase-orders/purchase-orders.
 import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.component';
 import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { QuoteComponent } from './sale/quote/quote.component';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
 import { Category_fileUpload } from './purchase/purchase-category/purchase-category.component';
+import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
+import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
+
+
+
+
  @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +74,10 @@ import { Category_fileUpload } from './purchase/purchase-category/purchase-categ
     DeliveryNoteComponent,
     PurchaseOrdersComponent,
     DeliveryNotePage2Component,
-    PurchaseCategoryComponent
+    PurchaseCategoryComponent,
+    QuoteComponent,
+    NewProductServiceComponent,
+    PurchaseOrderPage2Component
   ],
   imports: [
     BrowserModule,

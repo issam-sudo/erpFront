@@ -32,10 +32,16 @@ const elemnt: any[] = [
 export class PurchaseOrdersComponent implements OnInit {
 
 
+  hidden: any = 'pagepincipale';
 
-
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+  pageprincipale(){
+    this.hidden = 'pagepincipale';
   }
+  page2(){
+    this.hidden = 'page2';
+  }
+  
   isClients: boolean;
   route_active: string;
   displayedColumns: string[] = ['act', 'devis', 'date', 'client', 'montant', 'status', 'action'];
