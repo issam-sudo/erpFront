@@ -1,14 +1,13 @@
 .image-wrapper {
     width: 600px;
     height: 400px;
-    position: relative;
 }
 
 .image-wrapper img {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform-origin: left;
+    left: 8%;
+    transform-origin: center;
 }
 
 .image-1 {
@@ -47,4 +46,28 @@
     .image-wrapper:hover & {
         transform: translate(0, 0);
     }
+}
+
+span {
+    color: var(--secondary_color);
+}
+
+p {
+    margin: 0;
+}
+
+.borderDark {
+    border-style: dashed;
+    align-items: center;
+    height: 100px;
+    border-width: 2px;
+    border-color: var(--dark_color);
+}
+
+.borderSecondary {
+    border-style: dashed;
+    align-items: center;
+    height: 100px;
+    border-width: 2px;
+    border-color: var(--secondary_color);
 }
