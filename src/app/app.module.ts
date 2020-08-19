@@ -38,6 +38,7 @@ import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { QuoteComponent } from './sale/quote/quote.component';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
+import { Category_fileUpload } from './purchase/purchase-category/purchase-category.component';
 import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
 import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
 import { QuotePage2Component } from './sale/quote-page2/quote-page2.component';
@@ -59,9 +60,10 @@ import { QuotePage2Component } from './sale/quote-page2/quote-page2.component';
     HeaderPreferenceComponent,
     InvoiceComponent,
     FileUpload,
-  
-    
-    
+    Category_fileUpload,
+    SaleContainerComponent,
+    RecurringBillsComponent,
+    SaleInvoiceComponent,
     Quote_fileUpload,
     PreferenceReminderComponent,
     ContactSuppliersComponent,

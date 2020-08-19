@@ -1,0 +1,16 @@
+<div class="custom-scrollbar-css">
+    <h2 class="modal-title">
+
+        Achat Pièces jointes</h2>
+
+    <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
+
+    <button (click)="loadImage.click()">
+        rfetreer</button>
+    <p>{{url}}</p>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <img src="{{url}}" alt="">
+
+    </div>
+
+</div>

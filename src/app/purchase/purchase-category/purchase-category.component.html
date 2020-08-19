@@ -2,12 +2,24 @@
     <div class="row  ">
         <div class="col-12 col-md-9">
 
+            <div class="image-wrapper">
+                <img class="image-1" src="https://picsum.photos/id/1025/600/400" />
+                <img class="image-2" src="https://picsum.photos/id/1025/600/400" />
+                <img class="image-3" src="https://picsum.photos/id/1025/600/400" />
+                <img class="image-4" src="https://picsum.photos/id/1025/600/400" />
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;">
+                <img src="{{url}}" alt="">
+
+            </div>
+
+
 
         </div>
 
         <div class="col-12 col-md-3">
 
-            <button class="btn text-uppercase mb-4 w-100" type="submit" aria-pressed="true">Choisir une categorie</button>
+            <button class="btn text-uppercase mb-4 w-100" type="submit" aria-pressed="true" (click)="openDialogFileUpload()">Choisir une categorie</button>
             <div class="input-group mb-4">
 
                 <mat-form-field appearance="none" class="example-full-width">
@@ -164,6 +176,23 @@
 
             </div>
             <h3>VOS COORDONNÉES </h3>
+            <div class="row  ">
+                <div class="col-12 col-md-2">
+                    <strong> 2020/</strong>
+                </div>
+                <div class="col-12 col-md-10">
+                    <div class="input-group mb-4">
+
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Répéter mot-de-passe
+                            </mat-label>
+                            <input autocomplete="off" matInput placeholder="Répéter mot-de-passe">
+
+                        </mat-form-field>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
