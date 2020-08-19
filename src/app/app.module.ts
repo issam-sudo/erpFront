@@ -39,6 +39,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { QuoteComponent } from './sale/quote/quote.component';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
 import { NewProductServiceComponent } from './sale/new-product-service/new-product-service.component';
+import { PurchaseOrderPage2Component } from './sale/purchase-order-page2/purchase-order-page2.component';
+
+
+
 
  @NgModule({
   declarations: [
@@ -71,7 +75,8 @@ import { NewProductServiceComponent } from './sale/new-product-service/new-produ
     DeliveryNotePage2Component,
     PurchaseCategoryComponent,
     QuoteComponent,
-    NewProductServiceComponent
+    NewProductServiceComponent,
+    PurchaseOrderPage2Component
   ],
   imports: [
     BrowserModule,

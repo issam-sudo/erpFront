@@ -1,15 +1,18 @@
 
-<div class="container-fluid">
+<a class="mr-5 pr-5" *ngIf="hidden==='page2'" (click)="pageprincipale()">
+  <retour</a>
+      <app-purchase-order-page2 *ngIf="hidden==='page2'"></app-purchase-order-page2>
+
+<div class="container-fluid" *ngIf="hidden==='pagepincipale'">
 
 
     <div class="col col-lg-3 col-md-4 pb-3 ml-auto">
   
-  
     </div>
-  
+
     <div class="row mb-4">
       <div class="col-12 d-flex justify-content-end">
-        <a class="btn upercase">Créer un bon de commande</a>
+        <a class="btn upercase"  (click)="page2()" >Créer un bon de commande</a>
       </div>
   
     </div>
