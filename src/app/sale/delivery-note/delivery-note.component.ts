@@ -44,6 +44,7 @@ export class DeliveryNoteComponent implements OnInit {
   repos2: any;
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  expTrue: boolean;
  
   constructor(private router: Router) { }
 pageprincipale(){
@@ -51,6 +52,8 @@ pageprincipale(){
 }
 page2(){
   this.hidden = 'page2';
+ 
+
 }
 
 

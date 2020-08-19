@@ -37,6 +37,7 @@ import { DeliveryNoteComponent } from './sale/delivery-note/delivery-note.compon
 import { DeliveryNotePage2Component } from './sale/delivery-note-page2/delivery-note-page2.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase-category.component';
+import { Category_fileUpload } from './purchase/purchase-category/purchase-category.component';
  @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,7 @@ import { PurchaseCategoryComponent } from './purchase/purchase-category/purchase
     HeaderPreferenceComponent,
     InvoiceComponent,
     FileUpload,
-  
+    Category_fileUpload,
     SaleContainerComponent,
     RecurringBillsComponent,
     SaleInvoiceComponent,
