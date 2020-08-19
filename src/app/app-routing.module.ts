@@ -6,8 +6,7 @@ import { PreferenceModule } from './preference/preference.module';
 import { SaleModule } from './sale/sale.module';
 import { ContactModule } from './contact/contact.module';
 import { ErrorsComponent } from './errors/errors.component';
-
-
+import { PurchaseModule } from './purchase/purchase.module';
 const routes: Routes = [
  
 
@@ -17,6 +16,7 @@ const routes: Routes = [
     { path: 'preference', loadChildren: () => PreferenceModule  },
     { path: 'sale', loadChildren: () => SaleModule  },
     { path: 'contact', loadChildren: () => ContactModule  },
+    { path: 'purchase', loadChildren: () => PurchaseModule  },
   ]},
  
   {path: '**' , redirectTo:'/dashboard'},
