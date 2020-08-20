@@ -22,14 +22,14 @@ interface delai {
   styleUrls: ['./preference-reminder.component.scss']
 })
 export class PreferenceReminderComponent implements OnInit {
-  checked: boolean =false;
+  checked: boolean =true;
   valueCheckBox: HTMLElement;
   langue2: string;
   langueValue: string ='fr';
   showTradiction: boolean;
-  checked1: boolean =false;
-  checked2: boolean =false;
-  checked3: boolean =false;
+  checked1: boolean =true;
+  checked2: boolean =true;
+  checked3: boolean =true;
   checked4: boolean;
   constructor() { 
 

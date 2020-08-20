@@ -196,7 +196,9 @@ onSelectFile(event) { // called each time file input changes
 validerbtn(event){
  
   this.accountService.urlPathPurchase.next(this.url.toString()) 
+  this.router.navigate(['/purchase/invoice'])
   this.dialogRef.close();
+
 }
 
 

@@ -1,19 +1,13 @@
-<div class="container-fluid ">
+<div class="container-fluid mt-3">
 
-    <div class="row pt-4 ">
-        <div class="col-12 col-md-12 d-flex justify-content-end;">
 
-            <button>dfgdf</button>
-
-        </div>
-    </div>
     <div class="row  ">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
             <div>
                 <canvas class="elhoo_body_canvas" id="myChart"></canvas>
             </div>
         </div>
-        <div class="col-12 col-md-4 ">
+        <div class="col-12 col-md-3 ">
             <div class="elhoo_body_TableauBord-result_filter py-5">
 
                 <p class="elhoo_body_text_TableauBord ">Paiements en retard</p>
@@ -21,7 +15,7 @@
             </div>
 
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
 
             <div class="elhoo_body_TableauBord-result_filter py-5">
 
@@ -29,6 +23,12 @@
                 <h1 class="text-center mb-0">200,00 €</h1>
             </div>
 
+        </div>
+        <div *ngIf="url!=null" class="image-wrapper" cdkDrag>
+            <img *ngIf="url!=null" class="image-1 img-fluid" src="{{url}}" />
+            <img *ngIf="url!=null" class="image-2 img-fluid" src="{{url}}" />
+            <img *ngIf="url!=null" class="image-3 img-fluid" src="{{url}}" />
+            <img *ngIf="url!=null" class="image-4 img-fluid" src="{{url}}" />
         </div>
     </div>
 </div>

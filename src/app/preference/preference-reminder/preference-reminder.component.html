@@ -1,6 +1,6 @@
 <div class="container-fluid custom-scrollbar-css">
     <div class="row py-3 ">
-        <div class="col-12 col-md-12">
+        <div class="col-12 col-md-12 p-0">
 
             <div *ngIf="checked==false" class="wrap">
                 <input (click)="activeSection('s4')" type="checkbox" id="s4" name="s4" />
@@ -22,7 +22,7 @@
         </div>
 
     </div>
-    <div class="row py-3 d-flex align-items-center" *ngIf="checked!= false">
+    <div class="row py-3 d-flex align-items-center p-0" *ngIf="checked!= false">
         <div class="col-12 col-md-3">
             <p class="mb-0">Pas d'envoi de rappels pour un solde impayé de moins de *</p>
 
@@ -51,8 +51,8 @@
     </div>
 
 
-    <div class="row py-3">
-        <div class="col-12 col-md-12">
+    <div class="row py-3 ">
+        <div class="col-12 col-md-12 p-0">
 
             <div *ngIf="checked1==false" class="wrap">
                 <input (click)="activeSection('s5')" type="checkbox" id="s5" name="s5" />
@@ -250,7 +250,7 @@
 
 
     <div class="row py-3 ">
-        <div class="col-12 col-md-12">
+        <div class="col-12 col-md-12 p-0">
 
 
             <div *ngIf="checked2==false" class="wrap">
@@ -443,7 +443,7 @@
 
 
     <div class="row  py-3">
-        <div class="col-12 col-md-12 ">
+        <div class="col-12 col-md-12 p-0">
             <div *ngIf="checked3==false" class="wrap">
                 <input (click)="activeSection('s7')" type="checkbox" id="s7" name="s7" />
 

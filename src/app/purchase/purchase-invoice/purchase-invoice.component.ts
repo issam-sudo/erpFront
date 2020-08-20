@@ -7,6 +7,7 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
 import {MatDatepicker} from '@angular/material/datepicker';
 import * as _moment from 'moment';
 import { Moment} from 'moment';
+import { AccountService } from 'src/app/preference/services/account.service';
 
 @Component({
   selector: 'app-purchase-invoice',
@@ -16,12 +17,19 @@ import { Moment} from 'moment';
 export class PurchaseInvoiceComponent implements OnInit {
   date:Date =new Date()
  mois:any = this.date.toLocaleDateString(undefined,{  month: 'long' })
-  constructor() { }
+  url: any;
+  constructor(public accountService: AccountService) { }
 
   ngOnInit(): void {
     this.getChart()
     console.log(this.date)
   
+    this.accountService.currentdataPurchase.subscribe(data=>{
+      this.url =data
+      
+   
+    
+    })
     
   }
   async getChart(){

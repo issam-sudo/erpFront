@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
 
-    <div class="row align-items-center">
+    <div class="row align-items-center mb-3">
         <div class="col-md-2 d-flex align-items-center">
             <div class="row">
 
@@ -43,113 +43,120 @@
 
             <mat-form-field appearance="none">
 
-                <!-- <mat-label>Recherche</mat-label> -->
-                <input class="ml-3" (keyup)="applyFilter($event)" type="search" matInput placeholder="Recherche" #input>
+                <input class="ml-3   InputFirstSection" autocomplete="off" matInput placeholder="Recherche" (keyup)="applyFilter($event)" type="search" matInput placeholder="Recherche" #input>
                 <mat-icon class="mr-2" matSuffix>
-                    <svg width="1em" height="1em" viewBox="0 0
-                                        16 16" class="bi
-                                        bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.442 10.442a1 1 0 0 1 1.415
-                                            0l3.85 3.85a1 1 0
-                                            0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1
-                                            0-1.415z" />
+                    <svg width="1em" viewBox="0 0
+                                            16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
-                                                d="M6.5 12a5.5 5.5 0 1 0 0-11
-                                                5.5 5.5 0 0 0 0
-                                                11zM13 6.5a6.5 6.5 0 1 1-13 0
-                                                6.5 6.5 0 0 1 13
-                                                0z" />
-                                            </svg>
+                                                d="M10.442 10.442a1 1 0 0 1 1.415
+                                                0l3.85 3.85a1 1 0
+                                                0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1
+                                                0-1.415z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M6.5 12a5.5 5.5 0 1 0 0-11
+                                                    5.5 5.5 0 0 0 0
+                                                    11zM13 6.5a6.5 6.5 0 1 1-13 0
+                                                    6.5 6.5 0 0 1 13
+                                                    0z" />
+                                                </svg>
                 </mat-icon>
             </mat-form-field>
 
-            <button matTooltipPosition="above" matTooltip="Import file" class="elhoo_compte_IconSvgStyle1 ml-2">
+
+            <button (click)="setrouter('/contact/newcustomer')" matTooltipPosition="above" matTooltip="Ajouter clients" class="elhoo_compte_IconSvgStyle1 ml-3" #elhoolink [ngStyle]="{ 'height.px':   elhoolink.offsetWidth}">
                 <mat-icon>
-                    <svg width="26" viewBox="0 0 20
-                        19" fill="#323d41"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            clip-rule="evenodd" d="M18.8312
-                            12.7119C18.6267 12.4968 18.3785
-                            12.3884 18.0857
-                            12.3884H13.4024C13.2493 12.82
-                            12.9917 13.1748 12.6294
-                            13.452C12.2674 13.73 11.8639 13.8686
-                            11.4175 13.8686H8.61012C8.16372
-                            13.8686 7.75951 13.73 7.3981
-                            13.452C7.03576 13.1748 6.77823 12.82
-                            6.62506 12.3884H1.94172C1.64923
-                            12.3884 1.40068 12.4968 1.19566
-                            12.7119C0.991104 12.9282 0.888672
-                            13.1902 0.888672
-                            13.4985V17.198C0.888672 17.5063
-                            0.991104 17.7687 1.19566
-                            17.9843C1.40068 18.1998 1.64923
-                            18.3078 1.94172
-                            18.3078H18.0857C18.3785 18.3078
-                            18.6267 18.1998 18.8319
-                            17.9843C19.0364 17.7679 19.1389
-                            17.5063 19.1389
-                            17.198V13.4985C19.1389 13.1902
-                            19.0364 12.9282 18.8312
-                            12.7119ZM14.719 16.6081C14.5798
-                            16.7551 14.4155 16.8278 14.2256
-                            16.8278C14.0348 16.8278 13.8705
-                            16.7551 13.7317 16.6081C13.5931
-                            16.462 13.5234 16.2888 13.5234
-                            16.0878C13.5234 15.8875 13.5931
-                            15.7144 13.7317 15.5681C13.8705
-                            15.4212 14.0348 15.3485 14.2256
-                            15.3485C14.4155 15.3485 14.5798
-                            15.4212 14.719 15.5681C14.8578
-                            15.7144 14.9275 15.8875 14.9275
-                            16.0878C14.9275 16.2888 14.8578
-                            16.462 14.719 16.6081ZM17.5264
-                            16.6081C17.3879 16.7551 17.2226
-                            16.8278 17.0327 16.8278C16.8428
-                            16.8278 16.6785 16.7551 16.5393
-                            16.6081C16.4006 16.462 16.3313
-                            16.2888 16.3313 16.0878C16.3313
-                            15.8875 16.4006 15.7144 16.5393
-                            15.5681C16.6785 15.4212 16.8428
-                            15.3485 17.0327 15.3485C17.2226
-                            15.3485 17.3879 15.4212 17.5264
-                            15.5681C17.665 15.7144 17.7348
-                            15.8875 17.7348 16.0878C17.7348
-                            16.2888 17.6658 16.462 17.5264
-                            16.6081ZM5.07626
-                            6.08067H7.89792V1.36602C7.89792
-                            1.18391 7.96719 1.02534 8.10727
-                            0.892343C8.24651 0.759476 8.41166
-                            0.692444 8.6033
-                            0.692444H11.4242C11.6158 0.692444
-                            11.7809 0.759476 11.9202
-                            0.892343C12.0597 1.02534 12.1296
-                            1.18391 12.1296
-                            1.36602V6.08067H14.9512C15.2596
-                            6.08067 15.4763 6.22145 15.6011
-                            6.50128C15.7258 6.77518 15.6744
-                            7.01754 15.4464 7.22794L10.5095
-                            11.9428C10.3773 12.076 10.2122
-                            12.1426 10.0135 12.1426C9.81533
-                            12.1426 9.65017 12.076 9.51813
-                            11.9428L4.58032 7.22794C4.35242
-                            7.01754 4.3014 6.77518 4.42651
-                            6.50128C4.55125 6.22076 4.7678
-                            6.08067 5.07626 6.08067Z"
-                            fill="#323D41" />
+                    <svg width="20" height="19" viewBox="0 0 20 21" fill="#323d41" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2331 10.0916C12.6742 10.0916 14.653 8.03974 14.653 5.50852C14.653 2.97744 12.6742 0.925491 10.2331 0.925491C7.79187 0.925491 5.81291 2.97744 5.81291 5.50852C5.81291 8.03974 7.79187 10.0916 10.2331 10.0916ZM10.233 13.2808C11.8529 13.2808 13.2653 12.3744 14.0349 11.0269C17.3993 12.5493 19.7531 16.0249 19.7531 20.0743H0.712891C0.712891 16.0249 3.06674 12.5493 6.43111 11.0269C7.20082 12.3744 8.61316 13.2808 10.233 13.2808Z" fill="#323d41"/>
                         </svg>
 
                     </mat-icon>
                 </button>
-
+            <button matTooltipPosition="above" matTooltip="Import file" class="elhoo_compte_IconSvgStyle1 ml-3" #elhoolink [ngStyle]="{ 'height.px':  elhoolink.offsetWidth}">
+                    <mat-icon>
+                        <svg  width="20"  viewBox="0 0 20 
+                            19" fill="#323d41"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                clip-rule="evenodd" d="M18.8312
+                                12.7119C18.6267 12.4968 18.3785
+                                12.3884 18.0857
+                                12.3884H13.4024C13.2493 12.82
+                                12.9917 13.1748 12.6294
+                                13.452C12.2674 13.73 11.8639 13.8686
+                                11.4175 13.8686H8.61012C8.16372
+                                13.8686 7.75951 13.73 7.3981
+                                13.452C7.03576 13.1748 6.77823 12.82
+                                6.62506 12.3884H1.94172C1.64923
+                                12.3884 1.40068 12.4968 1.19566
+                                12.7119C0.991104 12.9282 0.888672
+                                13.1902 0.888672
+                                13.4985V17.198C0.888672 17.5063
+                                0.991104 17.7687 1.19566
+                                17.9843C1.40068 18.1998 1.64923
+                                18.3078 1.94172
+                                18.3078H18.0857C18.3785 18.3078
+                                18.6267 18.1998 18.8319
+                                17.9843C19.0364 17.7679 19.1389
+                                17.5063 19.1389
+                                17.198V13.4985C19.1389 13.1902
+                                19.0364 12.9282 18.8312
+                                12.7119ZM14.719 16.6081C14.5798
+                                16.7551 14.4155 16.8278 14.2256
+                                16.8278C14.0348 16.8278 13.8705
+                                16.7551 13.7317 16.6081C13.5931
+                                16.462 13.5234 16.2888 13.5234
+                                16.0878C13.5234 15.8875 13.5931
+                                15.7144 13.7317 15.5681C13.8705
+                                15.4212 14.0348 15.3485 14.2256
+                                15.3485C14.4155 15.3485 14.5798
+                                15.4212 14.719 15.5681C14.8578
+                                15.7144 14.9275 15.8875 14.9275
+                                16.0878C14.9275 16.2888 14.8578
+                                16.462 14.719 16.6081ZM17.5264
+                                16.6081C17.3879 16.7551 17.2226
+                                16.8278 17.0327 16.8278C16.8428
+                                16.8278 16.6785 16.7551 16.5393
+                                16.6081C16.4006 16.462 16.3313
+                                16.2888 16.3313 16.0878C16.3313
+                                15.8875 16.4006 15.7144 16.5393
+                                15.5681C16.6785 15.4212 16.8428
+                                15.3485 17.0327 15.3485C17.2226
+                                15.3485 17.3879 15.4212 17.5264
+                                15.5681C17.665 15.7144 17.7348
+                                15.8875 17.7348 16.0878C17.7348
+                                16.2888 17.6658 16.462 17.5264
+                                16.6081ZM5.07626
+                                6.08067H7.89792V1.36602C7.89792
+                                1.18391 7.96719 1.02534 8.10727
+                                0.892343C8.24651 0.759476 8.41166
+                                0.692444 8.6033
+                                0.692444H11.4242C11.6158 0.692444
+                                11.7809 0.759476 11.9202
+                                0.892343C12.0597 1.02534 12.1296
+                                1.18391 12.1296
+                                1.36602V6.08067H14.9512C15.2596
+                                6.08067 15.4763 6.22145 15.6011
+                                6.50128C15.7258 6.77518 15.6744
+                                7.01754 15.4464 7.22794L10.5095
+                                11.9428C10.3773 12.076 10.2122
+                                12.1426 10.0135 12.1426C9.81533
+                                12.1426 9.65017 12.076 9.51813
+                                11.9428L4.58032 7.22794C4.35242
+                                7.01754 4.3014 6.77518 4.42651
+                                6.50128C4.55125 6.22076 4.7678
+                                6.08067 5.07626 6.08067Z"
+                                fill="#323D41" />
+                            </svg>
+    
+                        </mat-icon>
+                    </button>
 
             <button (click)="exportDirective.exportTable('xlsx',
         {fileName:'clients', sheet: 'list', Props:
-        {Author: 'devcom'}})" matTooltipPosition="above" matTooltip="Export file" class="elhoo_compte_IconSvgStyle1 ml-2">
+        {Author: 'devcom'}})" matTooltipPosition="above" matTooltip="Export file" class="elhoo_compte_IconSvgStyle1 ml-3" #elhoolink [ngStyle]="{ 'height.px':
+        elhoolink.offsetWidth}">
                     <mat-icon>
-                        <svg width="26" viewBox="0 0
+                        <svg width="20"  viewBox="0 0
                             22 19" fill="#323d41"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -196,8 +203,10 @@
     <div class="row pb-3 pt-2">
         <div class="col-12 col-md-12">
             <table #exportDirective="matTableExporter" matTableExporter mat-table [dataSource]="dataSource" class="mat-elevation-z8 shadow-none" matSort>
+
                 <ng-container matColumnDef="act">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> ACTION</th>
+
                     <td mat-cell *matCellDef="let
                                                 repos">
                         <mat-checkbox class="example-margin
@@ -452,6 +461,7 @@
                 <tr mat-row *matRowDef="let row;
                                                     columns:
                                                     displayedColumns;"></tr>
+
             </table>
 
 
@@ -464,7 +474,8 @@
 
                     </li>
 
-                    <li [ngClass]="{colorBg:manualPage == item-1,colorBg1:manualPage == item-1,colorBg2:manualPage == item-1}" *ngFor="let item of collection" (click)="updateManualPage(item-1)" class="page-item page-item-li btn pl-4 pr-4 ml-2">
+                    <li [ngClass]="{colorBg:manualPage == item-1,colorBg1:manualPage == item-1,colorBg2:manualPage == item-1,
+                        colorBgs:manualPage != item-1,colorBg1s:manualPage != item-1,colorBg2s:manualPage != item-1 }" *ngFor="let item of collection" (click)="updateManualPage(item-1)" class="page-item  d-flex align-items-center btn pl-4 pr-4 ml-2">
                         {{item}}
                     </li>
 

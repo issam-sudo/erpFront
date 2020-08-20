@@ -20,6 +20,7 @@
     background-color: #323d41;
     border-color: #323d41;
     border-width: 1px;
+    transform: translateX(50%);
     cursor: pointer;
     &:hover {
         background-color: var(--primary_color);
@@ -88,13 +89,6 @@ tr.mat-header-row {
     padding-left: 3px;
     padding-right: 3px;
     font-size: 12px;
-}
-
-h1 {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
 }
 
 .list-group-item {
