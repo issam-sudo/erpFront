@@ -33,7 +33,16 @@ export class RecurringBillsComponent implements OnInit {
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
  
-  constructor(private router: Router) { }
+
+  hidden: any = 'pagepincipale';
+
+  constructor(private router: Router) {}
+  pageprincipale(){
+    this.hidden = 'pagepincipale';
+  }
+  page2(){
+    this.hidden = 'page2';
+  }
 
 
   public pageSize = 10;
