@@ -52,6 +52,11 @@ export class RecurringBillsPage2Component implements OnInit {
     {value: '1', viewValue: 'Le premier jour de la période'},
     {value: '2', viewValue: 'Le premier jour de la période'}
   ];
+  typeEnvoie: delai[] = [
+    {value: '0', viewValue: 'Le premier jour de la période'},
+    {value: '1', viewValue: 'Le premier jour de la période'},
+    {value: '2', viewValue: 'Le premier jour de la période'}
+  ];
 
 
 
@@ -100,6 +105,11 @@ export class RecurringBillsPage2Component implements OnInit {
   ])
 
   periodeFormControl = new FormControl('', [
+    Validators.required,
+   
+  ])
+
+  typeEnvoieFormControl = new FormControl('', [
     Validators.required,
    
   ])
