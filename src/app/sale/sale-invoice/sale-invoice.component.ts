@@ -38,15 +38,17 @@ const elemnt: any[] = [
 @Component({
   selector: 'app-sale-invoice',
   templateUrl: './sale-invoice.component.html',
-  styleUrls: ['./sale-invoice.component.scss']
+  styleUrls: ['./sale-invoice.component.css']
 })
 export class SaleInvoiceComponent implements OnInit {
+
+  constructor(private router: Router) { }
   hidden: any = 'pagepincipale';
   isClients: boolean;
   route_active: string;
   displayedColumns: string[] = ['act','facture', 'date', 'client', 'montant','status', 'financement','action'];
   displayedColumns1: string[] = ['act', 'devis', 'date', 'client', 'montant', 'status', 'new' , 'action'];
-  
+
   usersSelect: any;
   name: any ="wiwikuan";
   URL: string;
@@ -58,26 +60,12 @@ export class SaleInvoiceComponent implements OnInit {
    @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private router: Router) { }
-
-
-
-
-  pageprincipale(){
-    this.hidden = 'pagepincipale';
-  }
-  page2(){
-    this.hidden = 'page2';
-   
-  
-  }
-
 
   public pageSize = 10;
   public currentPage = 0;
   public totalSize = 0;
   pageSizeOptions = [5, 10, 25, 100];
-  
+
     manualPage = 0;
     pageSize1: any;
     lengthpage: number;
@@ -87,27 +75,39 @@ export class SaleInvoiceComponent implements OnInit {
   collection: any = [1, 2, 3];
 
 
-  
+
+
+  pageprincipale(){
+    this.hidden = 'pagepincipale';
+  }
+  page2(){
+    this.hidden = 'page2';
+
+
+  }
+
+
+
 
 
   ngOnInit(): void {
     this.getChart();
-    this.getChart1();
+
     this.route_active = this.router.url;
    // this.paginator._intl.itemsPerPageLabel = '';
-   this.getUser();
-   console.log(this.totalSize);
-   this.updateManualPagprevious();
-   this.updateManualPag();
+    this.getUser();
+    console.log(this.totalSize);
+    this.updateManualPagprevious();
+    this.updateManualPag();
 
 
    }
 
 
-   
 
 
-  async getChart(){
+
+   async getChart(){
 
     // tslint:disable-next-line:prefer-const
     let ctx = document.getElementById('myChart');
@@ -118,7 +118,8 @@ export class SaleInvoiceComponent implements OnInit {
           labels: ['Jan', 'Fev', 'Mar' , 'Apr', 'May', 'Jun', 'Jul' , 'Out' , 'Sep' , 'Oct' , 'Nov' , 'Dec'],
           datasets: [{
               label: 'Achat',
-              data: [60, 150, 200 , 260, 278 , 280 , 500 , 200 , 366 , 390 , 420 , 550],
+              fill: false,
+              data: [60 , 150, 200 , 260, 278 , 280 , 300 , 200 , 366 , 390 , 420 , 250],
               backgroundColor: [
                 'rgb(245, 89, 82 ,0)',
 
@@ -132,24 +133,41 @@ export class SaleInvoiceComponent implements OnInit {
               borderWidth: 1,
               pointStyle: 'circle',
               pointRadius: '5',
-              pointBackgroundColor: 'white',
+              pointBackgroundColor: 'rgb(245, 89, 82 ,1)',
               pointBorderColor: 'rgb(245, 89, 82 ,1)'
           }
         ]
       },
       options: {
         tooltips: {
-          yAlign: 'bottom',
+          custom(tooltip) {
+            if (!tooltip) { return; }
+            // disable displaying the color box;
+            tooltip.displayColors = false;
+          },
+          callbacks: {
+            title(tooltipItem, data) {
+              return data.labels[tooltipItem[0].index];
+            }, label(tooltipItem, data) {
+              return data.datasets[tooltipItem.datasetIndex].label + ':' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '€';
 
-  backgroundColor: 'rgb(50, 61, 65)'
+            },
+
+
+          },
+
+          yAlign: 'bottom',
+          backgroundColor: 'rgb(50, 61, 65)',
+
       },
         layout: {
           padding: {
-              left: 10,
+              left: 0,
               right: 0,
-              top: 0,
+              top: 40,
               bottom: 0
-          }
+          },
+
       },
         legend: {
           display: true,
@@ -157,7 +175,7 @@ export class SaleInvoiceComponent implements OnInit {
           align: 'start',
 
           labels: {
-            pointBackgroundColor: 'red',
+
             usePointStyle: true,
 
 
@@ -192,105 +210,17 @@ export class SaleInvoiceComponent implements OnInit {
           }
       }
   });
-  
-  }
-
-
-  async getChart1(){
-
-    // tslint:disable-next-line:prefer-const
-    let ctx = document.getElementById('myChart1');
-    // tslint:disable-next-line:prefer-const
-    let myChart1 = new Chart(ctx, {
-      type: 'line',
-      data: {
-          labels: ['Jan', 'Fev', 'Mar' , 'Apr', 'May', 'Jun', 'Jul' , 'Out' , 'Sep' , 'Oct' , 'Nov' , 'Dec'],
-          datasets: [{
-              label: 'Achat',
-              data: [60, 150, 200 , 260, 278 , 280 , 500 , 200 , 366 , 390 , 420 , 550],
-              backgroundColor: [
-                'rgb(245, 89, 82 ,0)',
-
-
-              ],
-              borderColor: [
-                'rgb(245, 89, 82 ,1)',
-
-
-              ],
-              borderWidth: 1,
-              pointStyle: 'circle',
-              pointRadius: '5',
-              pointBackgroundColor: 'white',
-              pointBorderColor: 'rgb(245, 89, 82 ,1)'
-          }
-        ]
-      },
-      options: {
-        tooltips: {
-          yAlign: 'bottom',
-
-  backgroundColor: 'rgb(50, 61, 65)'
-      },
-        layout: {
-          padding: {
-              left: 10,
-              right: 0,
-              top: 0,
-              bottom: 0
-          }
-      },
-        legend: {
-          display: true,
-          position: 'left',
-          align: 'start',
-
-          labels: {
-            pointBackgroundColor: 'red',
-            usePointStyle: true,
-
-
-          }
-      },
-          scales: {
-
-            xAxes: [{
-              ticks: {
-                padding: 30
-              },
-              gridLines: {
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false,
-
-              }
-            }],
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true,
-                      display: false,
-
-
-                  },
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                    drawTicks: false
-                  }
-              }]
-          }
-      }
-  });
-  
-
 
    }
 
-  
+
+
+
+
 
    setrouter(e){
     this.route_active = e;
-    console.log(this.route_active)
+    console.log(this.route_active);
     this.router.navigate([e]);
 
     console.log(this.route_active);

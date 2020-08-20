@@ -500,7 +500,7 @@
         a {
             width: 45px;
             height: 45px;
-            border: 1px solid var(--dark_color);
+            //  border: 1px solid var(--dark_color);
             border-radius: 8px;
             display: flex;
             justify-content: center;
@@ -601,10 +601,8 @@
     // //   ;
     // }
     .style-border {
-        border-style: solid;
-        border-width: 1px;
         border-radius: 5px;
-        border-color: rgb(14, 13, 13);
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
     }
     
     .style_button {
