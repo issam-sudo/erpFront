@@ -91,10 +91,7 @@ collection: any = [1, 2, 3];
 
  async  getUser(){
 
-
-
    this.URL = 'https://api.github.com/search/repositories?q=created:>2017-08-21&sort=stars&order=desc&page=';
-   9;
    const response = await fetch(this.URL);
 
    if (response.ok) {
