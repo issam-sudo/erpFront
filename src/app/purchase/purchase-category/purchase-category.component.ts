@@ -55,6 +55,7 @@ export class PurchaseCategoryComponent implements OnInit {
 
     this.accountService.currentdataPurchase.subscribe(data=>{
       this.url =data
+      
    
     
     })

@@ -1,14 +1,16 @@
 <div class="container-fluid ">
-    <div class="row  ">
-        <div class="col-12 col-md-6">
-            <pdf-viewer *ngIf="url!=null" [src]="url" [render-text]="true" style="display: flex;justify-content: center;align-items: center;">
+    <div class="row pt-3 ">
+        <div class="col-12 col-md-6 ">
+
+            <pdf-viewer *ngIf="url!=null" [src]="url" [render-text]="true" style="display: flex;justify-content: center;align-items: center;  height:800px">
             </pdf-viewer>
             <div *ngIf="url!=null" class="image-wrapper" cdkDrag>
-                <img *ngIf="url!=null" class="image-1" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-2" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-3" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-4" src="{{url}}" />
+                <img *ngIf="url!=null" class="image-1 img-fluid" src="{{url}}" />
+                <img *ngIf="url!=null" class="image-2 img-fluid" src="{{url}}" />
+                <img *ngIf="url!=null" class="image-3 img-fluid" src="{{url}}" />
+                <img *ngIf="url!=null" class="image-4 img-fluid" src="{{url}}" />
             </div>
+
 
 
 

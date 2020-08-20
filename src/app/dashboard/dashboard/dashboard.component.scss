@@ -175,3 +175,7 @@
     letter-spacing: 2PX;
     width: 271px;
 }
+
+::ng-deep .mat-calendar-content {
+    padding: 0 8px 8px 9px !important;
+}

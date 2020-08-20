@@ -1,0 +1,30 @@
+.elhoo_body_canvas {
+    width: 848px;
+    height: 378px;
+    padding: 0px;
+}
+
+.elhoo_body_TableauBord-result_filter {
+    text-align: center;
+    background: var(--primary_color);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: var(--dark_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    p {
+        margin: 0;
+        letter-spacing: 0px;
+        font-size: 16px;
+        padding-top: 30px;
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+        padding-top: 20px;
+    }
+}

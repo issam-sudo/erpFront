@@ -164,10 +164,10 @@
     }
     
     .mat-form-field {
-        border-color: #323d41;
         border-width: 1px;
-        border-style: solid;
         border-radius: 7px;
+        background: var(--primary_color);
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
     }
     
     .mat-form-field-wrapper {
@@ -234,11 +234,12 @@
         font-size: 19px;
         text-transform: uppercase;
         border-radius: 8px;
-        background-color: #323d41;
         display: flex;
         justify-content: flex-start;
         color: white;
         padding: .5rem 1.4rem;
+        background: var(--dark_color);
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
     }
     
     h1 {
@@ -342,18 +343,20 @@
         height: 48px;
         background: #F2F5FA;
         border-radius: 12px;
+        background: var(--primary_color);
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
     }
     
     td.mat-cell:first-child,
     th.mat-header-cell:first-child {
         border-radius: 5px 0px 0px 5px;
-        border-left: 1px solid #212529;
+        border-left: 1px;
     }
     
     td.mat-cell:last-child,
     th.mat-header-cell:last-child {
         border-radius: 0px 5px 5px 0px;
-        border-right: 1px solid #212529;
+        border-right: 1px;
         text-align: right;
         padding-right: 24px;
     }
@@ -374,8 +377,7 @@
     th.mat-header-cell,
     td.mat-cell,
     td.mat-footer-cell {
-        border-bottom-color: #333E42 !important;
-        border-top: 1px solid #333E42;
+        border-top: 1px;
     }
     
     th.mat-header-cell {
@@ -523,17 +525,17 @@
     
     .colorBg {
         background-color: #323d41;
-        color: #ebeff2;
+        color: var(--primary_color);
     }
     
     .colorBg1 {
         background-color: #323d41;
-        color: #ebeff2;
+        color: var(--primary_color);
     }
     
     .colorBg2 {
         background-color: #323d41;
-        color: #ebeff2;
+        color: var(--primary_color);
     }
     
     ul {
@@ -572,7 +574,8 @@
     
     tr.mat-row,
     tr.mat-footer-row {
-        background-color: var(--primary_color);
+        background: var(--primary_color);
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
     }
     
     .cursor-pointer {
@@ -621,4 +624,10 @@
         margin-top: 16px;
         color: var(--secondary_color);
         font-size: 9px;
+    }
+    
+    .page-item-li {
+        box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
     }

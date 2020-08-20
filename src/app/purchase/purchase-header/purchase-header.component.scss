@@ -1,0 +1,46 @@
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.list-group-item {
+    padding: 0;
+    background-color: #fff0;
+    border: 0;
+    flex-direction: unset;
+    flex-direction: unset;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    .list-group {
+        display: flex;
+        padding-left: 0;
+        margin-bottom: 0;
+        border-radius: .25rem;
+    }
+}
+
+.elhoo_compte_IconSvgStyle {
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+    }
+}
+
+button {
+    border: 0;
+}
+
+.elhoo_account_IconSvg_on {
+    fill: var(--secondary_color);
+    color: var(--secondary_color);
+}
+
+.elhoo_account_IconSvg_off {
+    fill: var(--dark_color);
+    color: var(--dark_color);
+}
