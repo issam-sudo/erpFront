@@ -103,3 +103,8 @@ table {
     /* padding: .5em 0; */
     border-top: 0px solid #333e42 !important;
 }
+
+.shadow {
+    box-shadow: 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.28), -2.8px -2.8px 8px rgb(255 255 255 / 100%), inset 3.5px 3.5px 6px rgba(255, 255, 255, 0.15);
+    border-radius: 9px;
+}
