@@ -46,6 +46,13 @@ import { InvoicePage2Component } from './sale/invoice-page2/invoice-page2.compon
 import { PurchaseHeaderComponent } from './purchase/purchase-header/purchase-header.component';
 import { PurchaseContainerComponent } from './purchase/purchase-container/purchase-container.component';
 import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recurring-bills-page2.component';
+import { date } from './sale/delivery-note-page2/delivery-note-page2.component';
+import { paymentTerms } from './sale/delivery-note-page2/delivery-note-page2.component';
+import {message } from './sale/delivery-note-page2/delivery-note-page2.component';
+
+
+
+
 import { PurchaseInvoiceComponent } from './purchase/purchase-invoice/purchase-invoice.component';
 import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice.component';
 
@@ -98,6 +105,12 @@ import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice
    PurchaseHeaderComponent,
    PurchaseContainerComponent,
    RecurringBillsPage2Component,
+   //pop-up class
+   date,
+   paymentTerms,
+   message,
+   
+
    Facture_fileUpload
     
   ],
