@@ -30,13 +30,27 @@ interface Civilite {
 
 interface Facture {
 
-  art: string;
+ /*  art: string;
   description: string;
   quantite: string;
   unite: string;
-  unit: string;
-
-  
+  unit: string; */
+ 
+  typeFacture :string;
+  numFacture :string;
+  nom:string;
+  date: string;
+  echeance:string;
+  thtva: string;
+  ttva: string;
+  ttvac: string;
+  deviseform: string;
+  tva: string;
+  bic: string;
+  iban: string;
+  communication: string;
+  numpiece: string;
+  pays: string;
 }
 
 
@@ -76,16 +90,26 @@ interface Type {
   styleUrls: ['./purchase-invoice.component.scss']
 })
 export class PurchaseInvoiceComponent implements OnInit {
-  displayedColumns: string[] = ['art','description', 'quantite', 'unite','unit' ,'action'];
+  displayedColumns: string[] = ['cat','numero', 'date', 'fournisseurs','montant' ,'echeance' , 'retard' ,'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   disableForm = false;
 show:boolean =false
   facture : Facture = {
-    art :"",
-    description :"",
-    quantite:"",
-    unite: "",
-    unit:"",
+    typeFacture :"",
+    numFacture :"",
+    nom:"",
+    date: "",
+    echeance: "",
+    thtva: "",
+    ttva: "",
+    ttvac: "",
+    deviseform: "",
+    tva: "",
+    bic: "",
+    iban: "",
+    communication: "",
+    numpiece: "",
+    pays: "",
    
 
   };
@@ -244,8 +268,8 @@ show:boolean =false
   selectedValueTypes: string;
   types: Type[] = [
     {value: 'Facture', viewValue: 'Facture'},
-    {value: 'Facture', viewValue: 'Facture'},
-    {value: 'Facture', viewValue: 'Facture'}
+    {value: 'Note de credit', viewValue: 'Note de credit'}
+  
   ];
   selectedValuePays: string;
 pays: Pays[] = [
@@ -263,41 +287,8 @@ devise: Devise[] = [
 
 
 
-NumeroFactureControl = new FormControl('', [
-  Validators.required,
-
-]);
-
-NomControl = new FormControl('', [
-  Validators.required,
-
-]);
-
-EcheanceControl = new FormControl('', [
-  Validators.required,
-
-]);
-
-DeviseControl = new FormControl('', [
-  Validators.required,
-
-]);
-HtvaControl = new FormControl('', [
-  Validators.required,
-
-]);
-TvaControl = new FormControl('', [
-  Validators.required,
-
-]);
-TvacControl = new FormControl('', [
-  Validators.required,
-
-]);
-DateControl = new FormControl('', [
-  Validators.required,
-
-]);
+ 
+ 
 matcher = new MyErrorStateMatcher();
 
 
@@ -307,12 +298,21 @@ this.hiddenSection =e
    }
 
    invoiceForm= new FormGroup({
-    art: new FormControl("", [Validators.required]),
-    description: new FormControl("", [Validators.required]),
-    quantite: new FormControl("", [Validators.required,Validators.pattern('^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$')]),
-    unite: new FormControl("", [Validators.required]),
-    unit: new FormControl("", [Validators.required]),
-   
+    typeFacture: new FormControl(""),
+    numFacture: new FormControl("", [Validators.required]),
+    nom: new FormControl("", [Validators.required]),
+    date: new FormControl("", [Validators.required]),
+    echeance: new FormControl("", [Validators.required]),
+    thtva: new FormControl("", [Validators.required]),
+    ttva: new FormControl("", [Validators.required]),
+    ttvac: new FormControl("", [Validators.required]),
+    deviseform: new FormControl("", [Validators.required]),
+    tva: new FormControl(""),
+    bic: new FormControl(""),
+    iban: new FormControl(""),
+    communication: new FormControl(""),
+    numpiece: new FormControl(""),
+    pays: new FormControl(""),
   });
   selectedValueCivilite: string;
   civilites: Civilite[] = [
@@ -325,11 +325,21 @@ this.hiddenSection =e
     ELEMENT_DATA.push(this.invoiceForm.value)
    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
    this.facture = {
-    art :"",
-    description :"",
-    quantite:"",
-    unite: "",
-    unit:""
+    typeFacture :"",
+    numFacture :"",
+    nom:"",
+    date: "",
+    echeance: "",
+    thtva: "",
+    ttva: "",
+    ttvac: "",
+    deviseform: "",
+    tva: "",
+    bic: "",
+    iban: "",
+    communication: "",
+    numpiece: "",
+    pays: "",
   };
   this.invoiceForm.reset();
   this.url=null;
