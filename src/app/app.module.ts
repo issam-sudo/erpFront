@@ -46,8 +46,8 @@ import { InvoicePage2Component } from './sale/invoice-page2/invoice-page2.compon
 import { PurchaseHeaderComponent } from './purchase/purchase-header/purchase-header.component';
 import { PurchaseContainerComponent } from './purchase/purchase-container/purchase-container.component';
 import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recurring-bills-page2.component';
-
-
+import { PurchaseInvoiceComponent } from './purchase/purchase-invoice/purchase-invoice.component';
+import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice.component';
 
 
 
@@ -79,9 +79,9 @@ import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recur
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
    
-    
+    PurchaseInvoiceComponent,
     PurchaseCategoryComponent,
-   
+    
 
     //sale 
     QuoteComponent,
@@ -97,7 +97,8 @@ import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recur
    InvoicePage2Component,
    PurchaseHeaderComponent,
    PurchaseContainerComponent,
-   RecurringBillsPage2Component
+   RecurringBillsPage2Component,
+   Facture_fileUpload
     
   ],
   imports: [

@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AccountService {
-  globalVar:boolean;
+  globalVar:any;
   urlPath   = new BehaviorSubject(null);
   currentdata = this.urlPath.asObservable();
 
