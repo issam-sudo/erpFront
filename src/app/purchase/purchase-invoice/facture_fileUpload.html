@@ -1,0 +1,39 @@
+<div class="custom-scrollbar-css">
+    <h2 class="modal-title">
+
+        Achat Pièces jointes</h2>
+
+
+    <div class="row m-5  " [ngClass]="{borderDark: url ==null ,borderSecondary: url !=null}">
+        <div class="col-12 col-md-1">
+        </div>
+        <div class="col-12 col-md-4">
+            <input type='file' #loadImage (change)="onSelectFile($event)" class="d-none">
+
+            <button class="btn elhoo_btn_transparent" (click)="loadImage.click()">
+                <img src="../../../assets/upload.png" style="height: 30px;" alt=""> Choose file</button>
+        </div>
+        <div class="col-12 col-md-7">
+            <span *ngIf="url !=null"> Name: {{name}} <br> </span>
+            <span *ngIf="url !=null">  Size: {{size}} <br> </span>
+            <span *ngIf="url !=null"> Type: {{type}} <br> </span>
+            <p *ngIf="url ==null"> Attach file by selecting one </p>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row m-5 pt-5" style=" 
+    display: grid;
+    justify-content: center;">
+        <div class="col-12 col-md-12 pt-3">
+
+            <a class="btn elhoo_btn  text-uppercase" (click)="validerbtn($event)">Valider</a>
+        </div>
+
+
+    </div>
+
+</div>

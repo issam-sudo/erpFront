@@ -53,6 +53,8 @@ import {message } from './sale/delivery-note-page2/delivery-note-page2.component
 
 
 
+import { PurchaseInvoiceComponent } from './purchase/purchase-invoice/purchase-invoice.component';
+import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice.component';
 
 
 
@@ -84,9 +86,9 @@ import {message } from './sale/delivery-note-page2/delivery-note-page2.component
     ContactNewCustomerComponent,
     ContactNewSuppliersComponent,
    
-    
+    PurchaseInvoiceComponent,
     PurchaseCategoryComponent,
-   
+    
 
     //sale 
     QuoteComponent,
@@ -106,9 +108,11 @@ import {message } from './sale/delivery-note-page2/delivery-note-page2.component
    //pop-up class
    date,
    paymentTerms,
-   message
+   message,
    
 
+   Facture_fileUpload
+    
   ],
   imports: [
     BrowserModule,
