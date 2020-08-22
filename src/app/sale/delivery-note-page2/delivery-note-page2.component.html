@@ -70,19 +70,20 @@
           <div class="row">
             <div class="col-4 ">
               <div class=" style-border bg_clear_gray h-100 p-3">
+                <a (click)="openDialogUpdateDate()">
                 <ul class="list-inline" *ngIf="selectedUser">
                   <li>BON DE livraison</li>
                   <li>
                    
-                    <a (click)="openDialogUpdateDate()">Date : {{ selectedUser.date }}</a>
+                    Date : {{ selectedUser.date }}
                   </li>
                   <li>
-                    <a (click)="openDialogUpdateDate()">Date de livraison : {{ selectedUser.dateLivraison }}</a>
+                    Date de livraison : {{ selectedUser.dateLivraison }}
                   </li>
                   <li>
-                    <a (click)="openDialogUpdateDate()">Info :</a>
+                  Info :
                   </li>
-                </ul>
+                </ul></a>
               </div>
             </div>
             <div class="col-8  justify-content-center">

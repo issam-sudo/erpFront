@@ -49,6 +49,12 @@ import { RecurringBillsPage2Component } from './sale/recurring-bills-page2/recur
 import { date } from './sale/delivery-note-page2/delivery-note-page2.component';
 import { paymentTerms } from './sale/delivery-note-page2/delivery-note-page2.component';
 import {message } from './sale/delivery-note-page2/delivery-note-page2.component';
+import {adressNameQuote } from './sale/quote-page2/quote-page2.component';
+import {dateQuote } from './sale/quote-page2/quote-page2.component';
+import {payamentQuote } from './sale/quote-page2/quote-page2.component';
+import {noteQuote } from './sale/quote-page2/quote-page2.component';
+
+
 
 
 
@@ -109,6 +115,10 @@ import { CategorieSelect } from './purchase/purchase-invoice/purchase-invoice.co
    date,
    paymentTerms,
    message,
+   adressNameQuote,
+   dateQuote,
+   payamentQuote,
+   noteQuote,
    
 
    Facture_fileUpload,
