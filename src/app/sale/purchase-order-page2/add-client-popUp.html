@@ -1,0 +1,98 @@
+<div class="custom-scrollbar-css">
+    <h2 class="modal-title">
+        Créez un nouveau client</h2>
+
+        <div class="container-fluid ">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="input-group ">
+                        <mat-form-field appearance="none">
+                            <input matInput placeholder="NOM" formControlName="montant">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="input-group ">
+                        <mat-form-field appearance="none">
+                            <input matInput placeholder="ADRESSE" formControlName="montant">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">
+                    <div class="input-group ">
+                        <mat-form-field appearance="none">
+                            <input matInput placeholder="CP" formControlName="montant">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" class="example-full-width">
+                            <mat-label class="elhoo_compte_labelInputPosition">Ville </mat-label>
+
+                            <mat-select matInput [(ngModel)]="selectedValueVille" [formControl]="villeFormControl" [errorStateMatcher]="matcher">
+
+                                <mat-option *ngFor="let ville of villes" [value]="ville.value">
+                                    {{ville.viewValue}}
+                                </mat-option>
+
+                            </mat-select>
+                            <mat-error *ngIf="villeFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                                Ville is <strong>required</strong>
+                            </mat-error>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="input-group ">
+                        <mat-form-field appearance="none">
+                            <input matInput placeholder="Référence" formControlName="montant">
+
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-12">
+                <div class="input-group mb-4">
+                    <mat-form-field appearance="none">
+                        <input autocomplete="off" matInput placeholder="Email *" class="InputFirstSection" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                        <mat-error class="elhoo_compte_messageErrorPosition" *ngIf="emailFormControl.hasError('email') &&
+                        !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')" class="elhoo_compte_messageErrorPosition">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+    
+    
+                </div>
+            </div></div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group mb-4">
+                        <mat-form-field appearance="none" >
+                            <input autocomplete="off" type="number" matInput placeholder="Num de téléphone" formControlName="unite" class="InputFirstSection">
+
+                        </mat-form-field>
+                    </div>
+                </div></div>
+
+            <div class="col-md-12 d-flex justify-content-center">
+
+                <button class="btn active text-uppercase btn_Save " type="submit">OK</button>
+                <!-- <button class="btn active text-uppercase btnEnregistrer mr-2" (click)="onNoClick()">Cancel</button> -->
+            </div>
+
+        </div>
+</div>

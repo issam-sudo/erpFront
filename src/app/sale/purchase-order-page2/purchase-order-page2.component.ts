@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup } from '@angular/forms';
 import {MatTableDataSource} from '@angular/material/table';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import {ErrorStateMatcher} from '@angular/material/core';
+import {FormControl, FormGroupDirective, NgForm, Validators , FormGroup , FormBuilder} from '@angular/forms';
 
 
 interface Facture {
@@ -11,6 +14,17 @@ interface Facture {
   unite: string;
   unit: string;
   montant: string;
+}
+interface Ville {
+  value: string;
+  viewValue: string;
+}
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
 }
 
 
@@ -97,7 +111,8 @@ export class PurchaseOrderPage2Component implements OnInit {
 
   selectedUser: any;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
 
   ngOnInit(): void {
   }
@@ -144,5 +159,133 @@ export class PurchaseOrderPage2Component implements OnInit {
       }
     }
 }
+
+openDialogAdressPurchaseOrder() {
+  this.dialog.open(adressOrder, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '30%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+openDialogAddClient() {
+  this.dialog.open(addClientOrder, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '60%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+
+openDialogDatePurshaseOrder() {
+  this.dialog.open(DatePurshaseOrder, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '60%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+openDialogMessagePurchase() {
+  this.dialog.open(MessagePurchase, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '40%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+
+}
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'adress-purchase-order-popUp',
+  templateUrl: 'adress-purchase-order-popUp.html',
+  styleUrls: ['./purchase-order-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class adressOrder {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<adressOrder> ) { }
+  ngOnInit(): void {
+  }
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'add-client-popUp',
+  templateUrl: 'add-client-popUp.html',
+  styleUrls: ['./purchase-order-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class addClientOrder {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<addClientOrder> ) { }
+  ngOnInit(): void {
+  }
+  villeFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+  emailFormControl = new FormControl('', [
+    Validators.required
+    , Validators.email
+
+  ]);
+  matcher = new MyErrorStateMatcher();
+
+  selectedValueVille: string;
+  villes: Ville[] = [
+    {value: 'Anvers', viewValue: 'Anvers'},
+    {value: 'Gand', viewValue: 'Gand'},
+    {value: 'Louvain', viewValue: 'Louvain'}
+  ];
+
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'date-purchase-order-popUp',
+  templateUrl: 'date-purchase-order-popUp.html',
+  styleUrls: ['./purchase-order-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class DatePurshaseOrder {
+ 
+  constructor(private router: Router, public dialogRef: MatDialogRef<DatePurshaseOrder> ) { }
+  ngOnInit(): void {
+    console.log("test")
+  }
+
+}
+
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'note-purchase-order-popUp',
+  templateUrl: 'note-purchase-order-popUp.html',
+  styleUrls: ['./purchase-order-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class MessagePurchase {
+ 
+  constructor(private router: Router, public dialogRef: MatDialogRef<MessagePurchase> ) { }
+  ngOnInit(): void {
+    console.log("test")
+  }
 
 }
