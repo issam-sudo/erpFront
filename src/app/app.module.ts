@@ -53,6 +53,10 @@ import {adressNameQuote } from './sale/quote-page2/quote-page2.component';
 import {dateQuote } from './sale/quote-page2/quote-page2.component';
 import {payamentQuote } from './sale/quote-page2/quote-page2.component';
 import {noteQuote } from './sale/quote-page2/quote-page2.component';
+import { adressOrder } from './sale/purchase-order-page2/purchase-order-page2.component';
+import { addClientOrder } from './sale/purchase-order-page2/purchase-order-page2.component';
+ import { DatePurshaseOrder } from './sale/purchase-order-page2/purchase-order-page2.component';
+ import { MessagePurchase } from './sale/purchase-order-page2/purchase-order-page2.component';
 
 
 
@@ -119,6 +123,10 @@ import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice
    dateQuote,
    payamentQuote,
    noteQuote,
+   adressOrder,
+   addClientOrder,
+    DatePurshaseOrder,
+    MessagePurchase,
    
 
    Facture_fileUpload
