@@ -5,7 +5,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PreferenceModule } from './preference/preference.module';
 import { SaleModule } from './sale/sale.module';
 import { ContactModule } from './contact/contact.module';
-import { ErrorsComponent } from './errors/errors.component';
+ 
 import { PurchaseModule } from './purchase/purchase.module';
 const routes: Routes = [
  

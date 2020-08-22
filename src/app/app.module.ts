@@ -65,7 +65,7 @@ import { addClientOrder } from './sale/purchase-order-page2/purchase-order-page2
 
 import { PurchaseInvoiceComponent } from './purchase/purchase-invoice/purchase-invoice.component';
 import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice.component';
-
+import { CategorieSelect } from './purchase/purchase-invoice/purchase-invoice.component';
 
 
 
@@ -129,7 +129,8 @@ import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice
     MessagePurchase,
    
 
-   Facture_fileUpload
+   Facture_fileUpload,
+   CategorieSelect
     
   ],
   imports: [

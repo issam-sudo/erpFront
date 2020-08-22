@@ -1,0 +1,73 @@
+<div>
+    <h2 class="modal-title">
+
+        Choisir Categorie</h2>
+
+
+
+    <div class="row mb-4" style="width: 100%;">
+
+        <div class="col-12 col-md-2 "></div>
+        <div class="col-12 col-md-9   w-100  ">
+
+
+            <mat-form-field appearance="none">
+                <mat-label class="elhoo_compte_labelInputPosition">Categorie
+                </mat-label>
+                <mat-select [(ngModel)]="selectedValuePays" name="pays">
+
+                    <mat-option *ngFor="let pays of pays" [value]="pays.value">
+                        {{pays.viewValue}}
+                    </mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+
+        </div>
+    </div>
+    <div class="row " style="width: 100%;">
+        <div class="col-12 col-md-2 "></div>
+        <div class="col-12 col-md-9  w-100  ">
+
+
+            <mat-form-field appearance="none">
+                <mat-label class="elhoo_compte_labelInputPosition">Sous categorie
+                </mat-label>
+                <mat-select [(ngModel)]="selectedValueCategorie" name="categorie">
+
+                    <mat-option *ngFor="let categorie of categorie" [value]="categorie.name">
+                        {{categorie.name}}
+                    </mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+            <section class="example-section mt-4">
+
+                <mat-checkbox class="example-margin">affecter egalement cette gategorie au fournisseur</mat-checkbox>
+            </section>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="row mt-5" style="width: 100%;">
+        <div class="col-12 col-md-2 "></div>
+        <div class="col-12 col-md-4">
+
+            <a (click)="close($event)" class="btn w-100">annuler</a>
+
+        </div>
+        <div class="col-12 col-md-5">
+
+
+
+            <a class="btn w-100">ok</a>
+
+        </div>
+    </div>
+
+</div>

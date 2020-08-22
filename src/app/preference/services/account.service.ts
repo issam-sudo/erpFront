@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AccountService {
-  globalVar:any;
+  globalVar:any =[1,2,3];
   urlPath   = new BehaviorSubject(null);
   currentdata = this.urlPath.asObservable();
 
@@ -13,9 +13,11 @@ export class AccountService {
   currentdataQuote = this.urlPathQuote.asObservable();
 
 
-  
+  categorieList = new BehaviorSubject(this.globalVar);
+  categorie =this.categorieList.asObservable();
   urlPathPurchase   = new BehaviorSubject(null);
   currentdataPurchase = this.urlPathPurchase.asObservable();
+
   urlActive = false
   constructor() { }
 }
