@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import {MatTableDataSource} from '@angular/material/table';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 interface Facture {
@@ -98,7 +100,7 @@ export class QuotePage2Component implements OnInit {
 
   selectedUser: any;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -146,4 +148,114 @@ export class QuotePage2Component implements OnInit {
     }
 }
 
+
+openDialogAdressNameQuote() {
+  this.dialog.open(adressNameQuote, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '40%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
 }
+openDialogDateQuote() {
+  this.dialog.open(dateQuote, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '40%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+
+openDialogPayamentQuote() {
+  this.dialog.open(payamentQuote, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '40%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+
+openDialogNoteQuote() {
+  this.dialog.open(noteQuote, {
+
+    data: {
+      animal: 'panda'
+    },
+    width: '30%',
+    height: '40%',
+    panelClass: 'my-custom-dialog-class'
+  });
+
+}
+}
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'name-adress-popUp',
+  templateUrl: 'name-adress-popUp.html',
+  styleUrls: ['./quote-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class adressNameQuote {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<adressNameQuote> ) { }
+  ngOnInit(): void {
+
+  }
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'date-quote-popUp',
+  templateUrl: 'date-quote-popUp.html',
+  styleUrls: ['./quote-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class dateQuote {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<dateQuote> ) { }
+  ngOnInit(): void {
+  }
+}
+
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'payement-quote',
+  templateUrl: 'payement-quote.html',
+  styleUrls: ['./quote-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class payamentQuote {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<payamentQuote> ) { }
+  ngOnInit(): void {
+  }
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'note-quote-popUp',
+  templateUrl: 'note-quote-popUp.html',
+  styleUrls: ['./quote-page2.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class noteQuote {
+  url: any;
+  constructor(private router: Router, public dialogRef: MatDialogRef<noteQuote> ) { }
+  ngOnInit(): void {
+  }
+}
+
+
