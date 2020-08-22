@@ -1,51 +1,48 @@
-<div class="container-fluid mt-3">
-    <div class="row " *ngIf="url ==null">
-        <div class="col-12 col-md-9 d-flex justify-content-end mb-2">
+<div [hidden]="url!=null" class="container-fluid mt-3">
+
+    <div class="row ">
+        <div class="col-12 col-md-10 d-flex justify-content-end  ">
         </div>
-        <div class="col-12 col-md-3 d-flex justify-content-end mb-2">
-            <button class="btn text-uppercase mb-4  w-100" type="submit" aria-pressed="true" (click)="openDialogFileUpload()">Entrer une facture d'achat</button>
-        </div>
-    </div>
-    <div class="row " *ngIf="url ==null">
-        <div class="col-12 col-md-9 d-flex justify-content-end mb-2">
-        </div>
-        <div class="col-12 col-md-3 d-flex justify-content-end mb-4">
-            <a class="btn d-flex align-items-center w-100" *ngIf="hiddenSection =='false'" (click)="setHidden('true')" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
-                CACHER LES CHIFFRES CLES <svg  xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect  fill="white" height="2" width="16" x="4" y="11"/></g></svg>
+        <div class="col-12 col-md-2 d-flex justify-content-end  ">
+            <a style="border-radius: 5px 5px 0 0;    font-size: 11px;
+            " class="btn d-flex align-items-center w-100" *ngIf="hiddenSection =='false'" (click)="setHidden('true')" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                CACHER LES CHIFFRES CLES <svg  style="    right: 7%;
+                position: absolute;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="15" viewBox="0 0 24 24" width="15"><g><rect  fill="white" height="2" width="16" x="4" y="11"/></g></svg>
              </a>
-            <a class="btn d-flex align-items-center w-100" *ngIf="hiddenSection =='true'" (click)="setHidden('false')" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
-                  APPARAITRE LES CHIFFRES CLES <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"> <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="white"/></svg>
-            </a>
-
+            <a style="border-radius: 5px 5px 0 0;    font-size: 11px; " class="btn d-flex align-items-center w-100" *ngIf="hiddenSection =='true'" (click)="setHidden('false')" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                  APPARAITRE LES CHIFFRES CLES <svg style="    right: 7%;
+                  position: absolute;" xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 0 24 24" width="15"> <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="white"/></svg>
+          
+                </a>
 
         </div>
 
     </div>
 
-
+    <hr style="  background-color: #323d41;margin:0 ;" class="mb-4">
     <div id="accordion">
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
 
 
             <div class="row pb-5">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6   ">
                     <div [hidden]="url!=null">
 
                         <canvas class="elhoo_body_canvas" id="myChart"></canvas>
 
                     </div>
                 </div>
-                <div class="col-12 col-md-3 " *ngIf="url ==null">
-                    <div class="elhoo_body_TableauBord-result_filter py-5">
+                <div class="col-12 col-md-3   ">
+                    <div class="elhoo_body_TableauBord-result_filter py-5 h-100">
 
                         <p class="elhoo_body_text_TableauBord ">Paiements en retard</p>
                         <h1 class="text-center mb-0">0,00 €</h1>
                     </div>
 
                 </div>
-                <div class="col-12 col-md-3" *ngIf="url ==null">
+                <div class="col-12 col-md-3   ">
 
-                    <div class="elhoo_body_TableauBord-result_filter py-5">
+                    <div class="elhoo_body_TableauBord-result_filter py-5 h-100">
 
                         <p class="elhoo_body_text_TableauBord ">Achat de {{mois}}</p>
                         <h1 class="text-center mb-0">200,00 €</h1>
@@ -74,21 +71,21 @@
 
 
 
-    <div class="row " *ngIf="url ==null">
+    <div class="row ">
 
-        <div class="col-md-12 ">
-
-
-
-            <div class="row align-items-center mb-3">
+        <div class="col-12 col-md-12 ">
 
 
 
+            <div class="row  mb-3">
 
 
-                <div class="col-md-5   d-flex    ">
-                    <div class="row align-items-center mb-3">
-                        <div class="col-md-2 align-items-center">
+
+
+
+                <div class="col-12 col-md-5  ">
+                    <div class="row align-items-center mb-3 ">
+                        <div class="col-md-2 align-items-center p-0">
 
 
                             <p class="mb-0 mr-4 text-nowrap
@@ -116,11 +113,13 @@
 
                 </div>
 
-                <div class=" col-md-5   d-flex  ml-auto text-right">
+                <div class="col-12 col-md-2">
+                </div>
+                <div class=" col-md-5  d-flex justify-content-end  ">
 
 
-                    <div class="row align-items-center mb-3">
-                        <div class="col-md-5">
+                    <div class="row   mb-3">
+                        <div class="col-md-5 d-flex justify-content-end ">
                             <mat-form-field appearance="none">
                                 <mat-label class="elhoo_compte_labelInputPosition">ACTION RAPIDE
                                 </mat-label>
@@ -131,7 +130,7 @@
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7  d-flex justify-content-end ">
                             <mat-form-field appearance="none">
 
                                 <input class="ml-3   InputFirstSection" autocomplete="off" matInput placeholder="Recherche" (keyup)="applyFilter($event)" type="search" matInput placeholder="Recherche" #input>
@@ -154,6 +153,7 @@
                             </mat-form-field>
 
                         </div>
+
                     </div>
 
                 </div>
@@ -189,180 +189,7 @@
 
 
 
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
 
-                    <ng-container matColumnDef="cat">
-                        <th mat-header-cell *matHeaderCellDef> CAT</th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            {{element.typeFacture}}
-                        </td>
-
-                    </ng-container>
-
-                    <ng-container matColumnDef="numero">
-                        <th mat-header-cell *matHeaderCellDef> Numéro </th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            {{element.numFacture}}
-                        </td>
-                    </ng-container>
-
-
-                    <ng-container matColumnDef="date">
-                        <th mat-header-cell *matHeaderCellDef> Date </th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            {{element.date}}
-                        </td>
-                    </ng-container>
-
-
-                    <ng-container matColumnDef="fournisseurs">
-                        <th mat-header-cell *matHeaderCellDef> Fournisseur </th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            <!-- {{element.date}} -->
-                    </ng-container>
-
-                    <ng-container matColumnDef="montant">
-                        <th mat-header-cell *matHeaderCellDef>Montant</th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            <!-- {{element.echeance}} -->
-                        </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="echeance">
-                        <th mat-header-cell *matHeaderCellDef>Echeance</th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            {{element.echeance}}
-                        </td>
-                    </ng-container>
-
-
-                    <ng-container matColumnDef="retard">
-                        <th mat-header-cell *matHeaderCellDef>Retard</th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            <!-- {{element.echeance}} -->
-                        </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="action">
-                        <th mat-header-cell *matHeaderCellDef></th>
-                        <td mat-cell *matCellDef="let element; let i = index">
-                            <a (click)="removenew(i)" class="cursor-pointer p-1">
-
-                                <svg width="14" height="17" viewBox="0 0 14
-                        17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M5.36536
-                            1.02622H8.30152V1.50426H9.36176V0.95934C9.36194
-                            0.43048 8.9175 0
-                            8.37117
-                            0H5.2957C4.74939 0
-                            4.30492 0.43048
-                            4.30492
-                            0.95934V1.50426H5.36536V1.02622ZM11.8106
-                            5.5699H1.85633C1.58358
-                            5.5699
-                            1.36887 5.7951
-                            1.39083 6.0582L2.223
-                            16.016C2.26941
-                            16.572 2.74845 17
-                            3.32421
-                            17H10.3425C10.9181
-                            17
-                            11.3974 16.572
-                            11.4437
-                            16.0158L12.2759
-                            6.0582C12.298 5.7951
-                            12.0833 5.5699
-                            11.8106
-                            5.5699ZM4.26653
-                            15.938C4.25547
-                            15.9386 4.2444
-                            15.939 4.23333
-                            15.939C3.95531
-                            15.939 3.72197
-                            15.7295 3.70482
-                            15.4574L3.18323
-                            7.28252C3.16533
-                            6.99966 3.3876
-                            6.75622 3.67981
-                            6.73886C3.97109
-                            6.72168 4.22373
-                            6.93636 4.24163
-                            7.21948L4.76304
-                            15.3943C4.78112
-                            15.6771 4.55875
-                            15.9205 4.26653
-                            15.938ZM7.36951
-                            15.4259C7.36951
-                            15.7092 7.13221
-                            15.9388 6.83935
-                            15.9388C6.54649
-                            15.9388 6.30908
-                            15.7092 6.30908
-                            15.4259V7.25094C6.30908
-                            6.96758
-                            6.54649 6.73784
-                            6.83935
-                            6.73784C7.13211
-                            6.73784 7.36951
-                            6.96758 7.36951
-                            7.25094V15.4259ZM10.4837
-                            7.28106L9.98578
-                            15.456C9.96925
-                            15.7286 9.73545
-                            15.9388 9.45699
-                            15.9388C9.44655
-                            15.9388 9.43586
-                            15.9386 9.42534
-                            15.9382C9.13304
-                            15.9213 8.91002
-                            15.6786 8.92727
-                            15.3956L9.42515
-                            7.22076C9.44222
-                            6.93782 9.69236
-                            6.72194 9.9854
-                            6.73878C10.2778
-                            6.75528 10.5008
-                            6.99828 10.4837
-                            7.28106ZM13.6441
-                            3.98642L13.2959
-                            2.97646C13.2041
-                            2.7101 12.9465
-                            2.53048 12.6563
-                            2.53048H1.01049C0.720317
-                            2.53048
-                            0.462699 2.7101
-                            0.370984
-                            2.97646L0.0227731
-                            3.98642C-0.0444109
-                            4.18136 0.0430711
-                            4.38004 0.206203
-                            4.4791C0.272537
-                            4.51946 0.351247
-                            4.54366 0.437794
-                            4.54366H13.2292C13.3155
-                            4.54366
-                            13.3944 4.51946
-                            13.4608
-                            4.479C13.6238
-                            4.37988 13.7113
-                            4.18118 13.6441
-                            3.98642Z" />
-                        </svg>
-
-
-                            </a>
-
-                        </td>
-                    </ng-container>
-
-
-
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
 
 
             </div>
@@ -371,36 +198,223 @@
 
 
     </div>
+    <div class="row ">
+
+        <div class="col-12 col-md-12 pl-0">
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100 shadow-none ">
+
+                <ng-container matColumnDef="cat">
+                    <th mat-header-cell *matHeaderCellDef> CAT</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        {{element.typeFacture}}
+                    </td>
+
+                </ng-container>
+
+                <ng-container matColumnDef="numero">
+                    <th mat-header-cell *matHeaderCellDef> Numéro </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        {{element.numFacture}}
+                    </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        {{element.date | date: 'yyyy/MM/dd'}}
+                    </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="fournisseurs">
+                    <th mat-header-cell *matHeaderCellDef> Fournisseur </th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <!-- {{element.date}} -->
+                </ng-container>
+
+                <ng-container matColumnDef="montant">
+                    <th mat-header-cell *matHeaderCellDef>Montant</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <!-- {{element.echeance}} -->
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="echeance">
+                    <th mat-header-cell *matHeaderCellDef>Echeance</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        {{element.echeance}}
+                    </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="retard">
+                    <th mat-header-cell *matHeaderCellDef>Retard</th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <!-- {{element.echeance}} -->
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element; let i = index">
+                        <a (click)="removenew(i)" class="cursor-pointer p-1">
+
+                            <svg width="14" height="17" viewBox="0 0 14
+            17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.36536
+                1.02622H8.30152V1.50426H9.36176V0.95934C9.36194
+                0.43048 8.9175 0
+                8.37117
+                0H5.2957C4.74939 0
+                4.30492 0.43048
+                4.30492
+                0.95934V1.50426H5.36536V1.02622ZM11.8106
+                5.5699H1.85633C1.58358
+                5.5699
+                1.36887 5.7951
+                1.39083 6.0582L2.223
+                16.016C2.26941
+                16.572 2.74845 17
+                3.32421
+                17H10.3425C10.9181
+                17
+                11.3974 16.572
+                11.4437
+                16.0158L12.2759
+                6.0582C12.298 5.7951
+                12.0833 5.5699
+                11.8106
+                5.5699ZM4.26653
+                15.938C4.25547
+                15.9386 4.2444
+                15.939 4.23333
+                15.939C3.95531
+                15.939 3.72197
+                15.7295 3.70482
+                15.4574L3.18323
+                7.28252C3.16533
+                6.99966 3.3876
+                6.75622 3.67981
+                6.73886C3.97109
+                6.72168 4.22373
+                6.93636 4.24163
+                7.21948L4.76304
+                15.3943C4.78112
+                15.6771 4.55875
+                15.9205 4.26653
+                15.938ZM7.36951
+                15.4259C7.36951
+                15.7092 7.13221
+                15.9388 6.83935
+                15.9388C6.54649
+                15.9388 6.30908
+                15.7092 6.30908
+                15.4259V7.25094C6.30908
+                6.96758
+                6.54649 6.73784
+                6.83935
+                6.73784C7.13211
+                6.73784 7.36951
+                6.96758 7.36951
+                7.25094V15.4259ZM10.4837
+                7.28106L9.98578
+                15.456C9.96925
+                15.7286 9.73545
+                15.9388 9.45699
+                15.9388C9.44655
+                15.9388 9.43586
+                15.9386 9.42534
+                15.9382C9.13304
+                15.9213 8.91002
+                15.6786 8.92727
+                15.3956L9.42515
+                7.22076C9.44222
+                6.93782 9.69236
+                6.72194 9.9854
+                6.73878C10.2778
+                6.75528 10.5008
+                6.99828 10.4837
+                7.28106ZM13.6441
+                3.98642L13.2959
+                2.97646C13.2041
+                2.7101 12.9465
+                2.53048 12.6563
+                2.53048H1.01049C0.720317
+                2.53048
+                0.462699 2.7101
+                0.370984
+                2.97646L0.0227731
+                3.98642C-0.0444109
+                4.18136 0.0430711
+                4.38004 0.206203
+                4.4791C0.272537
+                4.51946 0.351247
+                4.54366 0.437794
+                4.54366H13.2292C13.3155
+                4.54366
+                13.3944 4.51946
+                13.4608
+                4.479C13.6238
+                4.37988 13.7113
+                4.18118 13.6441
+                3.98642Z" />
+            </svg>
+
+
+                        </a>
+
+                    </td>
+                </ng-container>
 
 
 
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+        </div>
 
 
+    </div>
 
 </div>
 <div class="container-fluid" *ngIf="url!=null">
-    <div class="row pt-3 ">
-        <div class="col-12 col-md-6 ">
+    <div class="row   ">
+        <div class="col-12 col-md-6 hoverSvg" style="cursor: pointer;">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+            <a (click)="emptyUrl()">RETOUR</a>
+
+        </div>
+    </div>
+    <div class="row   ">
+        <div class="col-12 col-md-6  ">
 
             <pdf-viewer *ngIf="url!=null" [src]="url" [render-text]="true" style="display: flex;justify-content: center;align-items: center;  height:800px">
             </pdf-viewer>
             <div *ngIf="url!=null" class="image-wrapper" cdkDrag>
-                <img *ngIf="url!=null" class="image-1 img-fluid" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-2 img-fluid" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-3 img-fluid" src="{{url}}" />
-                <img *ngIf="url!=null" class="image-4 img-fluid" src="{{url}}" />
+                <img *ngIf="url!=null" class="image-1  " src="{{url}}" />
+                <img *ngIf="url!=null" class="image-2  " src="{{url}}" />
+                <img *ngIf="url!=null" class="image-3  " src="{{url}}" />
+                <img *ngIf="url!=null" class="image-4  " src="{{url}}" />
             </div>
 
         </div>
 
         <div class="col-12 col-md-6">
-            <div *ngIf="url !=null" [formGroup]='invoiceForm' class="row pt-3">
+            <div *ngIf="url !=null" [formGroup]='invoiceForm' class="row  ">
                 <div class="row  ">
 
 
                     <div class="col-12 col-md-6">
 
-                        <button class="btn text-uppercase mb-4 w-100" type="submit" aria-pressed="true" (click)="emptyUrl()">Choisir une categorie</button>
+                        <button class="btn text-uppercase mb-4 w-100" type="submit" aria-pressed="true" (click)="openSelectCategorieUpload()">Choisir une categorie</button>
                         <div class="input-group mb-4">
 
                             <mat-form-field appearance="none" class="example-full-width">

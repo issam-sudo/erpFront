@@ -1,6 +1,6 @@
 .elhoo_body_canvas {
     width: 95% !important;
-    height: 300px !important;
+    height: auto !important;
 }
 
 .elhoo_body_TableauBord-result_filter {
@@ -13,7 +13,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
     p {
         margin: 0;
         letter-spacing: 0px;
@@ -42,15 +41,14 @@ a {
 }
 
 .image-wrapper {
-    width: 600px;
-    height: 400px;
+    width: 90%;
 }
 
 .image-wrapper img {
     position: absolute;
-    top: 0;
-    left: 8%;
+    top: 3%;
     transform-origin: center;
+    width: 90%;
 }
 
 .image-1 {
@@ -113,4 +111,17 @@ p {
     height: 100px;
     border-width: 2px;
     border-color: var(--secondary_color);
+}
+
+.hoverSvg {
+    &:hover {
+        svg {
+            path {
+                fill: var(--secondary_color);
+            }
+        }
+        a {
+            color: var(--secondary_color);
+        }
+    }
 }

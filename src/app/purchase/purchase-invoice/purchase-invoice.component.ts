@@ -122,9 +122,17 @@ show:boolean =false
  mois:any = this.date.toLocaleDateString(undefined,{  month: 'long' })
   url: any =null;
   hiddenSection: any='false';
+  tbl: any ;
  
   constructor(private router: Router,public dialog: MatDialog,public accountService: AccountService) { }
 
+  users: any[] = [];
+addUser(){
+    this.users.push({});//push empty object of type user
+}
+removeUser(i){
+    this.users.splice(i, 1);    
+}
   ngOnInit(): void {
     this.getChart()
     console.log(this.date)
@@ -135,16 +143,19 @@ show:boolean =false
    
     
     })
- 
- 
-      
+    this.addUser()
+
+ console.log(this.users)
    
+    this.tbl = this.users
+   this.accountService.categorieList.next(this.tbl ) 
      
-    
+    console.log('kjhkjhlk'+this.tbl)
  
 
   
   }
+
   async getChart(){
     // tslint:disable-next-line:prefer-const
     let ctx = document.getElementById('myChart');
@@ -262,6 +273,18 @@ show:boolean =false
     });
   
   }
+  openSelectCategorieUpload() {
+    this.dialog.open(CategorieSelect,{
+   
+      data: {
+        animal: 'panda'
+      },
+      width: '30%',
+      height: '40%',
+      panelClass: 'my-custom-dialog-class'
+    });
+  
+  }
 
  
 
@@ -361,6 +384,7 @@ applyFilter(event: Event) {
 
 emptyUrl(){
   this.url =null
+ 
 }
 }
 
@@ -382,6 +406,7 @@ export class Facture_fileUpload {
   size: any;
   type: any;
   name: any;
+  categorie: string;
   
  
   
@@ -395,6 +420,14 @@ export class Facture_fileUpload {
   
   ngOnInit(): void {
     console.log(this.url)
+  this.accountService.categorie.subscribe(data=>{
+    this.categorie = data
+      
+   
+    
+    })
+ 
+    console.log( this.categorie)
  
 }
 onSelectFile(event) { // called each time file input changes
@@ -418,6 +451,7 @@ onSelectFile(event) { // called each time file input changes
   
   
   
+  
 }
 
 validerbtn(event){
@@ -434,4 +468,50 @@ validerbtn(event){
 
 }
 
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'categorieSelect',
+  templateUrl: 'categorieSelect.html',
+  
+  styleUrls: ['./purchase-invoice.component.scss']
+})
+// tslint:disable-next-line:component-class-suffix
+export class CategorieSelect {
+ 
+  categorie: any;
+  
+ 
+  
+  constructor(private router: Router, public dialogRef: MatDialogRef<CategorieSelect>  ,public accountService:AccountService  ) {  }
+   
+  
+  ngOnInit(): void {
+ 
+  this.accountService.categorie.subscribe(data=>{
+    this.categorie = data
+      
+   
+    
+    })
+ 
+    console.log( this.categorie)
+ 
+}
+ 
+selectedValuePays: string;
+selectedValueCategorie: string;
+pays: Pays[] = [
+  {value: 'Belgique', viewValue: 'Belgique'},
+  {value: 'France', viewValue: 'France'},
+  {value: 'Maroc', viewValue: 'Maroc'}
+];
+
+close(event){
+ 
+ 
+ 
+  this.dialogRef.close();
+
+}
+}
 

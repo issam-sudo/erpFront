@@ -55,7 +55,7 @@ import {message } from './sale/delivery-note-page2/delivery-note-page2.component
 
 import { PurchaseInvoiceComponent } from './purchase/purchase-invoice/purchase-invoice.component';
 import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice.component';
-
+import { CategorieSelect } from './purchase/purchase-invoice/purchase-invoice.component';
 
 
 
@@ -111,7 +111,8 @@ import { Facture_fileUpload } from './purchase/purchase-invoice/purchase-invoice
    message,
    
 
-   Facture_fileUpload
+   Facture_fileUpload,
+   CategorieSelect
     
   ],
   imports: [

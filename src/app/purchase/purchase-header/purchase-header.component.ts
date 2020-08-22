@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Facture_fileUpload } from '../purchase-invoice/purchase-invoice.component';
+import { AccountService } from 'src/app/preference/services/account.service';
 
 @Component({
   selector: 'app-purchase-header',
@@ -8,10 +11,19 @@ import { Router } from '@angular/router';
 })
 export class PurchaseHeaderComponent implements OnInit {
   route_active: string;
-  constructor(private router: Router) { }
+  url: any;
+  constructor(private router: Router,public dialog: MatDialog,public accountService: AccountService) { }
 
   ngOnInit(): void {
     this.route_active =this.router.url
+      
+    this.accountService.currentdataPurchase.subscribe(data=>{
+      this.url =data
+      
+   
+    
+    })
+ 
   }
   
 
@@ -23,4 +35,18 @@ export class PurchaseHeaderComponent implements OnInit {
     }); ;
 
   }
+
+  openDialogFileUpload() {
+    this.dialog.open(Facture_fileUpload,{
+   
+      data: {
+        animal: 'panda'
+      },
+      width: '40%',
+      height: '45%',
+      panelClass: 'my-custom-dialog-class'
+    });
+  
+  }
+
 }
